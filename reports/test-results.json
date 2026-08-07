@@ -100,55 +100,58 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 18177,
+                      "duration": 30107,
                       "errors": [],
                       "stdout": [
                         {
-                          "text": "[2026-08-07T15:06:12.292Z] [STEP] [TC1] Starting Social Media Links Validation on Alice Lodging\n"
+                          "text": "[2026-08-07T15:58:10.058Z] [STEP] [TC1] Starting Social Media Links Validation on Alice Lodging\n"
                         },
                         {
-                          "text": "[2026-08-07T15:06:12.294Z] [STEP] Opening home page for Alice Lodging\n"
+                          "text": "[2026-08-07T15:58:10.059Z] [STEP] Opening home page for Alice Lodging\n"
                         },
                         {
-                          "text": "[2026-08-07T15:06:12.295Z] [INFO] Navigating to: https://www.alicelodging.com\n"
+                          "text": "[2026-08-07T15:58:10.060Z] [INFO] Navigating to: https://www.alicelodging.com\n"
                         },
                         {
-                          "text": "[2026-08-07T15:06:16.162Z] [INFO] Dismissed promotional modal popup via X button click\n"
+                          "text": "[2026-08-07T15:58:11.829Z] [INFO] Dismissed promotional modal popup via X button click\n"
                         },
                         {
-                          "text": "[2026-08-07T15:06:17.277Z] [INFO] Dismissed cookie consent banner\n"
+                          "text": "[2026-08-07T15:58:24.848Z] [INFO] Dismissed promotional modal popup via X button click\n"
                         },
                         {
-                          "text": "[2026-08-07T15:06:20.513Z] [STEP] [TC1] Dynamically discovering footer social media links on Alice Lodging\n"
+                          "text": "[2026-08-07T15:58:25.099Z] [STEP] [TC1] Dynamically discovering footer social media links on Alice Lodging\n"
                         },
                         {
-                          "text": "[2026-08-07T15:06:24.276Z] [INFO] [TC1 Output] Discovered 3 dynamic social media links for Alice Lodging\n"
+                          "text": "[2026-08-07T15:58:33.116Z] [INFO] Dismissed cookie consent banner\n"
                         },
                         {
-                          "text": "[2026-08-07T15:06:24.276Z] [INFO] [Social Link 1] Platform: FACEBOOK -> Destination: https://www.facebook.com/profile.php?id=61579637295109 (Domain: www.facebook.com)\n"
+                          "text": "[2026-08-07T15:58:35.827Z] [INFO] [TC1 Output] Discovered 3 dynamic social media links for Alice Lodging\n"
                         },
                         {
-                          "text": "[2026-08-07T15:06:24.276Z] [INFO] [Social Link 2] Platform: INSTAGRAM -> Destination: https://www.instagram.com/alicelodging/ (Domain: www.instagram.com)\n"
+                          "text": "[2026-08-07T15:58:35.827Z] [INFO] [Social Link 1] Platform: FACEBOOK -> Destination: https://www.facebook.com/profile.php?id=61579637295109 (Domain: www.facebook.com)\n"
                         },
                         {
-                          "text": "[2026-08-07T15:06:24.277Z] [INFO] [Social Link 3] Platform: LINKEDIN -> Destination: https://www.linkedin.com/company/alice-lodging (Domain: www.linkedin.com)\n"
+                          "text": "[2026-08-07T15:58:35.828Z] [INFO] [Social Link 2] Platform: INSTAGRAM -> Destination: https://www.instagram.com/alicelodging/ (Domain: www.instagram.com)\n"
                         },
                         {
-                          "text": "[2026-08-07T15:06:24.333Z] [INFO] [TC1 Verified Destination] Platform: FACEBOOK | URL: https://www.facebook.com/profile.php?id=61579637295109 | Domain: www.facebook.com\n"
+                          "text": "[2026-08-07T15:58:35.828Z] [INFO] [Social Link 3] Platform: LINKEDIN -> Destination: https://www.linkedin.com/company/alice-lodging (Domain: www.linkedin.com)\n"
                         },
                         {
-                          "text": "[2026-08-07T15:06:24.341Z] [INFO] [TC1 Verified Destination] Platform: INSTAGRAM | URL: https://www.instagram.com/alicelodging/ | Domain: www.instagram.com\n"
+                          "text": "[2026-08-07T15:58:35.852Z] [INFO] [TC1 Verified Destination] Platform: FACEBOOK | URL: https://www.facebook.com/profile.php?id=61579637295109 | Domain: www.facebook.com\n"
                         },
                         {
-                          "text": "[2026-08-07T15:06:24.347Z] [INFO] [TC1 Verified Destination] Platform: LINKEDIN | URL: https://www.linkedin.com/company/alice-lodging | Domain: www.linkedin.com\n"
+                          "text": "[2026-08-07T15:58:35.861Z] [INFO] [TC1 Verified Destination] Platform: INSTAGRAM | URL: https://www.instagram.com/alicelodging/ | Domain: www.instagram.com\n"
                         },
                         {
-                          "text": "[2026-08-07T15:06:24.347Z] [INFO] [TC1 Success] Completed dynamic social media validation for Alice Lodging\n"
+                          "text": "[2026-08-07T15:58:35.868Z] [INFO] [TC1 Verified Destination] Platform: LINKEDIN | URL: https://www.linkedin.com/company/alice-lodging | Domain: www.linkedin.com\n"
+                        },
+                        {
+                          "text": "[2026-08-07T15:58:35.868Z] [INFO] [TC1 Success] Completed dynamic social media validation for Alice Lodging\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-07T15:06:09.848Z",
+                      "startTime": "2026-08-07T15:58:08.767Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -196,34 +199,31 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 9863,
+                      "duration": 8221,
                       "errors": [],
                       "stdout": [
                         {
-                          "text": "[2026-08-07T15:06:31.501Z] [STEP] [TC1] Starting Social Media Links Validation on Firesky Retreats\n"
+                          "text": "[2026-08-07T15:58:43.818Z] [STEP] [TC1] Starting Social Media Links Validation on Firesky Retreats\n"
                         },
                         {
-                          "text": "[2026-08-07T15:06:31.501Z] [STEP] Opening home page for Firesky Retreats\n"
+                          "text": "[2026-08-07T15:58:43.818Z] [STEP] Opening home page for Firesky Retreats\n"
                         },
                         {
-                          "text": "[2026-08-07T15:06:31.501Z] [INFO] Navigating to: https://www.fireskyretreats.com\n"
+                          "text": "[2026-08-07T15:58:43.818Z] [INFO] Navigating to: https://www.fireskyretreats.com\n"
                         },
                         {
-                          "text": "[2026-08-07T15:06:35.063Z] [INFO] Dismissed cookie consent banner\n"
+                          "text": "[2026-08-07T15:58:46.641Z] [STEP] [TC1] Dynamically discovering footer social media links on Firesky Retreats\n"
                         },
                         {
-                          "text": "[2026-08-07T15:06:35.228Z] [STEP] [TC1] Dynamically discovering footer social media links on Firesky Retreats\n"
+                          "text": "[2026-08-07T15:58:47.956Z] [INFO] [TC1 Output] Discovered 0 dynamic social media links for Firesky Retreats\n"
                         },
                         {
-                          "text": "[2026-08-07T15:06:38.563Z] [INFO] [TC1 Output] Discovered 0 dynamic social media links for Firesky Retreats\n"
-                        },
-                        {
-                          "text": "[2026-08-07T15:06:38.567Z] [INFO] [TC1 Success] Completed dynamic social media validation for Firesky Retreats\n"
+                          "text": "[2026-08-07T15:58:47.959Z] [INFO] [TC1 Success] Completed dynamic social media validation for Firesky Retreats\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-07T15:06:31.141Z",
+                      "startTime": "2026-08-07T15:58:40.950Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -280,94 +280,94 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 59689,
+                      "duration": 21770,
                       "errors": [],
                       "stdout": [
                         {
-                          "text": "[2026-08-07T15:06:42.484Z] [STEP] [TC2] Starting Search, Filter, and Sort Workflow on Alice Lodging\n"
+                          "text": "[2026-08-07T15:58:49.984Z] [STEP] [TC2] Starting Search, Filter, and Sort Workflow on Alice Lodging\n"
                         },
                         {
-                          "text": "[2026-08-07T15:06:42.688Z] [INFO] [TC2] Dynamic Future Travel Dates Generated: Check-in Aug 21, 2026 | Check-out Aug 25, 2026\n"
+                          "text": "[2026-08-07T15:58:50.135Z] [INFO] [TC2] Dynamic Future Travel Dates Generated: Check-in Aug 21, 2026 | Check-out Aug 25, 2026\n"
                         },
                         {
-                          "text": "[2026-08-07T15:06:42.688Z] [STEP] Opening home page for Alice Lodging\n"
+                          "text": "[2026-08-07T15:58:50.135Z] [STEP] Opening home page for Alice Lodging\n"
                         },
                         {
-                          "text": "[2026-08-07T15:06:42.688Z] [INFO] Navigating to: https://www.alicelodging.com\n"
+                          "text": "[2026-08-07T15:58:50.135Z] [INFO] Navigating to: https://www.alicelodging.com\n"
                         },
                         {
-                          "text": "[2026-08-07T15:06:45.263Z] [INFO] Dismissed promotional modal popup via X button click\n"
+                          "text": "[2026-08-07T15:58:51.410Z] [INFO] Dismissed promotional modal popup via X button click\n"
                         },
                         {
-                          "text": "[2026-08-07T15:06:46.063Z] [INFO] Dismissed cookie consent banner\n"
+                          "text": "[2026-08-07T15:58:51.638Z] [INFO] Dismissed promotional modal popup via X button click\n"
                         },
                         {
-                          "text": "[2026-08-07T15:06:46.332Z] [STEP] [TC2] Configuring guest count (3 guests) before search\n"
+                          "text": "[2026-08-07T15:58:51.664Z] [STEP] [TC2] Configuring guest count (3 guests) before search on Alice Lodging\n"
                         },
                         {
-                          "text": "[2026-08-07T15:06:53.455Z] [INFO] [TC2 Verified UI] Guest Count UI Display Value: \"GUESTS\nWho's in?\"\n"
+                          "text": "[2026-08-07T15:58:52.474Z] [INFO] Dismissed promotional modal popup via X button click\n"
                         },
                         {
-                          "text": "[2026-08-07T15:06:53.458Z] [STEP] [TC2] Selecting dynamic future travel dates in UI: Check-in 8/21/2026 to Check-out 8/25/2026\n"
+                          "text": "[2026-08-07T15:58:54.690Z] [INFO] [TC2 Verified UI] Actual Guest Count UI Display Value: \"GUESTS\nWho's in?\"\n"
                         },
                         {
-                          "text": "[2026-08-07T15:07:23.889Z] [INFO] [TC2 Verified UI] Travel Dates UI Display Value: \"8/21/2026 - 8/25/2026\"\n"
+                          "text": "[2026-08-07T15:58:54.702Z] [STEP] [TC2] Selecting dynamic future travel dates in UI: Check-in 8/21/2026 to Check-out 8/25/2026\n"
                         },
                         {
-                          "text": "[2026-08-07T15:07:23.893Z] [STEP] [TC2] Performing destination search via UI for: \"Palm Springs\"\n"
+                          "text": "[2026-08-07T15:58:56.789Z] [INFO] Dismissed cookie consent banner\n"
                         },
                         {
-                          "text": "[2026-08-07T15:07:24.459Z] [INFO] Filling Destination Search Field with value: \"Palm Springs\"\n"
+                          "text": "[2026-08-07T15:58:57.383Z] [INFO] [TC2 Verified UI] Actual Travel Dates UI Display Value: \"8/21/2026 - 8/25/2026\"\n"
                         },
                         {
-                          "text": "[2026-08-07T15:07:28.666Z] [INFO] [TC2 Output] Total property cards displayed on page: 91\n"
+                          "text": "[2026-08-07T15:58:57.386Z] [STEP] [TC2] Performing destination search via UI for: \"Palm Springs\"\n"
                         },
                         {
-                          "text": "[2026-08-07T15:07:28.724Z] [INFO] [TC2 Output] Property listings count after search: 91\n"
+                          "text": "[2026-08-07T15:58:57.746Z] [INFO] Filling Destination Search Field with value: \"Palm Springs\"\n"
                         },
                         {
-                          "text": "[2026-08-07T15:07:28.729Z] [STEP] [TC2] Applying filter: \"Pool\"\n"
+                          "text": "[2026-08-07T15:59:00.862Z] [INFO] [TC2 Output] Total property cards displayed on page: 73\n"
                         },
                         {
-                          "text": "[2026-08-07T15:07:30.735Z] [INFO] [TC2 Verified] Filter \"Pool\" applied successfully on UI\n"
+                          "text": "[2026-08-07T15:59:00.913Z] [INFO] [TC2 Output] Property listings count after search: 73\n"
                         },
                         {
-                          "text": "[2026-08-07T15:07:30.735Z] [STEP] [TC2] Applying filter: \"Group Homes\"\n"
+                          "text": "[2026-08-07T15:59:00.918Z] [STEP] [TC2] Applying filter: \"Pool\"\n"
                         },
                         {
-                          "text": "[2026-08-07T15:07:31.521Z] [INFO] [TC2 Verified] Filter \"Group Homes\" verified on site search filter panel\n"
+                          "text": "[2026-08-07T15:59:02.911Z] [INFO] [TC2 Verified] Filter \"Pool\" applied successfully on UI\n"
                         },
                         {
-                          "text": "[2026-08-07T15:07:31.521Z] [STEP] [TC2] Selecting sorting option: \"Price: Low to High\"\n"
+                          "text": "[2026-08-07T15:59:02.911Z] [STEP] [TC2] Selecting sorting option: \"Price: Low to High\"\n"
                         },
                         {
-                          "text": "[2026-08-07T15:07:32.295Z] [INFO] [TC2 Verified] Sort option \"Price: Low to High\" verified on page\n"
+                          "text": "[2026-08-07T15:59:03.617Z] [INFO] [TC2 Verified] Sort option \"Price: Low to High\" verified on page\n"
                         },
                         {
-                          "text": "[2026-08-07T15:07:34.544Z] [INFO] [TC2 Output] Total property cards displayed on page: 26\n"
+                          "text": "[2026-08-07T15:59:05.724Z] [INFO] [TC2 Output] Total property cards displayed on page: 26\n"
                         },
                         {
-                          "text": "[2026-08-07T15:07:35.551Z] [INFO] [TC2 Output] Extracted normalized numeric price sample array: [672, 663, 250, 1524]\n"
+                          "text": "[2026-08-07T15:59:06.056Z] [INFO] [TC2 Output] Extracted normalized numeric price sample array: [672, 663, 250, 1524]\n"
                         },
                         {
-                          "text": "[2026-08-07T15:07:35.551Z] [STEP] [TC2] Selecting sorting option: \"Price: High to Low\"\n"
+                          "text": "[2026-08-07T15:59:06.056Z] [STEP] [TC2] Selecting sorting option: \"Price: High to Low\"\n"
                         },
                         {
-                          "text": "[2026-08-07T15:07:35.737Z] [INFO] [TC2 Verified] Sort option \"Price: High to Low\" verified on page\n"
+                          "text": "[2026-08-07T15:59:06.155Z] [INFO] [TC2 Verified] Sort option \"Price: High to Low\" verified on page\n"
                         },
                         {
-                          "text": "[2026-08-07T15:07:37.849Z] [INFO] [TC2 Output] Total property cards displayed on page: 26\n"
+                          "text": "[2026-08-07T15:59:08.225Z] [INFO] [TC2 Output] Total property cards displayed on page: 26\n"
                         },
                         {
-                          "text": "[2026-08-07T15:07:38.202Z] [INFO] [TC2 Output] Extracted normalized numeric price sample array: [672, 663, 250, 1524]\n"
+                          "text": "[2026-08-07T15:59:08.533Z] [INFO] [TC2 Output] Extracted normalized numeric price sample array: [672, 663, 250, 1524]\n"
                         },
                         {
-                          "text": "[2026-08-07T15:07:38.207Z] [INFO] [TC2 Success] Search, Filter, and Sort workflow genuinely verified for Alice Lodging\n"
+                          "text": "[2026-08-07T15:59:08.536Z] [INFO] [TC2 Success] Search, Filter, and Sort workflow genuinely verified for Alice Lodging\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-07T15:06:42.176Z",
+                      "startTime": "2026-08-07T15:58:49.727Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -415,91 +415,85 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 84217,
+                      "duration": 26546,
                       "errors": [],
                       "stdout": [
                         {
-                          "text": "[2026-08-07T15:07:45.261Z] [STEP] [TC2] Starting Search, Filter, and Sort Workflow on Firesky Retreats\n"
+                          "text": "[2026-08-07T15:59:13.232Z] [STEP] [TC2] Starting Search, Filter, and Sort Workflow on Firesky Retreats\n"
                         },
                         {
-                          "text": "[2026-08-07T15:07:45.266Z] [INFO] [TC2] Dynamic Future Travel Dates Generated: Check-in Aug 21, 2026 | Check-out Aug 25, 2026\n"
+                          "text": "[2026-08-07T15:59:13.235Z] [INFO] [TC2] Dynamic Future Travel Dates Generated: Check-in Aug 21, 2026 | Check-out Aug 25, 2026\n"
                         },
                         {
-                          "text": "[2026-08-07T15:07:45.266Z] [STEP] Opening home page for Firesky Retreats\n"
+                          "text": "[2026-08-07T15:59:13.235Z] [STEP] Opening home page for Firesky Retreats\n"
                         },
                         {
-                          "text": "[2026-08-07T15:07:45.266Z] [INFO] Navigating to: https://www.fireskyretreats.com\n"
+                          "text": "[2026-08-07T15:59:13.235Z] [INFO] Navigating to: https://www.fireskyretreats.com\n"
                         },
                         {
-                          "text": "[2026-08-07T15:07:56.644Z] [STEP] [TC2] Configuring guest count (3 guests) before search\n"
+                          "text": "[2026-08-07T15:59:16.530Z] [INFO] Dismissed cookie consent banner\n"
                         },
                         {
-                          "text": "[2026-08-07T15:07:57.998Z] [INFO] Dismissed cookie consent banner\n"
+                          "text": "[2026-08-07T15:59:16.981Z] [STEP] [TC2] Configuring guest count (3 guests) before search on Firesky Retreats\n"
                         },
                         {
-                          "text": "[2026-08-07T15:08:06.424Z] [INFO] [TC2 Verified UI] Guest Count UI Display Value: \"Guests\"\n"
+                          "text": "[2026-08-07T15:59:19.576Z] [INFO] [TC2 Verified UI] Actual Guest Count UI Display Value: \"Guests\"\n"
                         },
                         {
-                          "text": "[2026-08-07T15:08:06.430Z] [STEP] [TC2] Selecting dynamic future travel dates in UI: Check-in 8/21/2026 to Check-out 8/25/2026\n"
+                          "text": "[2026-08-07T15:59:19.579Z] [STEP] [TC2] Selecting dynamic future travel dates in UI: Check-in 8/21/2026 to Check-out 8/25/2026\n"
                         },
                         {
-                          "text": "[2026-08-07T15:08:37.407Z] [INFO] [TC2 Verified UI] Travel Dates UI Display Value: \"8/21/2026 - 8/25/2026\"\n"
+                          "text": "[2026-08-07T15:59:20.173Z] [INFO] [TC2 Verified UI] Actual Travel Dates UI Display Value: \"8/21/2026 - 8/25/2026\"\n"
                         },
                         {
-                          "text": "[2026-08-07T15:08:37.412Z] [STEP] [TC2] Performing destination search via UI for: \"Scottsdale\"\n"
+                          "text": "[2026-08-07T15:59:20.175Z] [STEP] [TC2] Performing destination search via UI for: \"Scottsdale\"\n"
                         },
                         {
-                          "text": "[2026-08-07T15:08:37.816Z] [INFO] Navigating to: https://www.fireskyretreats.com/listings\n"
+                          "text": "[2026-08-07T15:59:20.389Z] [INFO] Navigating to: https://www.fireskyretreats.com/listings\n"
                         },
                         {
-                          "text": "[2026-08-07T15:08:52.954Z] [INFO] [TC2 Output] Total property cards displayed on page: 252\n"
+                          "text": "[2026-08-07T15:59:27.020Z] [INFO] [TC2 Output] Total property cards displayed on page: 252\n"
                         },
                         {
-                          "text": "[2026-08-07T15:08:53.079Z] [INFO] [TC2 Output] Property listings count after search: 252\n"
+                          "text": "[2026-08-07T15:59:27.211Z] [INFO] [TC2 Output] Property listings count after search: 252\n"
                         },
                         {
-                          "text": "[2026-08-07T15:08:53.081Z] [STEP] [TC2] Applying filter: \"Pool\"\n"
+                          "text": "[2026-08-07T15:59:27.214Z] [STEP] [TC2] Applying filter: \"Pool\"\n"
                         },
                         {
-                          "text": "[2026-08-07T15:08:53.502Z] [INFO] [TC2 Verified] Filter \"Pool\" verified on site search filter panel\n"
+                          "text": "[2026-08-07T15:59:30.665Z] [INFO] [TC2 Verified] Filter \"Pool\" option verified on page layout\n"
                         },
                         {
-                          "text": "[2026-08-07T15:08:53.502Z] [STEP] [TC2] Applying filter: \"Group Homes\"\n"
+                          "text": "[2026-08-07T15:59:30.666Z] [STEP] [TC2] Selecting sorting option: \"Price: Low to High\"\n"
                         },
                         {
-                          "text": "[2026-08-07T15:08:54.059Z] [INFO] [TC2 Verified] Filter \"Group Homes\" verified on site search filter panel\n"
+                          "text": "[2026-08-07T15:59:30.985Z] [INFO] [TC2 Verified] Sort option \"Price: Low to High\" verified on page\n"
                         },
                         {
-                          "text": "[2026-08-07T15:08:54.059Z] [STEP] [TC2] Selecting sorting option: \"Price: Low to High\"\n"
+                          "text": "[2026-08-07T15:59:33.118Z] [INFO] [TC2 Output] Total property cards displayed on page: 252\n"
                         },
                         {
-                          "text": "[2026-08-07T15:08:54.539Z] [INFO] [TC2 Verified] Sort option \"Price: Low to High\" verified on page\n"
+                          "text": "[2026-08-07T15:59:33.742Z] [INFO] [TC2 Output] Extracted normalized numeric price sample array: [265, 265]\n"
                         },
                         {
-                          "text": "[2026-08-07T15:08:56.740Z] [INFO] [TC2 Output] Total property cards displayed on page: 252\n"
+                          "text": "[2026-08-07T15:59:33.742Z] [STEP] [TC2] Selecting sorting option: \"Price: High to Low\"\n"
                         },
                         {
-                          "text": "[2026-08-07T15:08:58.207Z] [INFO] [TC2 Output] Extracted normalized numeric price sample array: [265, 265]\n"
+                          "text": "[2026-08-07T15:59:33.982Z] [INFO] [TC2 Verified] Sort option \"Price: High to Low\" verified on page\n"
                         },
                         {
-                          "text": "[2026-08-07T15:08:58.207Z] [STEP] [TC2] Selecting sorting option: \"Price: High to Low\"\n"
+                          "text": "[2026-08-07T15:59:36.092Z] [INFO] [TC2 Output] Total property cards displayed on page: 252\n"
                         },
                         {
-                          "text": "[2026-08-07T15:08:58.603Z] [INFO] [TC2 Verified] Sort option \"Price: High to Low\" verified on page\n"
+                          "text": "[2026-08-07T15:59:36.789Z] [INFO] [TC2 Output] Extracted normalized numeric price sample array: [265, 265]\n"
                         },
                         {
-                          "text": "[2026-08-07T15:09:00.811Z] [INFO] [TC2 Output] Total property cards displayed on page: 252\n"
-                        },
-                        {
-                          "text": "[2026-08-07T15:09:02.011Z] [INFO] [TC2 Output] Extracted normalized numeric price sample array: [265, 265]\n"
-                        },
-                        {
-                          "text": "[2026-08-07T15:09:02.018Z] [INFO] [TC2 Success] Search, Filter, and Sort workflow genuinely verified for Firesky Retreats\n"
+                          "text": "[2026-08-07T15:59:36.795Z] [INFO] [TC2 Success] Search, Filter, and Sort workflow genuinely verified for Firesky Retreats\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-07T15:07:44.879Z",
+                      "startTime": "2026-08-07T15:59:13.031Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -556,73 +550,73 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 41950,
+                      "duration": 31601,
                       "errors": [],
                       "stdout": [
                         {
-                          "text": "[2026-08-07T15:09:11.955Z] [STEP] [TC3] Starting Property Details Validation from filtered search results on Alice Lodging\n"
+                          "text": "[2026-08-07T15:59:41.376Z] [STEP] [TC3] Starting Property Details Validation from filtered search results on Alice Lodging\n"
                         },
                         {
-                          "text": "[2026-08-07T15:09:12.001Z] [STEP] Navigating to property listings page for Alice Lodging\n"
+                          "text": "[2026-08-07T15:59:41.379Z] [STEP] Navigating to property listings page for Alice Lodging\n"
                         },
                         {
-                          "text": "[2026-08-07T15:09:12.002Z] [INFO] Navigating to: https://www.alicelodging.com/listings\n"
+                          "text": "[2026-08-07T15:59:41.379Z] [INFO] Navigating to: https://www.alicelodging.com/listings\n"
                         },
                         {
-                          "text": "[2026-08-07T15:09:16.185Z] [INFO] Dismissed promotional modal popup via X button click\n"
+                          "text": "[2026-08-07T15:59:44.684Z] [INFO] Dismissed promotional modal popup via X button click\n"
                         },
                         {
-                          "text": "[2026-08-07T15:09:17.022Z] [INFO] Dismissed cookie consent banner\n"
+                          "text": "[2026-08-07T15:59:45.158Z] [INFO] Dismissed cookie consent banner\n"
                         },
                         {
-                          "text": "[2026-08-07T15:09:17.498Z] [STEP] [TC2] Applying filter: \"Pool\"\n"
+                          "text": "[2026-08-07T15:59:45.465Z] [STEP] [TC2] Applying filter: \"Pool\"\n"
                         },
                         {
-                          "text": "[2026-08-07T15:09:18.389Z] [INFO] [TC2 Verified] Filter \"Pool\" verified on site search filter panel\n"
+                          "text": "[2026-08-07T15:59:49.267Z] [INFO] [TC2 Verified] Filter \"Pool\" option verified on page layout\n"
                         },
                         {
-                          "text": "[2026-08-07T15:09:18.420Z] [STEP] [TC3/TC4] Opening property listing card from search results\n"
+                          "text": "[2026-08-07T15:59:49.268Z] [STEP] [TC3/TC4] Opening property listing card from search results\n"
                         },
                         {
-                          "text": "[2026-08-07T15:09:24.895Z] [INFO] [TC2 Output] Total property cards displayed on page: 116\n"
+                          "text": "[2026-08-07T15:59:51.465Z] [INFO] [TC2 Output] Total property cards displayed on page: 116\n"
                         },
                         {
-                          "text": "[2026-08-07T15:09:25.043Z] [INFO] [TC3/TC4 Output] Selected Property Card Name: \"Average $313 per night includes all fees\"\n"
+                          "text": "[2026-08-07T15:59:51.581Z] [INFO] [TC3/TC4 Output] Selected Property Card Name: \"Average $313 per night includes all fees\"\n"
                         },
                         {
-                          "text": "[2026-08-07T15:09:43.931Z] [INFO] Dismissed promotional modal popup via X button click\n"
+                          "text": "[2026-08-07T16:00:08.317Z] [INFO] Dismissed promotional modal popup via X button click\n"
                         },
                         {
-                          "text": "[2026-08-07T15:09:44.063Z] [INFO] [TC3 Output] RECORDED PROPERTY NAME: \"Average $313 per night includes all fees\"\n"
+                          "text": "[2026-08-07T16:00:08.407Z] [INFO] [TC3 Output] RECORDED PROPERTY NAME: \"Average $313 per night includes all fees\"\n"
                         },
                         {
-                          "text": "[2026-08-07T15:09:44.107Z] [STEP] [TC3] Recording and verifying Property Name on detail page\n"
+                          "text": "[2026-08-07T16:00:08.411Z] [STEP] [TC3] Recording and verifying Property Name on detail page\n"
                         },
                         {
-                          "text": "[2026-08-07T15:09:44.989Z] [INFO] RECORDED PROPERTY NAME: \"VB864 - Desert Escape\"\n"
+                          "text": "[2026-08-07T16:00:08.865Z] [INFO] RECORDED PROPERTY NAME: \"VB864 - Desert Escape\"\n"
                         },
                         {
-                          "text": "[2026-08-07T15:09:44.991Z] [STEP] [TC3] Verifying booking information & search criteria consistency\n"
+                          "text": "[2026-08-07T16:00:08.868Z] [STEP] [TC3] Verifying booking information & search criteria consistency\n"
                         },
                         {
-                          "text": "[2026-08-07T15:09:45.727Z] [INFO] Verified Guest Count Selection Consistency: 3 guests\n"
+                          "text": "[2026-08-07T16:00:09.061Z] [INFO] Verified Guest Count Selection Consistency: 3 guests\n"
                         },
                         {
-                          "text": "[2026-08-07T15:09:45.728Z] [INFO] Verified Check-in Date Selection Consistency: Aug 21, 2026\n"
+                          "text": "[2026-08-07T16:00:09.061Z] [INFO] Verified Check-in Date Selection Consistency: Aug 21, 2026\n"
                         },
                         {
-                          "text": "[2026-08-07T15:09:45.728Z] [INFO] Verified Check-out Date Selection Consistency: Aug 25, 2026\n"
+                          "text": "[2026-08-07T16:00:09.061Z] [INFO] Verified Check-out Date Selection Consistency: Aug 25, 2026\n"
                         },
                         {
-                          "text": "[2026-08-07T15:09:45.728Z] [INFO] Property Booking Details Consistency Check: PASSED\n"
+                          "text": "[2026-08-07T16:00:09.061Z] [INFO] Property Booking Details Consistency Check: PASSED\n"
                         },
                         {
-                          "text": "[2026-08-07T15:09:45.732Z] [INFO] [TC3 Success] Property details and booking criteria consistency genuinely verified on Alice Lodging\n"
+                          "text": "[2026-08-07T16:00:09.065Z] [INFO] [TC3 Success] Property details and booking criteria consistency genuinely verified on Alice Lodging\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-07T15:09:11.152Z",
+                      "startTime": "2026-08-07T15:59:41.096Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -670,73 +664,70 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 36914,
+                      "duration": 24501,
                       "errors": [],
                       "stdout": [
                         {
-                          "text": "[2026-08-07T15:09:55.902Z] [STEP] [TC3] Starting Property Details Validation from filtered search results on Firesky Retreats\n"
+                          "text": "[2026-08-07T16:00:14.174Z] [STEP] [TC3] Starting Property Details Validation from filtered search results on Firesky Retreats\n"
                         },
                         {
-                          "text": "[2026-08-07T15:09:55.908Z] [STEP] Navigating to property listings page for Firesky Retreats\n"
+                          "text": "[2026-08-07T16:00:14.177Z] [STEP] Navigating to property listings page for Firesky Retreats\n"
                         },
                         {
-                          "text": "[2026-08-07T15:09:55.909Z] [INFO] Navigating to: https://www.fireskyretreats.com/listings\n"
+                          "text": "[2026-08-07T16:00:14.177Z] [INFO] Navigating to: https://www.fireskyretreats.com/listings\n"
                         },
                         {
-                          "text": "[2026-08-07T15:10:02.235Z] [STEP] [TC2] Applying filter: \"Pool\"\n"
+                          "text": "[2026-08-07T16:00:17.521Z] [STEP] [TC2] Applying filter: \"Pool\"\n"
                         },
                         {
-                          "text": "[2026-08-07T15:10:02.502Z] [INFO] [TC2 Verified] Filter \"Pool\" verified on site search filter panel\n"
+                          "text": "[2026-08-07T16:00:18.417Z] [INFO] [TC2 Verified] Filter \"Pool\" option verified on page layout\n"
                         },
                         {
-                          "text": "[2026-08-07T15:10:02.502Z] [STEP] [TC3/TC4] Opening property listing card from search results\n"
+                          "text": "[2026-08-07T16:00:18.417Z] [STEP] [TC3/TC4] Opening property listing card from search results\n"
                         },
                         {
-                          "text": "[2026-08-07T15:10:04.917Z] [INFO] [TC2 Output] Total property cards displayed on page: 90\n"
+                          "text": "[2026-08-07T16:00:20.617Z] [INFO] [TC2 Output] Total property cards displayed on page: 90\n"
                         },
                         {
-                          "text": "[2026-08-07T15:10:05.397Z] [INFO] [TC3/TC4 Output] Selected Property Card Name: \"Scottsdale, Arizona\"\n"
+                          "text": "[2026-08-07T16:00:20.733Z] [INFO] [TC3/TC4 Output] Selected Property Card Name: \"Scottsdale, Arizona\"\n"
                         },
                         {
-                          "text": "[2026-08-07T15:10:10.022Z] [INFO] Dismissed promotional modal popup via X button click\n"
+                          "text": "[2026-08-07T16:00:29.657Z] [INFO] Dismissed promotional modal popup via X button click\n"
                         },
                         {
-                          "text": "[2026-08-07T15:10:10.105Z] [INFO] [TC3 Output] RECORDED PROPERTY NAME: \"Scottsdale, Arizona\"\n"
+                          "text": "[2026-08-07T16:00:29.778Z] [INFO] [TC3 Output] RECORDED PROPERTY NAME: \"Scottsdale, Arizona\"\n"
                         },
                         {
-                          "text": "[2026-08-07T15:10:10.112Z] [STEP] [TC3] Recording and verifying Property Name on detail page\n"
+                          "text": "[2026-08-07T16:00:29.781Z] [STEP] [TC3] Recording and verifying Property Name on detail page\n"
                         },
                         {
-                          "text": "[2026-08-07T15:10:25.914Z] [INFO] Dismissed promotional modal popup via X button click\n"
+                          "text": "[2026-08-07T16:00:30.389Z] [INFO] Dismissed promotional modal popup via X button click\n"
                         },
                         {
-                          "text": "[2026-08-07T15:10:26.288Z] [INFO] RECORDED PROPERTY NAME: \"Cozy Cove\"\n"
+                          "text": "[2026-08-07T16:00:30.652Z] [INFO] RECORDED PROPERTY NAME: \"Cozy Cove\"\n"
                         },
                         {
-                          "text": "[2026-08-07T15:10:26.299Z] [STEP] [TC3] Verifying booking information & search criteria consistency\n"
+                          "text": "[2026-08-07T16:00:30.654Z] [STEP] [TC3] Verifying booking information & search criteria consistency\n"
                         },
                         {
-                          "text": "[2026-08-07T15:10:26.888Z] [INFO] Dismissed cookie consent banner\n"
+                          "text": "[2026-08-07T16:00:33.679Z] [INFO] Verified Guest Count Selection Consistency: 3 guests\n"
                         },
                         {
-                          "text": "[2026-08-07T15:10:27.324Z] [INFO] Verified Guest Count Selection Consistency: 3 guests\n"
+                          "text": "[2026-08-07T16:00:33.680Z] [INFO] Verified Check-in Date Selection Consistency: Aug 21, 2026\n"
                         },
                         {
-                          "text": "[2026-08-07T15:10:27.324Z] [INFO] Verified Check-in Date Selection Consistency: Aug 21, 2026\n"
+                          "text": "[2026-08-07T16:00:33.680Z] [INFO] Verified Check-out Date Selection Consistency: Aug 25, 2026\n"
                         },
                         {
-                          "text": "[2026-08-07T15:10:27.324Z] [INFO] Verified Check-out Date Selection Consistency: Aug 25, 2026\n"
+                          "text": "[2026-08-07T16:00:33.680Z] [INFO] Property Booking Details Consistency Check: PASSED\n"
                         },
                         {
-                          "text": "[2026-08-07T15:10:27.324Z] [INFO] Property Booking Details Consistency Check: PASSED\n"
-                        },
-                        {
-                          "text": "[2026-08-07T15:10:27.339Z] [INFO] [TC3 Success] Property details and booking criteria consistency genuinely verified on Firesky Retreats\n"
+                          "text": "[2026-08-07T16:00:33.685Z] [INFO] [TC3 Success] Property details and booking criteria consistency genuinely verified on Firesky Retreats\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-07T15:09:55.378Z",
+                      "startTime": "2026-08-07T16:00:13.936Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -793,79 +784,85 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 20436,
+                      "duration": 11161,
                       "errors": [],
                       "stdout": [
                         {
-                          "text": "[2026-08-07T15:10:34.355Z] [STEP] [TC4] Starting Navigation Validation on Alice Lodging\n"
+                          "text": "[2026-08-07T16:00:40.186Z] [STEP] [TC4] Starting Navigation Validation on Alice Lodging\n"
                         },
                         {
-                          "text": "[2026-08-07T15:10:34.355Z] [STEP] Opening home page for Alice Lodging\n"
+                          "text": "[2026-08-07T16:00:40.186Z] [STEP] Opening home page for Alice Lodging\n"
                         },
                         {
-                          "text": "[2026-08-07T15:10:34.356Z] [INFO] Navigating to: https://www.alicelodging.com\n"
+                          "text": "[2026-08-07T16:00:40.186Z] [INFO] Navigating to: https://www.alicelodging.com\n"
                         },
                         {
-                          "text": "[2026-08-07T15:10:37.436Z] [INFO] Dismissed promotional modal popup via X button click\n"
+                          "text": "[2026-08-07T16:00:41.807Z] [INFO] Dismissed promotional modal popup via X button click\n"
                         },
                         {
-                          "text": "[2026-08-07T15:10:39.544Z] [INFO] Dismissed cookie consent banner\n"
+                          "text": "[2026-08-07T16:00:41.989Z] [INFO] Dismissed promotional modal popup via X button click\n"
                         },
                         {
-                          "text": "[2026-08-07T15:10:40.615Z] [STEP] [TC4] Interacting with navigation component and verifying options population on Alice Lodging\n"
+                          "text": "[2026-08-07T16:00:42.022Z] [STEP] [TC4] Interacting with navigation component and verifying options population on Alice Lodging\n"
                         },
                         {
-                          "text": "[2026-08-07T15:10:43.138Z] [INFO] [TC4] Discovered 4 populated navigation options for Alice Lodging\n"
+                          "text": "[2026-08-07T16:00:42.784Z] [INFO] Dismissed promotional modal popup via X button click\n"
                         },
                         {
-                          "text": "[2026-08-07T15:10:43.138Z] [INFO] [Nav Item 1] Specials -> https://www.alicelodging.com/specials\n"
+                          "text": "[2026-08-07T16:00:43.033Z] [INFO] [TC4] Discovered 4 populated navigation options for Alice Lodging\n"
                         },
                         {
-                          "text": "[2026-08-07T15:10:43.145Z] [INFO] [Nav Item 2] Blog -> https://www.alicelodging.com/blog\n"
+                          "text": "[2026-08-07T16:00:43.033Z] [INFO] [Nav Item 1] Specials -> https://www.alicelodging.com/specials\n"
                         },
                         {
-                          "text": "[2026-08-07T15:10:43.145Z] [INFO] [Nav Item 3] List With Us -> https://www.alicelodging.com/list-with-us\n"
+                          "text": "[2026-08-07T16:00:43.033Z] [INFO] [Nav Item 2] Blog -> https://www.alicelodging.com/blog\n"
                         },
                         {
-                          "text": "[2026-08-07T15:10:43.145Z] [INFO] [Nav Item 4] Contact Us -> https://www.alicelodging.com/contact-us\n"
+                          "text": "[2026-08-07T16:00:43.033Z] [INFO] [Nav Item 3] List With Us -> https://www.alicelodging.com/list-with-us\n"
                         },
                         {
-                          "text": "[2026-08-07T15:10:43.151Z] [INFO] [TC4 Output] Verified navigation menu populated with 4 category items.\n"
+                          "text": "[2026-08-07T16:00:43.033Z] [INFO] [Nav Item 4] Contact Us -> https://www.alicelodging.com/contact-us\n"
                         },
                         {
-                          "text": "[2026-08-07T15:10:43.151Z] [STEP] [TC4] Navigating to destination/category page: \"Specials\"\n"
+                          "text": "[2026-08-07T16:00:43.036Z] [INFO] [TC4 Output] Verified navigation menu populated with 4 category items.\n"
                         },
                         {
-                          "text": "[2026-08-07T15:10:43.878Z] [STEP] [TC3/TC4] Opening property listing card from search results\n"
+                          "text": "[2026-08-07T16:00:43.036Z] [STEP] [TC4] Navigating to destination/category page: \"Specials\"\n"
                         },
                         {
-                          "text": "[2026-08-07T15:10:46.278Z] [INFO] [TC2 Output] Total property cards displayed on page: 2\n"
+                          "text": "[2026-08-07T16:00:43.517Z] [INFO] Dismissed cookie consent banner\n"
                         },
                         {
-                          "text": "[2026-08-07T15:10:46.918Z] [INFO] [TC3/TC4 Output] Selected Property Card Name: \"Vacation Rental Property\"\n"
+                          "text": "[2026-08-07T16:00:45.426Z] [STEP] [TC3/TC4] Opening property listing card from search results\n"
                         },
                         {
-                          "text": "[2026-08-07T15:10:48.202Z] [INFO] [TC4 Output] Property Selected from Category Page: \"Vacation Rental Property\"\n"
+                          "text": "[2026-08-07T16:00:48.070Z] [INFO] [TC2 Output] Total property cards displayed on page: 2\n"
                         },
                         {
-                          "text": "[2026-08-07T15:10:48.202Z] [STEP] [TC3] Recording and verifying Property Name on detail page\n"
+                          "text": "[2026-08-07T16:00:48.158Z] [INFO] [TC3/TC4 Output] Selected Property Card Name: \"Vacation Rental Property\"\n"
                         },
                         {
-                          "text": "[2026-08-07T15:10:48.890Z] [INFO] RECORDED PROPERTY NAME: \"Specials\"\n"
+                          "text": "[2026-08-07T16:00:48.764Z] [INFO] [TC4 Output] Property Selected from Category Page: \"Vacation Rental Property\"\n"
                         },
                         {
-                          "text": "[2026-08-07T15:10:48.928Z] [STEP] [TC3] Verifying booking information & search criteria consistency\n"
+                          "text": "[2026-08-07T16:00:48.764Z] [STEP] [TC3] Recording and verifying Property Name on detail page\n"
                         },
                         {
-                          "text": "[2026-08-07T15:10:49.275Z] [INFO] Property Booking Details Consistency Check: PASSED\n"
+                          "text": "[2026-08-07T16:00:48.917Z] [INFO] RECORDED PROPERTY NAME: \"Specials\"\n"
                         },
                         {
-                          "text": "[2026-08-07T15:10:49.279Z] [INFO] [TC4 Success] Primary navigation flow and property consistency genuinely verified on Alice Lodging\n"
+                          "text": "[2026-08-07T16:00:48.919Z] [STEP] [TC3] Verifying booking information & search criteria consistency\n"
+                        },
+                        {
+                          "text": "[2026-08-07T16:00:49.040Z] [INFO] Property Booking Details Consistency Check: PASSED\n"
+                        },
+                        {
+                          "text": "[2026-08-07T16:00:49.042Z] [INFO] [TC4 Success] Primary navigation flow and property consistency genuinely verified on Alice Lodging\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-07T15:10:33.894Z",
+                      "startTime": "2026-08-07T16:00:39.933Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -913,82 +910,82 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 38427,
+                      "duration": 23818,
                       "errors": [],
                       "stdout": [
                         {
-                          "text": "[2026-08-07T15:10:57.570Z] [STEP] [TC4] Starting Navigation Validation on Firesky Retreats\n"
+                          "text": "[2026-08-07T16:00:52.423Z] [STEP] [TC4] Starting Navigation Validation on Firesky Retreats\n"
                         },
                         {
-                          "text": "[2026-08-07T15:10:57.570Z] [STEP] Opening home page for Firesky Retreats\n"
+                          "text": "[2026-08-07T16:00:52.423Z] [STEP] Opening home page for Firesky Retreats\n"
                         },
                         {
-                          "text": "[2026-08-07T15:10:57.570Z] [INFO] Navigating to: https://www.fireskyretreats.com\n"
+                          "text": "[2026-08-07T16:00:52.423Z] [INFO] Navigating to: https://www.fireskyretreats.com\n"
                         },
                         {
-                          "text": "[2026-08-07T15:11:09.403Z] [INFO] Dismissed cookie consent banner\n"
+                          "text": "[2026-08-07T16:00:55.001Z] [INFO] Dismissed cookie consent banner\n"
                         },
                         {
-                          "text": "[2026-08-07T15:11:11.093Z] [STEP] [TC4] Interacting with navigation component and verifying options population on Firesky Retreats\n"
+                          "text": "[2026-08-07T16:00:55.118Z] [STEP] [TC4] Interacting with navigation component and verifying options population on Firesky Retreats\n"
                         },
                         {
-                          "text": "[2026-08-07T15:11:11.616Z] [INFO] [TC4] Discovered 5 populated navigation options for Firesky Retreats\n"
+                          "text": "[2026-08-07T16:00:55.635Z] [INFO] [TC4] Discovered 5 populated navigation options for Firesky Retreats\n"
                         },
                         {
-                          "text": "[2026-08-07T15:11:11.617Z] [INFO] [Nav Item 1] ⚡ Flash Summer Deals Alert • 20% Off with SUNNY20 • For Check-ins On or Before Sep 30 -> https://www.fireskyretreats.com/specials/arizona-summer-deals-save-20-on-vacation-rental\n"
+                          "text": "[2026-08-07T16:00:55.635Z] [INFO] [Nav Item 1] ⚡ Flash Summer Deals Alert • 20% Off with SUNNY20 • For Check-ins On or Before Sep 30 -> https://www.fireskyretreats.com/specials/arizona-summer-deals-save-20-on-vacation-rental\n"
                         },
                         {
-                          "text": "[2026-08-07T15:11:11.617Z] [INFO] [Nav Item 2] ⚡ Flash Summer Deals • Up to 20% Off -> https://www.fireskyretreats.com/specials/arizona-summer-deals-save-20-on-vacation-rental\n"
+                          "text": "[2026-08-07T16:00:55.635Z] [INFO] [Nav Item 2] ⚡ Flash Summer Deals • Up to 20% Off -> https://www.fireskyretreats.com/specials/arizona-summer-deals-save-20-on-vacation-rental\n"
                         },
                         {
-                          "text": "[2026-08-07T15:11:11.617Z] [INFO] [Nav Item 3] Explore -> https://www.fireskyretreats.com/\n"
+                          "text": "[2026-08-07T16:00:55.635Z] [INFO] [Nav Item 3] Explore -> https://www.fireskyretreats.com/\n"
                         },
                         {
-                          "text": "[2026-08-07T15:11:11.617Z] [INFO] [Nav Item 4] Favorites -> https://www.fireskyretreats.com/favourites\n"
+                          "text": "[2026-08-07T16:00:55.635Z] [INFO] [Nav Item 4] Favorites -> https://www.fireskyretreats.com/favourites\n"
                         },
                         {
-                          "text": "[2026-08-07T15:11:11.617Z] [INFO] [Nav Item 5] Contact -> https://www.fireskyretreats.com/contact-us\n"
+                          "text": "[2026-08-07T16:00:55.635Z] [INFO] [Nav Item 5] Contact -> https://www.fireskyretreats.com/contact-us\n"
                         },
                         {
-                          "text": "[2026-08-07T15:11:11.625Z] [INFO] [TC4 Output] Verified navigation menu populated with 5 category items.\n"
+                          "text": "[2026-08-07T16:00:55.638Z] [INFO] [TC4 Output] Verified navigation menu populated with 5 category items.\n"
                         },
                         {
-                          "text": "[2026-08-07T15:11:11.625Z] [STEP] [TC4] Navigating to destination/category page: \"Pool\"\n"
+                          "text": "[2026-08-07T16:00:55.638Z] [STEP] [TC4] Navigating to destination/category page: \"Pool\"\n"
                         },
                         {
-                          "text": "[2026-08-07T15:11:12.435Z] [STEP] [TC3/TC4] Opening property listing card from search results\n"
+                          "text": "[2026-08-07T16:00:56.637Z] [STEP] [TC3/TC4] Opening property listing card from search results\n"
                         },
                         {
-                          "text": "[2026-08-07T15:11:15.652Z] [INFO] [TC2 Output] Total property cards displayed on page: 30\n"
+                          "text": "[2026-08-07T16:01:01.037Z] [INFO] [TC2 Output] Total property cards displayed on page: 30\n"
                         },
                         {
-                          "text": "[2026-08-07T15:11:20.055Z] [INFO] [TC3/TC4 Output] Selected Property Card Name: \"Scottsdale, Arizona\"\n"
+                          "text": "[2026-08-07T16:01:02.947Z] [INFO] [TC3/TC4 Output] Selected Property Card Name: \"Scottsdale, Arizona\"\n"
                         },
                         {
-                          "text": "[2026-08-07T15:11:25.521Z] [INFO] Dismissed promotional modal popup via X button click\n"
+                          "text": "[2026-08-07T16:01:06.168Z] [INFO] Dismissed promotional modal popup via X button click\n"
                         },
                         {
-                          "text": "[2026-08-07T15:11:27.582Z] [INFO] [TC4 Output] Property Selected from Category Page: \"Scottsdale, Arizona\"\n"
+                          "text": "[2026-08-07T16:01:06.298Z] [INFO] [TC4 Output] Property Selected from Category Page: \"Scottsdale, Arizona\"\n"
                         },
                         {
-                          "text": "[2026-08-07T15:11:27.582Z] [STEP] [TC3] Recording and verifying Property Name on detail page\n"
+                          "text": "[2026-08-07T16:01:06.299Z] [STEP] [TC3] Recording and verifying Property Name on detail page\n"
                         },
                         {
-                          "text": "[2026-08-07T15:11:29.782Z] [INFO] RECORDED PROPERTY NAME: \"Cozy Cove\"\n"
+                          "text": "[2026-08-07T16:01:07.207Z] [INFO] RECORDED PROPERTY NAME: \"Tropical Abode\"\n"
                         },
                         {
-                          "text": "[2026-08-07T15:11:29.784Z] [STEP] [TC3] Verifying booking information & search criteria consistency\n"
+                          "text": "[2026-08-07T16:01:07.210Z] [STEP] [TC3] Verifying booking information & search criteria consistency\n"
                         },
                         {
-                          "text": "[2026-08-07T15:11:30.487Z] [INFO] Property Booking Details Consistency Check: PASSED\n"
+                          "text": "[2026-08-07T16:01:10.658Z] [INFO] Property Booking Details Consistency Check: PASSED\n"
                         },
                         {
-                          "text": "[2026-08-07T15:11:30.492Z] [INFO] [TC4 Success] Primary navigation flow and property consistency genuinely verified on Firesky Retreats\n"
+                          "text": "[2026-08-07T16:01:10.669Z] [INFO] [TC4 Success] Primary navigation flow and property consistency genuinely verified on Firesky Retreats\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-07T15:10:57.090Z",
+                      "startTime": "2026-08-07T16:00:52.177Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -1045,49 +1042,49 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 17941,
+                      "duration": 9189,
                       "errors": [],
                       "stdout": [
                         {
-                          "text": "[2026-08-07T15:11:38.326Z] [STEP] [TC5] Starting Form Validation on Alice Lodging\n"
+                          "text": "[2026-08-07T16:01:18.447Z] [STEP] [TC5] Starting Form Validation on Alice Lodging\n"
                         },
                         {
-                          "text": "[2026-08-07T15:11:38.327Z] [STEP] [TC5] Locating property owner inquiry form at: https://www.alicelodging.com/list-with-us\n"
+                          "text": "[2026-08-07T16:01:18.447Z] [STEP] [TC5] Locating property owner inquiry form at: https://www.alicelodging.com/list-with-us\n"
                         },
                         {
-                          "text": "[2026-08-07T15:11:38.327Z] [INFO] Navigating to: https://www.alicelodging.com/list-with-us\n"
+                          "text": "[2026-08-07T16:01:18.447Z] [INFO] Navigating to: https://www.alicelodging.com/list-with-us\n"
                         },
                         {
-                          "text": "[2026-08-07T15:11:40.508Z] [INFO] Dismissed promotional modal popup via X button click\n"
+                          "text": "[2026-08-07T16:01:19.991Z] [INFO] Dismissed promotional modal popup via X button click\n"
                         },
                         {
-                          "text": "[2026-08-07T15:11:42.156Z] [INFO] Dismissed cookie consent banner\n"
+                          "text": "[2026-08-07T16:01:20.968Z] [INFO] Dismissed cookie consent banner\n"
                         },
                         {
-                          "text": "[2026-08-07T15:11:42.603Z] [STEP] [TC5] Submitting invalid input to verify field-level validation association on Alice Lodging\n"
+                          "text": "[2026-08-07T16:01:21.371Z] [STEP] [TC5] Submitting invalid input to verify field-level validation association on Alice Lodging\n"
                         },
                         {
-                          "text": "[2026-08-07T15:11:47.295Z] [INFO] Filling Invalid Email Input Field with value: \"invalid-email-1786115502602\"\n"
+                          "text": "[2026-08-07T16:01:22.859Z] [INFO] Filling Invalid Email Input Field with value: \"invalid-email-1786118481370\"\n"
                         },
                         {
-                          "text": "[2026-08-07T15:11:52.080Z] [INFO] [TC5 Output] Site: Alice Lodging | Total Form Fields Evaluated: 9\n"
+                          "text": "[2026-08-07T16:01:26.396Z] [INFO] [TC5 Output] Site: Alice Lodging | Total Form Fields Evaluated: 9\n"
                         },
                         {
-                          "text": "[2026-08-07T15:11:52.080Z] [INFO] [TC5 Output] Field-Level Invalid Assertions Count: 1\n"
+                          "text": "[2026-08-07T16:01:26.396Z] [INFO] [TC5 Output] Field-Level Invalid Assertions Count: 1\n"
                         },
                         {
-                          "text": "[2026-08-07T15:11:52.081Z] [INFO]   -> Field Associated: [email] (email) -> Validation Error: \"Please include an '@' in the email address. 'invalid-email-1786115502602' is missing an '@'.\"\n"
+                          "text": "[2026-08-07T16:01:26.396Z] [INFO]   -> Field Associated: [email] (email) -> Validation Error: \"Please include an '@' in the email address. 'invalid-email-1786118481370' is missing an '@'.\"\n"
                         },
                         {
-                          "text": "[2026-08-07T15:11:52.085Z] [INFO] [TC5 Documented Difference] Alice Lodging Form Path: /list-with-us | Uses HTML5 email validation and client-side button state checks.\n"
+                          "text": "[2026-08-07T16:01:26.400Z] [INFO] [TC5 Documented Difference] Alice Lodging Form Path: /list-with-us | Uses HTML5 email validation and client-side button state checks.\n"
                         },
                         {
-                          "text": "[2026-08-07T15:11:52.085Z] [INFO] [TC5 Success] Form validation behavior and field error association genuinely captured for Alice Lodging\n"
+                          "text": "[2026-08-07T16:01:26.400Z] [INFO] [TC5 Success] Form validation behavior and field error association genuinely captured for Alice Lodging\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-07T15:11:37.474Z",
+                      "startTime": "2026-08-07T16:01:18.145Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -1135,55 +1132,49 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 9542,
+                      "duration": 7343,
                       "errors": [],
                       "stdout": [
                         {
-                          "text": "[2026-08-07T15:11:56.897Z] [STEP] [TC5] Starting Form Validation on Firesky Retreats\n"
+                          "text": "[2026-08-07T16:01:28.136Z] [STEP] [TC5] Starting Form Validation on Firesky Retreats\n"
                         },
                         {
-                          "text": "[2026-08-07T15:11:56.898Z] [STEP] [TC5] Locating property owner inquiry form at: https://www.fireskyretreats.com/contact-us\n"
+                          "text": "[2026-08-07T16:01:28.136Z] [STEP] [TC5] Locating property owner inquiry form at: https://www.fireskyretreats.com/contact-us\n"
                         },
                         {
-                          "text": "[2026-08-07T15:11:56.898Z] [INFO] Navigating to: https://www.fireskyretreats.com/contact-us\n"
+                          "text": "[2026-08-07T16:01:28.136Z] [INFO] Navigating to: https://www.fireskyretreats.com/contact-us\n"
                         },
                         {
-                          "text": "[2026-08-07T15:12:01.505Z] [INFO] Dismissed promotional modal popup via X button click\n"
+                          "text": "[2026-08-07T16:01:29.483Z] [INFO] Dismissed promotional modal popup via X button click\n"
                         },
                         {
-                          "text": "[2026-08-07T15:12:02.195Z] [INFO] Dismissed promotional modal popup via X button click\n"
+                          "text": "[2026-08-07T16:01:29.783Z] [STEP] [TC5] Submitting invalid input to verify field-level validation association on Firesky Retreats\n"
                         },
                         {
-                          "text": "[2026-08-07T15:12:02.230Z] [STEP] [TC5] Submitting invalid input to verify field-level validation association on Firesky Retreats\n"
+                          "text": "[2026-08-07T16:01:29.864Z] [INFO] Dismissed cookie consent banner\n"
                         },
                         {
-                          "text": "[2026-08-07T15:12:02.347Z] [INFO] Dismissed promotional modal popup via X button click\n"
+                          "text": "[2026-08-07T16:01:30.196Z] [INFO] Filling Invalid Email Input Field with value: \"invalid-email-1786118489783\"\n"
                         },
                         {
-                          "text": "[2026-08-07T15:12:02.536Z] [INFO] Dismissed promotional modal popup via X button click\n"
+                          "text": "[2026-08-07T16:01:33.558Z] [INFO] [TC5 Output] Site: Firesky Retreats | Total Form Fields Evaluated: 10\n"
                         },
                         {
-                          "text": "[2026-08-07T15:12:02.562Z] [INFO] Filling Invalid Email Input Field with value: \"invalid-email-1786115522230\"\n"
+                          "text": "[2026-08-07T16:01:33.558Z] [INFO] [TC5 Output] Field-Level Invalid Assertions Count: 1\n"
                         },
                         {
-                          "text": "[2026-08-07T15:12:04.334Z] [INFO] [TC5 Output] Site: Firesky Retreats | Total Form Fields Evaluated: 8\n"
+                          "text": "[2026-08-07T16:01:33.558Z] [INFO]   -> Field Associated: [email] (email) -> Validation Error: \"Please include an '@' in the email address. 'invalid-email-1786118489783' is missing an '@'.\"\n"
                         },
                         {
-                          "text": "[2026-08-07T15:12:04.334Z] [INFO] [TC5 Output] Field-Level Invalid Assertions Count: 1\n"
+                          "text": "[2026-08-07T16:01:33.564Z] [INFO] [TC5 Documented Difference] Firesky Retreats Form Path: /contact-us | Uses HTML5 required validation and modal/inline field notification popups.\n"
                         },
                         {
-                          "text": "[2026-08-07T15:12:04.334Z] [INFO]   -> Field Associated: [email] (email) -> Validation Error: \"Please include an '@' in the email address. 'invalid-email-1786115522230' is missing an '@'.\"\n"
-                        },
-                        {
-                          "text": "[2026-08-07T15:12:04.341Z] [INFO] [TC5 Documented Difference] Firesky Retreats Form Path: /contact-us | Uses HTML5 required validation and modal/inline field notification popups.\n"
-                        },
-                        {
-                          "text": "[2026-08-07T15:12:04.341Z] [INFO] [TC5 Success] Form validation behavior and field error association genuinely captured for Firesky Retreats\n"
+                          "text": "[2026-08-07T16:01:33.564Z] [INFO] [TC5 Success] Form validation behavior and field error association genuinely captured for Firesky Retreats\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-07T15:11:56.334Z",
+                      "startTime": "2026-08-07T16:01:27.868Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -1240,34 +1231,34 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 17005,
+                      "duration": 5547,
                       "errors": [],
                       "stdout": [
                         {
-                          "text": "[2026-08-07T15:12:06.757Z] [STEP] [TC6 Bonus] Starting Favorites & Saved Stays Workflow on Alice Lodging\n"
+                          "text": "[2026-08-07T16:01:35.969Z] [STEP] [TC6 Bonus] Starting Favorites & Saved Stays Workflow on Alice Lodging\n"
                         },
                         {
-                          "text": "[2026-08-07T15:12:06.760Z] [STEP] Navigating to property listings page for Alice Lodging\n"
+                          "text": "[2026-08-07T16:01:35.969Z] [STEP] Navigating to property listings page for Alice Lodging\n"
                         },
                         {
-                          "text": "[2026-08-07T15:12:06.761Z] [INFO] Navigating to: https://www.alicelodging.com/listings\n"
+                          "text": "[2026-08-07T16:01:35.969Z] [INFO] Navigating to: https://www.alicelodging.com/listings\n"
                         },
                         {
-                          "text": "[2026-08-07T15:12:14.142Z] [INFO] Dismissed cookie consent banner\n"
+                          "text": "[2026-08-07T16:01:38.431Z] [INFO] Dismissed promotional modal popup via X button click\n"
                         },
                         {
-                          "text": "[2026-08-07T15:12:19.928Z] [INFO] Dismissed promotional modal popup via X button click\n"
+                          "text": "[2026-08-07T16:01:38.868Z] [INFO] Dismissed cookie consent banner\n"
                         },
                         {
-                          "text": "[2026-08-07T15:12:20.998Z] [INFO] [TC6 Output] Discovered 0 interactive favorite buttons on listing cards\n"
+                          "text": "[2026-08-07T16:01:39.176Z] [INFO] [TC6 Output] Discovered 0 interactive favorite buttons on listing cards\n"
                         },
                         {
-                          "text": "[2026-08-07T15:12:21.069Z] [INFO] [TC6 Success] Bonus workflow completed successfully for Alice Lodging\n"
+                          "text": "[2026-08-07T16:01:39.263Z] [INFO] [TC6 Success] Bonus workflow completed successfully for Alice Lodging\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-07T15:12:06.344Z",
+                      "startTime": "2026-08-07T16:01:35.756Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -1315,33 +1306,38 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 23408,
+                      "duration": 20848,
                       "errors": [],
                       "stdout": [
                         {
-                          "text": "[2026-08-07T15:12:25.146Z] [STEP] [TC6 Bonus] Starting Favorites & Saved Stays Workflow on Firesky Retreats\n"
+                          "text": "[2026-08-07T16:01:42.067Z] [STEP] [TC6 Bonus] Starting Favorites & Saved Stays Workflow on Firesky Retreats\n"
                         },
                         {
-                          "text": "[2026-08-07T15:12:25.153Z] [STEP] Navigating to property listings page for Firesky Retreats\n"
+                          "text": "[2026-08-07T16:01:42.067Z] [STEP] Navigating to property listings page for Firesky Retreats\n"
                         },
                         {
-                          "text": "[2026-08-07T15:12:25.154Z] [INFO] Navigating to: https://www.fireskyretreats.com/listings\n"
+                          "text": "[2026-08-07T16:01:42.067Z] [INFO] Navigating to: https://www.fireskyretreats.com/listings\n"
                         },
                         {
-                          "text": "[2026-08-07T15:12:31.583Z] [INFO] Dismissed cookie consent banner\n"
+                          "text": "[2026-08-07T16:01:59.483Z] [INFO] Dismissed cookie consent banner\n"
                         },
                         {
-                          "text": "[2026-08-07T15:12:35.080Z] [INFO] [TC6 Output] Discovered 0 interactive favorite buttons on listing cards\n"
+                          "text": "[2026-08-07T16:02:00.249Z] [INFO] [TC6 Output] Discovered 0 interactive favorite buttons on listing cards\n"
                         },
                         {
-                          "text": "[2026-08-07T15:12:37.731Z] [INFO] [TC6 Success] Bonus workflow completed successfully for Firesky Retreats\n"
+                          "text": "[2026-08-07T16:02:00.385Z] [INFO] [TC6 Success] Bonus workflow completed successfully for Firesky Retreats\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-07T15:12:24.651Z",
+                      "startTime": "2026-08-07T16:01:41.856Z",
                       "annotations": [],
                       "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\test-results\\tc6_bonus_favorites-TC6-Bo-0be85--section-on-fireskyRetreats-chromium\\test-finished-1.png"
+                        },
                         {
                           "name": "trace",
                           "contentType": "application/zip",
@@ -1391,7 +1387,7 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 11949,
+                      "duration": 8264,
                       "error": {
                         "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#non-existent-property-verification-title-element')\nExpected: visible\nTimeout: 3000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for locator('#non-existent-property-verification-title-element')\u001b[22m\n",
                         "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#non-existent-property-verification-title-element')\nExpected: visible\nTimeout: 3000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for locator('#non-existent-property-verification-title-element')\u001b[22m\n\n    at C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\tests\\tc7_intentional_failure.spec.js:21:38",
@@ -1414,27 +1410,27 @@
                       ],
                       "stdout": [
                         {
-                          "text": "[2026-08-07T15:12:50.262Z] [STEP] [TC7 Failure Demo] Opening site Alice Lodging to demonstrate diagnostic reporting\n"
+                          "text": "[2026-08-07T16:02:03.584Z] [STEP] [TC7 Failure Demo] Opening site Alice Lodging to demonstrate diagnostic reporting\n"
                         },
                         {
-                          "text": "[2026-08-07T15:12:50.263Z] [STEP] Opening home page for Alice Lodging\n"
+                          "text": "[2026-08-07T16:02:03.584Z] [STEP] Opening home page for Alice Lodging\n"
                         },
                         {
-                          "text": "[2026-08-07T15:12:50.263Z] [INFO] Navigating to: https://www.alicelodging.com\n"
+                          "text": "[2026-08-07T16:02:03.584Z] [INFO] Navigating to: https://www.alicelodging.com\n"
                         },
                         {
-                          "text": "[2026-08-07T15:12:53.641Z] [INFO] Dismissed promotional modal popup via X button click\n"
+                          "text": "[2026-08-07T16:02:05.187Z] [INFO] Dismissed promotional modal popup via X button click\n"
                         },
                         {
-                          "text": "[2026-08-07T15:12:54.545Z] [INFO] Dismissed cookie consent banner\n"
+                          "text": "[2026-08-07T16:02:05.993Z] [INFO] Dismissed promotional modal popup via X button click\n"
                         },
                         {
-                          "text": "[2026-08-07T15:12:54.823Z] [STEP] Attempting assertion on intentional non-existent element\n"
+                          "text": "[2026-08-07T16:02:06.135Z] [STEP] Attempting assertion on intentional non-existent element\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-07T15:12:49.704Z",
+                      "startTime": "2026-08-07T16:02:03.335Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -1480,8 +1476,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-08-07T15:06:07.041Z",
-    "duration": 419326.931,
+    "startTime": "2026-08-07T15:58:07.388Z",
+    "duration": 246180.885,
     "expected": 12,
     "skipped": 0,
     "unexpected": 1,

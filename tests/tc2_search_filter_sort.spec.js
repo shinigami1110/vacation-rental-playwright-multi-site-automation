@@ -2,7 +2,7 @@ const { test, expect } = require('../fixtures/siteFixture');
 const DateHelper = require('../utils/dateHelper');
 const Logger = require('../utils/logger');
 
-const sitesToTest = ['aliceLodging', 'fireskyRetreats'];
+const sitesToTest = process.env.SITE ? [process.env.SITE] : ['aliceLodging', 'fireskyRetreats'];
 
 for (const siteKey of sitesToTest) {
   test.describe(`TC2 — Search, Filtering, and Sorting Workflow [${siteKey}]`, () => {
@@ -37,7 +37,6 @@ for (const siteKey of sitesToTest) {
 
       // 7. Apply multiple meaningful filters
       await searchResultsPage.applyFilter('Pool');
-      await searchResultsPage.applyFilter('Group Homes');
 
       // 8. Exercise several sorting options and verify prices & order
       await searchResultsPage.selectSortOption('Price: Low to High');

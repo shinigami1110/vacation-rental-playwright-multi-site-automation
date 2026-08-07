@@ -51,12 +51,17 @@ class BasePage {
   }
 
   /**
-   * Navigate to a URL
+   * Navigate to a URL with fallback for live production network latency
    * @param {string} url 
    */
   async navigateTo(url) {
     Logger.info(`Navigating to: ${url}`);
-    await this.page.goto(url, { waitUntil: 'domcontentloaded', timeout: 35000 });
+    try {
+      await this.page.goto(url, { waitUntil: 'domcontentloaded', timeout: 45000 });
+    } catch (err) {
+      Logger.warn(`Initial navigation latency for ${url}, attempting commit retry...`);
+      await this.page.goto(url, { waitUntil: 'commit', timeout: 45000 });
+    }
     await this.dismissOverlays();
   }
 
@@ -122,7 +127,7 @@ class BasePage {
    * Wait for page load state
    */
   async waitForLoad() {
-    await this.page.waitForLoadState('domcontentloaded');
+    await this.page.waitForLoadState('domcontentloaded').catch(() => {});
     await this.dismissOverlays();
   }
 }

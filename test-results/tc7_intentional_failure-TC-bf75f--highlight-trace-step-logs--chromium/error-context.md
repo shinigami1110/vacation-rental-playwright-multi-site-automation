@@ -117,9 +117,11 @@ Call log:
   - img "HEAD ON OVER CHAISE."
 - text: Average $661 per night includes all fees Aug 08 – Aug 11
 - button "Click to add unit to Favourites"
-- img "Loading beds"
+- img "beds":
+  - img
 - text: "4"
-- img "Loading shower"
+- img "shower":
+  - img
 - text: 4 8
 - img "Pet Friendly"
 - text: Pet Friendly
@@ -138,9 +140,11 @@ Call log:
   - img "Desert Dream- Alice Lodging"
 - text: Average $617 per night includes all fees Aug 09 – Aug 12
 - button "Click to add unit to Favourites"
-- img "Loading beds"
+- img "beds":
+  - img
 - text: "2"
-- img "Loading shower"
+- img "shower":
+  - img
 - text: 2 4
 - link "Desert Dream":
   - /url: /listings/6924de9447db180013b45623
@@ -381,6 +385,12 @@ Call log:
   - link "Flow One":
     - /url: https://flow.one/
   - img "Flow One Logo"
+- paragraph:
+  - text: By continuing to use this website, you agree to use of cookies in accordance with our
+  - link "Privacy Policy":
+    - /url: /privacy-policy
+  - text: . By exiting this window, default cookies will be accepted. To change your preferences, Click Here.
+- button "Accept"
 - alert
 ```
 

@@ -1,7 +1,7 @@
 const { test, expect } = require('../fixtures/siteFixture');
 const Logger = require('../utils/logger');
 
-const sitesToTest = ['aliceLodging', 'fireskyRetreats'];
+const sitesToTest = process.env.SITE ? [process.env.SITE] : ['aliceLodging', 'fireskyRetreats'];
 
 for (const siteKey of sitesToTest) {
   test.describe(`TC4 — Navigation Validation [${siteKey}]`, () => {

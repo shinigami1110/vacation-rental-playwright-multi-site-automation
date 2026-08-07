@@ -2,7 +2,7 @@ const { test, expect } = require('../fixtures/siteFixture');
 const DataGenerator = require('../utils/dataGenerator');
 const Logger = require('../utils/logger');
 
-const sitesToTest = ['aliceLodging', 'fireskyRetreats'];
+const sitesToTest = process.env.SITE ? [process.env.SITE] : ['aliceLodging', 'fireskyRetreats'];
 
 for (const siteKey of sitesToTest) {
   test.describe(`TC5 — Form Validation Workflow [${siteKey}]`, () => {
