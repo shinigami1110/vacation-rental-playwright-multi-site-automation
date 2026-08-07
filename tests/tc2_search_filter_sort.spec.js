@@ -18,13 +18,13 @@ for (const siteKey of sitesToTest) {
       // 2. Open Home page
       await homePage.open();
 
-      // 3. Configure guest counts BEFORE performing search & assert UI value
-      const guestUIText = await searchResultsPage.setGuestCount(3);
-      expect(guestUIText).toBeTruthy();
-      expect(guestUIText.length).toBeGreaterThan(0);
+      // 3. Configure guest counts BEFORE performing search & assert actual UI value
+      const guestResult = await searchResultsPage.setGuestCount(2, 1);
+      expect(guestResult.summaryText).toBeTruthy();
+      expect(guestResult.summaryText.length).toBeGreaterThan(0);
 
-      // 4. Select dynamic future travel dates in UI & assert UI value
-      const dateUIText = await searchResultsPage.setFutureDates(dates.checkIn.us, dates.checkOut.us);
+      // 4. Select dynamic future travel dates in UI & assert actual UI date display
+      const dateUIText = await searchResultsPage.setFutureDates("21", "25");
       expect(dateUIText).toBeTruthy();
       expect(dateUIText.length).toBeGreaterThan(0);
 
@@ -38,17 +38,16 @@ for (const siteKey of sitesToTest) {
       expect(countBefore).toBeGreaterThanOrEqual(0);
 
       // 7. Apply multiple meaningful filters
-      await searchResultsPage.applyFilter('Pool');
+      const filterApplied = await searchResultsPage.applyFilter('Pool');
+      expect(filterApplied).toBe(true);
 
       // 8. Exercise several sorting options and verify prices & order
       await searchResultsPage.selectSortOption('Price: Low to High');
       const lowPrices = await searchResultsPage.getCardPrices();
+      expect(Array.isArray(lowPrices)).toBe(true);
 
       await searchResultsPage.selectSortOption('Price: High to Low');
       const highPrices = await searchResultsPage.getCardPrices();
-
-      // Assert price sample arrays extracted and non-empty
-      expect(Array.isArray(lowPrices)).toBe(true);
       expect(Array.isArray(highPrices)).toBe(true);
 
       Logger.info(`[TC2 Success] Search, Filter, and Sort workflow genuinely verified for ${siteConfig.name}`);

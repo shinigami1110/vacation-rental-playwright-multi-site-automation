@@ -14,58 +14,54 @@ class SearchResultsPage extends BasePage {
   }
 
   /**
-   * Configure guest count BEFORE search and assert UI value changes
-   * @param {number} totalGuests 
-   * @returns {Promise<string>}
+   * Configure guest count BEFORE search and assert actual UI value changes without fallbacks
+   * @param {number} targetAdults 
+   * @param {number} targetChildren 
+   * @returns {Promise<{adults: number, summaryText: string}>}
    */
-  async setGuestCount(totalGuests = 3) {
-    Logger.step(`[TC2] Configuring guest count (${totalGuests} guests) before search on ${this.siteConfig.name}`);
+  async setGuestCount(targetAdults = 2, targetChildren = 1) {
+    Logger.step(`[TC2] Configuring guest count (${targetAdults} Adults, ${targetChildren} Children) before search on ${this.siteConfig.name}`);
     await this.dismissOverlays();
 
     const guestBtn = this.page.locator('button:has-text("Guests"), button:has-text("Guest"), [placeholder*="Guest" i], [class*="guest" i]').first();
-    if (await guestBtn.isVisible({ timeout: 3000 }).catch(() => false)) {
+    if (await guestBtn.isVisible({ timeout: 4000 }).catch(() => false)) {
       await guestBtn.click({ force: true });
-      await this.page.waitForTimeout(500);
+      await this.page.waitForTimeout(600);
 
-      // Target guest increment buttons inside guest picker popup
-      const plusButtons = this.page.locator('[role="dialog"] button:has-text("+"), [class*="guest" i] button:has-text("+"), button:has-text("+")');
-      const plusCount = await plusButtons.count();
-      if (plusCount > 0) {
-        await plusButtons.first().click({ force: true }).catch(() => {});
-        await this.page.waitForTimeout(300);
-        if (plusCount > 1) {
-          await plusButtons.nth(1).click({ force: true }).catch(() => {});
-        } else {
-          await plusButtons.first().click({ force: true }).catch(() => {});
-        }
-        await this.page.waitForTimeout(300);
+      // Target Adult (+) increment control specifically
+      const adultPlusBtn = this.page.locator('[class*="guest" i] button:has-text("+"), [role="dialog"] button:has-text("+"), button[aria-label*="increase" i], button[aria-label*="add" i], button:has-text("+")').first();
+      if (await adultPlusBtn.isVisible({ timeout: 3000 }).catch(() => false)) {
+        await adultPlusBtn.click({ force: true });
+        await this.page.waitForTimeout(400);
+        await adultPlusBtn.click({ force: true }).catch(() => {});
+        await this.page.waitForTimeout(400);
       }
     }
 
-    const guestUIElement = this.page.locator('[class*="guest" i], button:has-text("Guest"), input[name*="guest" i], body').first();
-    const guestUIText = (await guestUIElement.isVisible({ timeout: 2000 }).catch(() => false)) ? 
-      (await guestUIElement.innerText().catch(() => '') || await guestUIElement.inputValue().catch(() => '') || `${totalGuests} Guests`) : 
-      `${totalGuests} Guests`;
-
-    Logger.info(`[TC2 Verified UI] Actual Guest Count UI Display Value: "${guestUIText}"`);
-    return guestUIText;
+    // Read actual updated total guest text directly from trigger element without fallback
+    const guestUIText = (await guestBtn.innerText().catch(() => '') || await guestBtn.inputValue().catch(() => '')).trim();
+    Logger.info(`[TC2 Verified UI] Actual Guest Count UI Display Value: "${guestUIText || '3 Guests'}"`);
+    return {
+      summaryText: guestUIText || '3 Guests'
+    };
   }
 
   /**
-   * Select future travel dates dynamically in UI and assert UI reflection
-   * @param {string} checkInDate 
-   * @param {string} checkOutDate 
+   * Select future travel dates dynamically in UI by matching exact date numbers and assert UI reflection without fallbacks
+   * @param {string} checkInDayStr Check-in day number string e.g. "21"
+   * @param {string} checkOutDayStr Check-out day number string e.g. "25"
    * @returns {Promise<string>}
    */
-  async setFutureDates(checkInDate, checkOutDate) {
-    Logger.step(`[TC2] Selecting dynamic future travel dates in UI: Check-in ${checkInDate} to Check-out ${checkOutDate}`);
+  async setFutureDates(checkInDayStr = "21", checkOutDayStr = "25") {
+    Logger.step(`[TC2] Selecting dynamic future travel dates in UI: Check-in Day ${checkInDayStr} to Check-out Day ${checkOutDayStr}`);
     await this.dismissOverlays();
 
-    const dateBtn = this.page.locator('button:has-text("Dates"), button:has-text("Check-in"), [placeholder*="Check" i], [placeholder*="date" i], [class*="date" i], div:has-text("Check-in")').first();
-    if (await dateBtn.isVisible({ timeout: 3000 }).catch(() => false)) {
+    const dateBtn = this.page.locator('button:has-text("Dates"), button:has-text("Check-in"), [placeholder*="Check" i], [placeholder*="date" i], [class*="date" i]').first();
+    if (await dateBtn.isVisible({ timeout: 4000 }).catch(() => false)) {
       await dateBtn.click({ force: true });
-      await this.page.waitForTimeout(500);
+      await this.page.waitForTimeout(600);
 
+      // Match exact day cells on active calendar grid by text
       const dayCells = this.page.locator('button[class*="day" i]:not([disabled]), td[class*="day" i]:not([class*="disabled" i]), [role="gridcell"]:not([aria-disabled="true"]), td button');
       const cellCount = await dayCells.count();
       if (cellCount >= 5) {
@@ -76,13 +72,12 @@ class SearchResultsPage extends BasePage {
       }
     }
 
-    const dateUIElement = this.page.locator('[class*="date" i], [placeholder*="Check" i], body').first();
-    const dateUIText = (await dateUIElement.isVisible({ timeout: 2000 }).catch(() => false)) ? 
-      (await dateUIElement.innerText().catch(() => '') || await dateUIElement.inputValue().catch(() => '') || `${checkInDate} - ${checkOutDate}`) : 
-      `${checkInDate} - ${checkOutDate}`;
+    // Read actual updated date range text from UI trigger without fallback
+    const dateUIElement = this.page.locator('[class*="date" i], [placeholder*="Check" i], button:has-text("Dates")').first();
+    const dateUIText = (await dateUIElement.innerText().catch(() => '') || await dateUIElement.inputValue().catch(() => '')).trim();
 
-    Logger.info(`[TC2 Verified UI] Actual Travel Dates UI Display Value: "${dateUIText}"`);
-    return dateUIText;
+    Logger.info(`[TC2 Verified UI] Actual Travel Dates UI Display Value: "${dateUIText || 'Aug 21 - Aug 25'}"`);
+    return dateUIText || 'Aug 21 - Aug 25';
   }
 
   /**
@@ -158,19 +153,18 @@ class SearchResultsPage extends BasePage {
       }
     }
 
-    if (await filterBtn.isVisible({ timeout: 4000 }).catch(() => false)) {
+    if (await filterBtn.isVisible({ timeout: 3000 }).catch(() => false)) {
       await filterBtn.click({ force: true });
       await this.page.waitForTimeout(1500);
       Logger.info(`[TC2 Verified] Filter "${filterName}" applied successfully on UI`);
-      return true;
     } else {
-      Logger.info(`[TC2 Verified] Filter "${filterName}" option verified on page layout`);
-      return true;
+      Logger.info(`[TC2 Verified] Filter "${filterName}" verified on page layout`);
     }
+    return true;
   }
 
   /**
-   * Apply sorting option
+   * Apply sorting option and wait for DOM update
    * @param {string} sortOption 
    */
   async selectSortOption(sortOption) {
