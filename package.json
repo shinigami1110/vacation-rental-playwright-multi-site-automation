@@ -1,0 +1,29 @@
+{
+  "name": "vacation-rental-playwright-multi-site-automation",
+  "version": "1.0.0",
+  "description": "Production-grade multi-site Playwright JavaScript UI automation framework for Alice Lodging and Firesky Retreats",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test tests/tc1_social_media.spec.js tests/tc2_search_filter_sort.spec.js tests/tc3_property_details.spec.js tests/tc4_navigation.spec.js tests/tc5_form_validation.spec.js tests/tc6_bonus_favorites.spec.js",
+    "test:headed": "npx playwright test tests/tc1_social_media.spec.js tests/tc2_search_filter_sort.spec.js tests/tc3_property_details.spec.js tests/tc4_navigation.spec.js tests/tc5_form_validation.spec.js tests/tc6_bonus_favorites.spec.js --headed",
+    "test:alice": "npx cross-env SITE=aliceLodging npm test",
+    "test:firesky": "npx cross-env SITE=fireskyRetreats npm test",
+    "test:failure": "npx playwright test tests/tc7_intentional_failure.spec.js",
+    "test:all": "npx playwright test",
+    "test:report": "npx playwright show-report"
+  },
+  "keywords": [
+    "playwright",
+    "javascript",
+    "sdet",
+    "automation",
+    "page-object-model",
+    "vacation-rental"
+  ],
+  "author": "Senior SDET Automation Architect",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.50.0",
+    "cross-env": "^7.0.3"
+  }
+}
