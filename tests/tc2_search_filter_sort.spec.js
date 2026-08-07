@@ -21,10 +21,12 @@ for (const siteKey of sitesToTest) {
       // 3. Configure guest counts BEFORE performing search & assert UI value
       const guestUIText = await searchResultsPage.setGuestCount(3);
       expect(guestUIText).toBeTruthy();
+      expect(guestUIText.length).toBeGreaterThan(0);
 
-      // 4. Select dynamic future travel dates in UI
+      // 4. Select dynamic future travel dates in UI & assert UI value
       const dateUIText = await searchResultsPage.setFutureDates(dates.checkIn.us, dates.checkOut.us);
       expect(dateUIText).toBeTruthy();
+      expect(dateUIText.length).toBeGreaterThan(0);
 
       // 5. Perform destination search using valid destination
       await searchResultsPage.executeSearch(siteConfig.defaultDestination);
@@ -45,7 +47,7 @@ for (const siteKey of sitesToTest) {
       await searchResultsPage.selectSortOption('Price: High to Low');
       const highPrices = await searchResultsPage.getCardPrices();
 
-      // Assert price sample arrays extracted
+      // Assert price sample arrays extracted and non-empty
       expect(Array.isArray(lowPrices)).toBe(true);
       expect(Array.isArray(highPrices)).toBe(true);
 

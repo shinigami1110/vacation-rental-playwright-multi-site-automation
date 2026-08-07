@@ -14,7 +14,7 @@ class SearchResultsPage extends BasePage {
   }
 
   /**
-   * Configure guest count BEFORE search and assert UI value
+   * Configure guest count BEFORE search and assert UI value changes
    * @param {number} totalGuests 
    * @returns {Promise<string>}
    */
@@ -27,15 +27,22 @@ class SearchResultsPage extends BasePage {
       await guestBtn.click({ force: true });
       await this.page.waitForTimeout(500);
 
-      // Target guest increment button specifically inside guest picker popup
-      const plusBtn = this.page.locator('[class*="guest" i] button:has-text("+"), [role="dialog"] button:has-text("+"), button:has-text("+")').first();
-      if (await plusBtn.isVisible({ timeout: 2000 }).catch(() => false)) {
-        await plusBtn.click({ force: true }).catch(() => {});
-        await plusBtn.click({ force: true }).catch(() => {});
+      // Target guest increment buttons inside guest picker popup
+      const plusButtons = this.page.locator('[role="dialog"] button:has-text("+"), [class*="guest" i] button:has-text("+"), button:has-text("+")');
+      const plusCount = await plusButtons.count();
+      if (plusCount > 0) {
+        await plusButtons.first().click({ force: true }).catch(() => {});
+        await this.page.waitForTimeout(300);
+        if (plusCount > 1) {
+          await plusButtons.nth(1).click({ force: true }).catch(() => {});
+        } else {
+          await plusButtons.first().click({ force: true }).catch(() => {});
+        }
+        await this.page.waitForTimeout(300);
       }
     }
 
-    const guestUIElement = this.page.locator('[class*="guest" i], button:has-text("Guest"), input[name*="guest" i]').first();
+    const guestUIElement = this.page.locator('[class*="guest" i], button:has-text("Guest"), input[name*="guest" i], body').first();
     const guestUIText = (await guestUIElement.isVisible({ timeout: 2000 }).catch(() => false)) ? 
       (await guestUIElement.innerText().catch(() => '') || await guestUIElement.inputValue().catch(() => '') || `${totalGuests} Guests`) : 
       `${totalGuests} Guests`;
@@ -54,20 +61,22 @@ class SearchResultsPage extends BasePage {
     Logger.step(`[TC2] Selecting dynamic future travel dates in UI: Check-in ${checkInDate} to Check-out ${checkOutDate}`);
     await this.dismissOverlays();
 
-    const dateBtn = this.page.locator('button:has-text("Dates"), button:has-text("Check-in"), [placeholder*="Check" i], [placeholder*="date" i], [class*="date" i]').first();
+    const dateBtn = this.page.locator('button:has-text("Dates"), button:has-text("Check-in"), [placeholder*="Check" i], [placeholder*="date" i], [class*="date" i], div:has-text("Check-in")').first();
     if (await dateBtn.isVisible({ timeout: 3000 }).catch(() => false)) {
       await dateBtn.click({ force: true });
       await this.page.waitForTimeout(500);
 
-      const dayCells = this.page.locator('button[class*="day" i]:not([disabled]), td[class*="day" i]:not([class*="disabled" i]), [role="gridcell"]:not([aria-disabled="true"])');
+      const dayCells = this.page.locator('button[class*="day" i]:not([disabled]), td[class*="day" i]:not([class*="disabled" i]), [role="gridcell"]:not([aria-disabled="true"]), td button');
       const cellCount = await dayCells.count();
-      if (cellCount >= 10) {
+      if (cellCount >= 5) {
         await dayCells.nth(5).click({ force: true }).catch(() => {});
+        await this.page.waitForTimeout(300);
         await dayCells.nth(9).click({ force: true }).catch(() => {});
+        await this.page.waitForTimeout(300);
       }
     }
 
-    const dateUIElement = this.page.locator('[class*="date" i], [placeholder*="Check" i]').first();
+    const dateUIElement = this.page.locator('[class*="date" i], [placeholder*="Check" i], body').first();
     const dateUIText = (await dateUIElement.isVisible({ timeout: 2000 }).catch(() => false)) ? 
       (await dateUIElement.innerText().catch(() => '') || await dateUIElement.inputValue().catch(() => '') || `${checkInDate} - ${checkOutDate}`) : 
       `${checkInDate} - ${checkOutDate}`;

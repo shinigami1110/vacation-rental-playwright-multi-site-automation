@@ -385,12 +385,6 @@ Call log:
   - link "Flow One":
     - /url: https://flow.one/
   - img "Flow One Logo"
-- paragraph:
-  - text: By continuing to use this website, you agree to use of cookies in accordance with our
-  - link "Privacy Policy":
-    - /url: /privacy-policy
-  - text: . By exiting this window, default cookies will be accepted. To change your preferences, Click Here.
-- button "Accept"
 - alert
 ```
 
