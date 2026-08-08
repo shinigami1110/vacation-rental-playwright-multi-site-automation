@@ -32,12 +32,7 @@ const test = baseTest.extend({
           if (text.includes('SUMMER') || text.includes('OFF') || text.includes('20%') ||
               text.includes('SPECIAL') || text.includes('coupon') || text.includes('discount') ||
               text.includes('SUBSCRIBE') || text.includes('newsletter')) {
-            const closeBtn = p.querySelector('button[aria-label*="close" i], button[aria-label*="Close"]');
-            if (closeBtn) {
-              closeBtn.click();
-            } else {
-              p.style.display = 'none';
-            }
+            p.style.display = 'none';
           }
         });
       });

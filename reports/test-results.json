@@ -4,12 +4,10 @@
       "C:\\Program Files\\nodejs\\node.exe",
       "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\node_modules\\@playwright\\test\\cli.js",
       "test",
-      "tests/tc1_social_media.spec.js",
       "tests/tc2_search_filter_sort.spec.js",
-      "tests/tc3_property_details.spec.js",
-      "tests/tc4_navigation.spec.js",
-      "tests/tc5_form_validation.spec.js",
-      "tests/tc6_bonus_favorites.spec.js"
+      "--headed",
+      "-g",
+      "aliceLodging"
     ],
     "configFile": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\playwright.config.js",
     "rootDir": "C:/Users/ASUS/.gemini/antigravity-ide/scratch/vacation-rental-playwright-multi-site-automation/tests",
@@ -78,183 +76,6 @@
   },
   "suites": [
     {
-      "title": "tc1_social_media.spec.js",
-      "file": "tc1_social_media.spec.js",
-      "column": 0,
-      "line": 0,
-      "specs": [],
-      "suites": [
-        {
-          "title": "TC1 — Social Media Links Validation [aliceLodging]",
-          "file": "tc1_social_media.spec.js",
-          "line": 7,
-          "column": 8,
-          "specs": [
-            {
-              "title": "Verify dynamic discovery, destination URL recording, and social platform domain assertions on aliceLodging",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 90000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 12717,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "[2026-08-07T17:15:07.073Z] [STEP] [TC1] Starting Social Media Links Validation on Alice Lodging\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:15:07.074Z] [STEP] Opening home page for Alice Lodging\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:15:07.074Z] [INFO] Navigating to: https://www.alicelodging.com\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:15:10.185Z] [INFO] Dismissed promotional modal popup via X button click\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:15:11.038Z] [INFO] Dismissed cookie consent banner\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:15:11.282Z] [STEP] [TC1] Dynamically discovering footer social media links on Alice Lodging\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:15:14.994Z] [INFO] [TC1 Output] Discovered 3 dynamic social media links for Alice Lodging\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:15:14.997Z] [INFO] [Social Link 1] Platform: FACEBOOK -> Destination: https://www.facebook.com/profile.php?id=61579637295109 (Domain: www.facebook.com)\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:15:14.998Z] [INFO] [Social Link 2] Platform: INSTAGRAM -> Destination: https://www.instagram.com/alicelodging/ (Domain: www.instagram.com)\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:15:14.998Z] [INFO] [Social Link 3] Platform: LINKEDIN -> Destination: https://www.linkedin.com/company/alice-lodging (Domain: www.linkedin.com)\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:15:15.038Z] [INFO] [TC1 Verified Destination] Platform: FACEBOOK | URL: https://www.facebook.com/profile.php?id=61579637295109 | Domain: www.facebook.com\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:15:15.048Z] [INFO] [TC1 Verified Destination] Platform: INSTAGRAM | URL: https://www.instagram.com/alicelodging/ | Domain: www.instagram.com\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:15:15.057Z] [INFO] [TC1 Verified Destination] Platform: LINKEDIN | URL: https://www.linkedin.com/company/alice-lodging | Domain: www.linkedin.com\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:15:15.057Z] [INFO] [TC1 Success] Completed dynamic social media validation for Alice Lodging\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-08-07T17:15:05.395Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\test-results\\tc1_social_media-TC1-—-Soc-fd223--assertions-on-aliceLodging-chromium\\test-finished-1.png"
-                        },
-                        {
-                          "name": "trace",
-                          "contentType": "application/zip",
-                          "path": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\test-results\\tc1_social_media-TC1-—-Soc-fd223--assertions-on-aliceLodging-chromium\\trace.zip"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "3ff269b265c19b75fec6-fffecc28f929c1a7d2d0",
-              "file": "tc1_social_media.spec.js",
-              "line": 10,
-              "column": 5
-            }
-          ]
-        },
-        {
-          "title": "TC1 — Social Media Links Validation [fireskyRetreats]",
-          "file": "tc1_social_media.spec.js",
-          "line": 7,
-          "column": 8,
-          "specs": [
-            {
-              "title": "Verify dynamic discovery, destination URL recording, and social platform domain assertions on fireskyRetreats",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 90000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 8004,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "[2026-08-07T17:15:20.374Z] [STEP] [TC1] Starting Social Media Links Validation on Firesky Retreats\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:15:20.374Z] [STEP] Opening home page for Firesky Retreats\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:15:20.374Z] [INFO] Navigating to: https://www.fireskyretreats.com\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:15:25.403Z] [STEP] [TC1] Dynamically discovering footer social media links on Firesky Retreats\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:15:26.753Z] [INFO] [TC1 Output] Discovered 0 dynamic social media links for Firesky Retreats\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:15:26.756Z] [INFO] [TC1 Success] Completed dynamic social media validation for Firesky Retreats\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-08-07T17:15:20.136Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\test-results\\tc1_social_media-TC1-—-Soc-f557a-sertions-on-fireskyRetreats-chromium\\test-finished-1.png"
-                        },
-                        {
-                          "name": "trace",
-                          "contentType": "application/zip",
-                          "path": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\test-results\\tc1_social_media-TC1-—-Soc-f557a-sertions-on-fireskyRetreats-chromium\\trace.zip"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "3ff269b265c19b75fec6-ee0b55bd84f2708bb5e6",
-              "file": "tc1_social_media.spec.js",
-              "line": 10,
-              "column": 5
-            }
-          ]
-        }
-      ]
-    },
-    {
       "title": "tc2_search_filter_sort.spec.js",
       "file": "tc2_search_filter_sort.spec.js",
       "column": 0,
@@ -268,12 +89,12 @@
           "column": 8,
           "specs": [
             {
-              "title": "Verify search, guest count configuration, dynamic future travel dates, multiple filters, and sorting changes on aliceLodging",
-              "ok": true,
+              "title": "Verify search, guest count, date selection, filters, and price sorting on aliceLodging",
+              "ok": false,
               "tags": [],
               "tests": [
                 {
-                  "timeout": 90000,
+                  "timeout": 120000,
                   "annotations": [],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
@@ -282,1088 +103,99 @@
                     {
                       "workerIndex": 0,
                       "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 54076,
-                      "errors": [],
+                      "status": "failed",
+                      "duration": 15314,
+                      "error": {
+                        "message": "Error: [TC2 FAILURE] Guest Child count did not increment via UI. Expected: 1, Got: 0",
+                        "stack": "Error: [TC2 FAILURE] Guest Child count did not increment via UI. Expected: 1, Got: 0\n    at SearchResultsPage.setGuestCount (C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\pages\\SearchResultsPage.js:206:13)\n    at C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\tests\\tc2_search_filter_sort.spec.js:23:27",
+                        "location": {
+                          "file": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\pages\\SearchResultsPage.js",
+                          "column": 13,
+                          "line": 206
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m..\\pages\\SearchResultsPage.js:206\n\n\u001b[0m \u001b[90m 204 |\u001b[39m     }\n \u001b[90m 205 |\u001b[39m     \u001b[36mif\u001b[39m (after\u001b[33m.\u001b[39mchildren \u001b[33m!==\u001b[39m before\u001b[33m.\u001b[39mchildren \u001b[33m+\u001b[39m childrenToAdd) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 206 |\u001b[39m       \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m`[TC2 FAILURE] Guest Child count did not increment via UI. Expected: ${before.children + childrenToAdd}, Got: ${after.children}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 207 |\u001b[39m     }\n \u001b[90m 208 |\u001b[39m\n \u001b[90m 209 |\u001b[39m     \u001b[36mreturn\u001b[39m {\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\pages\\SearchResultsPage.js",
+                            "column": 13,
+                            "line": 206
+                          },
+                          "message": "Error: [TC2 FAILURE] Guest Child count did not increment via UI. Expected: 1, Got: 0\n\n   at ..\\pages\\SearchResultsPage.js:206\n\n  204 |     }\n  205 |     if (after.children !== before.children + childrenToAdd) {\n> 206 |       throw new Error(`[TC2 FAILURE] Guest Child count did not increment via UI. Expected: ${before.children + childrenToAdd}, Got: ${after.children}`);\n      |             ^\n  207 |     }\n  208 |\n  209 |     return {\n    at SearchResultsPage.setGuestCount (C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\pages\\SearchResultsPage.js:206:13)\n    at C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\tests\\tc2_search_filter_sort.spec.js:23:27"
+                        }
+                      ],
                       "stdout": [
                         {
-                          "text": "[2026-08-07T17:15:29.064Z] [STEP] [TC2] Starting Search, Filter, and Sort Workflow on Alice Lodging\n"
+                          "text": "[2026-08-08T11:09:03.034Z] [STEP] [TC2] Starting Search, Filter, Sort Workflow on Alice Lodging\n"
                         },
                         {
-                          "text": "[2026-08-07T17:15:29.193Z] [INFO] [TC2] Dynamic Future Travel Dates Generated: Check-in Aug 21, 2026 | Check-out Aug 25, 2026\n"
+                          "text": "[2026-08-08T11:09:03.091Z] [INFO] [TC2] Dynamic dates: Check-in 2026-08-22 | Check-out 2026-08-26\n"
                         },
                         {
-                          "text": "[2026-08-07T17:15:29.194Z] [STEP] Opening home page for Alice Lodging\n"
+                          "text": "[2026-08-08T11:09:03.092Z] [STEP] Opening home page for Alice Lodging\n"
                         },
                         {
-                          "text": "[2026-08-07T17:15:29.194Z] [INFO] Navigating to: https://www.alicelodging.com\n"
+                          "text": "[2026-08-08T11:09:03.092Z] [INFO] Navigating to: https://www.alicelodging.com\n"
                         },
                         {
-                          "text": "[2026-08-07T17:15:31.414Z] [INFO] Dismissed promotional modal popup via X button click\n"
+                          "text": "[2026-08-08T11:09:04.589Z] [STEP] [TC2] Configuring guest count (+2 Adults, +1 Children) on Alice Lodging\n"
                         },
                         {
-                          "text": "[2026-08-07T17:15:32.165Z] [INFO] Dismissed cookie consent banner\n"
+                          "text": "[2026-08-08T11:09:05.677Z] [INFO] [Guest Picker] Current aria-label: \"Select Guests: 0 Adults 0 Children \"\n"
                         },
                         {
-                          "text": "[2026-08-07T17:15:32.307Z] [STEP] [TC2] Configuring guest count (2 Adults, 1 Children) before search on Alice Lodging\n"
+                          "text": "[2026-08-08T11:09:05.677Z] [INFO] [TC2] BEFORE: Adults=0, Children=0\n"
                         },
                         {
-                          "text": "[2026-08-07T17:15:37.199Z] [INFO] [TC2 Verified UI] Actual Guest Count UI Display Value: \"GUESTS\nWho's in?\"\n"
+                          "text": "[2026-08-08T11:09:08.547Z] [INFO] [TC2] Guest stepper detection: {\"found\":true,\"adultPlus\":{\"x\":1498.5,\"y\":641.5},\"childPlus\":{\"x\":1498.5,\"y\":715.5}}\n"
                         },
                         {
-                          "text": "[2026-08-07T17:15:37.205Z] [STEP] [TC2] Selecting dynamic future travel dates in UI: Check-in Day 21 to Check-out Day 25\n"
+                          "text": "[2026-08-08T11:09:14.093Z] [INFO] [Guest Picker] Current aria-label: \"Select Guests: 2 Adults 0 Children \"\n"
                         },
                         {
-                          "text": "[2026-08-07T17:16:07.993Z] [INFO] [TC2 Verified UI] Actual Travel Dates UI Display Value: \"Aug 21 - Aug 25\"\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:16:07.997Z] [STEP] [TC2] Performing destination search via UI for: \"Palm Springs\"\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:16:08.248Z] [INFO] Filling Destination Search Field with value: \"Palm Springs\"\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:16:11.539Z] [INFO] [TC2 Output] Total property cards displayed on page: 91\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:16:11.598Z] [INFO] [TC2 Output] Property listings count after search: 91\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:16:11.602Z] [STEP] [TC2] Applying filter: \"Pool\"\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:16:13.668Z] [INFO] [TC2 Verified] Filter \"Pool\" applied successfully on UI\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:16:13.672Z] [STEP] [TC2] Selecting sorting option: \"Price: Low to High\"\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:16:14.238Z] [INFO] [TC2 Verified] Sort option \"Price: Low to High\" verified on page\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:16:16.431Z] [INFO] [TC2 Output] Total property cards displayed on page: 26\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:16:16.758Z] [INFO] [TC2 Output] Extracted normalized numeric price sample array: [1380, 661, 375, 250]\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:16:16.760Z] [STEP] [TC2] Selecting sorting option: \"Price: High to Low\"\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:16:16.851Z] [INFO] [TC2 Verified] Sort option \"Price: High to Low\" verified on page\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:16:18.911Z] [INFO] [TC2 Output] Total property cards displayed on page: 26\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:16:19.228Z] [INFO] [TC2 Output] Extracted normalized numeric price sample array: [1380, 661, 375, 250]\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:16:19.230Z] [INFO] [TC2 Success] Search, Filter, and Sort workflow genuinely verified for Alice Lodging\n"
+                          "text": "[2026-08-08T11:09:14.094Z] [INFO] [TC2] AFTER: Adults=2, Children=0\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-07T17:15:28.825Z",
+                      "startTime": "2026-08-08T11:09:02.023Z",
                       "annotations": [],
                       "attachments": [
                         {
                           "name": "screenshot",
                           "contentType": "image/png",
-                          "path": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\test-results\\tc2_search_filter_sort-TC2-488fe-ing-changes-on-aliceLodging-chromium\\test-finished-1.png"
+                          "path": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\test-results\\tc2_search_filter_sort-TC2-50996-ice-sorting-on-aliceLodging-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\test-results\\tc2_search_filter_sort-TC2-50996-ice-sorting-on-aliceLodging-chromium\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\test-results\\tc2_search_filter_sort-TC2-50996-ice-sorting-on-aliceLodging-chromium\\error-context.md"
                         },
                         {
                           "name": "trace",
                           "contentType": "application/zip",
-                          "path": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\test-results\\tc2_search_filter_sort-TC2-488fe-ing-changes-on-aliceLodging-chromium\\trace.zip"
+                          "path": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\test-results\\tc2_search_filter_sort-TC2-50996-ice-sorting-on-aliceLodging-chromium\\trace.zip"
                         }
-                      ]
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\pages\\SearchResultsPage.js",
+                        "column": 13,
+                        "line": 206
+                      }
                     }
                   ],
-                  "status": "expected"
+                  "status": "unexpected"
                 }
               ],
-              "id": "390146c09a1a0f257f4d-b4e720e2b2ba987f0a9c",
+              "id": "390146c09a1a0f257f4d-f2f12b4979e1839cebc5",
               "file": "tc2_search_filter_sort.spec.js",
               "line": 11,
-              "column": 5
-            }
-          ]
-        },
-        {
-          "title": "TC2 — Search, Filtering, and Sorting Workflow [fireskyRetreats]",
-          "file": "tc2_search_filter_sort.spec.js",
-          "line": 8,
-          "column": 8,
-          "specs": [
-            {
-              "title": "Verify search, guest count configuration, dynamic future travel dates, multiple filters, and sorting changes on fireskyRetreats",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 90000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 38645,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "[2026-08-07T17:16:25.481Z] [STEP] [TC2] Starting Search, Filter, and Sort Workflow on Firesky Retreats\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:16:25.518Z] [INFO] [TC2] Dynamic Future Travel Dates Generated: Check-in Aug 21, 2026 | Check-out Aug 25, 2026\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:16:25.518Z] [STEP] Opening home page for Firesky Retreats\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:16:25.518Z] [INFO] Navigating to: https://www.fireskyretreats.com\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:16:28.353Z] [STEP] [TC2] Configuring guest count (2 Adults, 1 Children) before search on Firesky Retreats\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:16:34.584Z] [INFO] [TC2 Verified UI] Actual Guest Count UI Display Value: \"1 guest\"\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:16:34.591Z] [STEP] [TC2] Selecting dynamic future travel dates in UI: Check-in Day 21 to Check-out Day 25\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:16:35.447Z] [INFO] Dismissed promotional modal popup via X button click\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:16:38.845Z] [INFO] [TC2 Verified UI] Actual Travel Dates UI Display Value: \"Arrival\n2026-08-08\"\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:16:38.858Z] [STEP] [TC2] Performing destination search via UI for: \"Scottsdale\"\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:16:39.774Z] [INFO] Dismissed cookie consent banner\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:16:40.555Z] [INFO] Navigating to: https://www.fireskyretreats.com/listings\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:16:49.104Z] [INFO] [TC2 Output] Total property cards displayed on page: 252\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:16:49.513Z] [INFO] [TC2 Output] Property listings count after search: 252\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:16:49.516Z] [STEP] [TC2] Applying filter: \"Pool\"\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:16:52.794Z] [INFO] [TC2 Verified] Filter \"Pool\" verified on page layout\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:16:52.796Z] [STEP] [TC2] Selecting sorting option: \"Price: Low to High\"\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:16:53.069Z] [INFO] Dismissed promotional modal popup via X button click\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:16:53.193Z] [INFO] [TC2 Verified] Sort option \"Price: Low to High\" verified on page\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:16:55.340Z] [INFO] [TC2 Output] Total property cards displayed on page: 252\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:16:56.235Z] [INFO] [TC2 Output] Extracted normalized numeric price sample array: [289, 289]\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:16:56.241Z] [STEP] [TC2] Selecting sorting option: \"Price: High to Low\"\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:16:56.530Z] [INFO] Dismissed promotional modal popup via X button click\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:16:56.643Z] [INFO] [TC2 Verified] Sort option \"Price: High to Low\" verified on page\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:16:58.758Z] [INFO] [TC2 Output] Total property cards displayed on page: 252\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:16:59.389Z] [INFO] [TC2 Output] Extracted normalized numeric price sample array: [289, 289]\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:16:59.391Z] [INFO] [TC2 Success] Search, Filter, and Sort workflow genuinely verified for Firesky Retreats\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-08-07T17:16:25.190Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\test-results\\tc2_search_filter_sort-TC2-f7ed8--changes-on-fireskyRetreats-chromium\\test-finished-1.png"
-                        },
-                        {
-                          "name": "trace",
-                          "contentType": "application/zip",
-                          "path": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\test-results\\tc2_search_filter_sort-TC2-f7ed8--changes-on-fireskyRetreats-chromium\\trace.zip"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "390146c09a1a0f257f4d-ab27f465e5e6a5e17229",
-              "file": "tc2_search_filter_sort.spec.js",
-              "line": 11,
-              "column": 5
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "tc3_property_details.spec.js",
-      "file": "tc3_property_details.spec.js",
-      "column": 0,
-      "line": 0,
-      "specs": [],
-      "suites": [
-        {
-          "title": "TC3 — Property Details Validation [aliceLodging]",
-          "file": "tc3_property_details.spec.js",
-          "line": 8,
-          "column": 8,
-          "specs": [
-            {
-              "title": "Verify property details and booking criteria consistency starting from filtered search on aliceLodging",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 90000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 33913,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "[2026-08-07T17:17:06.413Z] [STEP] [TC3] Starting Property Details Validation from filtered search results on Alice Lodging\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:17:06.417Z] [STEP] Navigating to property listings page for Alice Lodging\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:17:06.417Z] [INFO] Navigating to: https://www.alicelodging.com/listings\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:17:09.772Z] [INFO] Dismissed promotional modal popup via X button click\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:17:10.315Z] [INFO] Dismissed cookie consent banner\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:17:10.506Z] [STEP] [TC2] Applying filter: \"Pool\"\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:17:15.424Z] [INFO] [TC2 Verified] Filter \"Pool\" verified on page layout\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:17:15.425Z] [STEP] [TC3/TC4] Opening property listing card from search results\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:17:17.619Z] [INFO] [TC2 Output] Total property cards displayed on page: 116\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:17:17.741Z] [INFO] [TC3/TC4 Output] Selected Property Card Name: \"Average $320 per night includes all fees\"\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:17:34.522Z] [INFO] Dismissed promotional modal popup via X button click\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:17:34.584Z] [INFO] [TC3 Output] RECORDED PROPERTY NAME: \"Average $320 per night includes all fees\"\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:17:34.586Z] [STEP] [TC3] Recording and verifying Property Name on detail page\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:17:35.030Z] [INFO] RECORDED PROPERTY NAME: \"PS613 - Italian Fairway\"\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:17:35.032Z] [STEP] [TC3] Verifying booking information & search criteria consistency on property page\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:17:35.891Z] [INFO] [TC3 Extracted UI] Actual Property Booking Section Guest Text: \"1 guest\"\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:17:35.891Z] [INFO] [TC3 Extracted UI] Actual Property Booking Section Date Text: \"Arrival\n2026-08-08\"\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:17:35.891Z] [INFO] Property Booking Details Consistency Check: PASSED\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:17:35.895Z] [INFO] [TC3 Success] Property details and booking criteria consistency genuinely verified on Alice Lodging\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-08-07T17:17:06.120Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\test-results\\tc3_property_details-TC3-—-7084f-ered-search-on-aliceLodging-chromium\\test-finished-1.png"
-                        },
-                        {
-                          "name": "trace",
-                          "contentType": "application/zip",
-                          "path": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\test-results\\tc3_property_details-TC3-—-7084f-ered-search-on-aliceLodging-chromium\\trace.zip"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "44d21a503d51ea94d010-9a0f92a4e85a8134fd2c",
-              "file": "tc3_property_details.spec.js",
-              "line": 11,
-              "column": 5
-            }
-          ]
-        },
-        {
-          "title": "TC3 — Property Details Validation [fireskyRetreats]",
-          "file": "tc3_property_details.spec.js",
-          "line": 8,
-          "column": 8,
-          "specs": [
-            {
-              "title": "Verify property details and booking criteria consistency starting from filtered search on fireskyRetreats",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 90000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 27247,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "[2026-08-07T17:17:41.351Z] [STEP] [TC3] Starting Property Details Validation from filtered search results on Firesky Retreats\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:17:41.354Z] [STEP] Navigating to property listings page for Firesky Retreats\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:17:41.354Z] [INFO] Navigating to: https://www.fireskyretreats.com/listings\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:17:47.509Z] [INFO] Dismissed cookie consent banner\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:17:47.629Z] [STEP] [TC2] Applying filter: \"Pool\"\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:17:54.873Z] [INFO] [TC2 Verified] Filter \"Pool\" verified on page layout\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:17:54.873Z] [STEP] [TC3/TC4] Opening property listing card from search results\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:17:57.255Z] [INFO] [TC2 Output] Total property cards displayed on page: 252\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:17:57.475Z] [INFO] [TC3/TC4 Output] Selected Property Card Name: \"Scottsdale, Arizona\"\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:17:59.540Z] [INFO] Dismissed promotional modal popup via X button click\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:17:59.627Z] [INFO] [TC3 Output] RECORDED PROPERTY NAME: \"Scottsdale, Arizona\"\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:17:59.630Z] [STEP] [TC3] Recording and verifying Property Name on detail page\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:18:00.192Z] [INFO] RECORDED PROPERTY NAME: \"Tropical Abode\"\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:18:00.195Z] [STEP] [TC3] Verifying booking information & search criteria consistency on property page\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:18:04.614Z] [INFO] [TC3 Extracted UI] Actual Property Booking Section Guest Text: \"1 guest\"\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:18:04.614Z] [INFO] [TC3 Extracted UI] Actual Property Booking Section Date Text: \"Arrival\n2026-08-08\"\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:18:04.614Z] [INFO] Property Booking Details Consistency Check: PASSED\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:18:04.619Z] [INFO] [TC3 Success] Property details and booking criteria consistency genuinely verified on Firesky Retreats\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-08-07T17:17:41.081Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\test-results\\tc3_property_details-TC3-—-5542d-d-search-on-fireskyRetreats-chromium\\test-finished-1.png"
-                        },
-                        {
-                          "name": "trace",
-                          "contentType": "application/zip",
-                          "path": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\test-results\\tc3_property_details-TC3-—-5542d-d-search-on-fireskyRetreats-chromium\\trace.zip"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "44d21a503d51ea94d010-9be8dfa52af70903156f",
-              "file": "tc3_property_details.spec.js",
-              "line": 11,
-              "column": 5
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "tc4_navigation.spec.js",
-      "file": "tc4_navigation.spec.js",
-      "column": 0,
-      "line": 0,
-      "specs": [],
-      "suites": [
-        {
-          "title": "TC4 — Navigation Validation [aliceLodging]",
-          "file": "tc4_navigation.spec.js",
-          "line": 7,
-          "column": 8,
-          "specs": [
-            {
-              "title": "Verify navigation menu, options population, category page navigation, and property info consistency on aliceLodging",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 90000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 14275,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "[2026-08-07T17:18:10.267Z] [STEP] [TC4] Starting Navigation Validation on Alice Lodging\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:18:10.267Z] [STEP] Opening home page for Alice Lodging\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:18:10.267Z] [INFO] Navigating to: https://www.alicelodging.com\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:18:12.769Z] [INFO] Dismissed promotional modal popup via X button click\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:18:13.364Z] [INFO] Dismissed cookie consent banner\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:18:13.455Z] [STEP] [TC4] Interacting with navigation component and verifying options population on Alice Lodging\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:18:15.570Z] [INFO] [TC4] Discovered 4 populated navigation options for Alice Lodging\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:18:15.571Z] [INFO] [Nav Item 1] Specials -> https://www.alicelodging.com/specials\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:18:15.571Z] [INFO] [Nav Item 2] Blog -> https://www.alicelodging.com/blog\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:18:15.571Z] [INFO] [Nav Item 3] List With Us -> https://www.alicelodging.com/list-with-us\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:18:15.571Z] [INFO] [Nav Item 4] Contact Us -> https://www.alicelodging.com/contact-us\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:18:15.575Z] [INFO] [TC4 Output] Verified navigation menu populated with 4 category items.\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:18:15.575Z] [STEP] [TC4] Navigating to destination/category page: \"Specials\"\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:18:16.454Z] [STEP] [TC3/TC4] Opening property listing card from search results\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:18:18.675Z] [INFO] [TC2 Output] Total property cards displayed on page: 2\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:18:18.748Z] [INFO] [TC3/TC4 Output] Selected Property Card Name: \"Vacation Rental Property\"\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:18:20.096Z] [INFO] [TC4 Output] Property Selected from Category Page: \"Vacation Rental Property\"\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:18:20.097Z] [STEP] [TC3] Recording and verifying Property Name on detail page\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:18:21.045Z] [INFO] RECORDED PROPERTY NAME: \"Specials\"\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:18:21.047Z] [STEP] [TC3] Verifying booking information & search criteria consistency on property page\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:18:21.492Z] [INFO] [TC3 Extracted UI] Actual Property Booking Section Guest Text: \"Visible on page\"\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:18:21.492Z] [INFO] [TC3 Extracted UI] Actual Property Booking Section Date Text: \"Visible on page\"\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:18:21.492Z] [INFO] Property Booking Details Consistency Check: PASSED\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:18:21.495Z] [INFO] [TC4 Success] Primary navigation flow and property consistency genuinely verified on Alice Lodging\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-08-07T17:18:10.023Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\test-results\\tc4_navigation-TC4-—-Navig-03590-consistency-on-aliceLodging-chromium\\test-finished-1.png"
-                        },
-                        {
-                          "name": "trace",
-                          "contentType": "application/zip",
-                          "path": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\test-results\\tc4_navigation-TC4-—-Navig-03590-consistency-on-aliceLodging-chromium\\trace.zip"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "728dc8ddd5ff0d1d6886-925534cfac3a764b87cb",
-              "file": "tc4_navigation.spec.js",
-              "line": 10,
-              "column": 5
-            }
-          ]
-        },
-        {
-          "title": "TC4 — Navigation Validation [fireskyRetreats]",
-          "file": "tc4_navigation.spec.js",
-          "line": 7,
-          "column": 8,
-          "specs": [
-            {
-              "title": "Verify navigation menu, options population, category page navigation, and property info consistency on fireskyRetreats",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 90000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 23140,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "[2026-08-07T17:18:26.405Z] [STEP] [TC4] Starting Navigation Validation on Firesky Retreats\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:18:26.405Z] [STEP] Opening home page for Firesky Retreats\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:18:26.405Z] [INFO] Navigating to: https://www.fireskyretreats.com\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:18:28.811Z] [INFO] Dismissed cookie consent banner\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:18:28.921Z] [STEP] [TC4] Interacting with navigation component and verifying options population on Firesky Retreats\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:18:29.538Z] [INFO] [TC4] Discovered 5 populated navigation options for Firesky Retreats\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:18:29.538Z] [INFO] [Nav Item 1] ⚡ Flash Summer Deals Alert • 20% Off with SUNNY20 • For Check-ins On or Before Sep 30 -> https://www.fireskyretreats.com/specials/arizona-summer-deals-save-20-on-vacation-rental\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:18:29.538Z] [INFO] [Nav Item 2] ⚡ Flash Summer Deals • Up to 20% Off -> https://www.fireskyretreats.com/specials/arizona-summer-deals-save-20-on-vacation-rental\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:18:29.538Z] [INFO] [Nav Item 3] Explore -> https://www.fireskyretreats.com/\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:18:29.538Z] [INFO] [Nav Item 4] Favorites -> https://www.fireskyretreats.com/favourites\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:18:29.538Z] [INFO] [Nav Item 5] Contact -> https://www.fireskyretreats.com/contact-us\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:18:29.540Z] [INFO] [TC4 Output] Verified navigation menu populated with 5 category items.\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:18:29.541Z] [STEP] [TC4] Navigating to destination/category page: \"Pool\"\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:18:31.153Z] [STEP] [TC3/TC4] Opening property listing card from search results\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:18:35.190Z] [INFO] [TC2 Output] Total property cards displayed on page: 198\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:18:36.954Z] [INFO] [TC3/TC4 Output] Selected Property Card Name: \"Scottsdale, Arizona\"\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:18:39.516Z] [INFO] Dismissed promotional modal popup via X button click\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:18:39.650Z] [INFO] [TC4 Output] Property Selected from Category Page: \"Scottsdale, Arizona\"\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:18:39.650Z] [STEP] [TC3] Recording and verifying Property Name on detail page\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:18:40.377Z] [INFO] RECORDED PROPERTY NAME: \"Tropical Abode\"\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:18:40.380Z] [STEP] [TC3] Verifying booking information & search criteria consistency on property page\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:18:45.482Z] [INFO] [TC3 Extracted UI] Actual Property Booking Section Guest Text: \"1 guest\"\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:18:45.483Z] [INFO] [TC3 Extracted UI] Actual Property Booking Section Date Text: \"Arrival\n2026-08-08\"\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:18:45.483Z] [INFO] Property Booking Details Consistency Check: PASSED\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:18:45.484Z] [INFO] [TC4 Success] Primary navigation flow and property consistency genuinely verified on Firesky Retreats\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-08-07T17:18:26.163Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\test-results\\tc4_navigation-TC4-—-Navig-afdf0-sistency-on-fireskyRetreats-chromium\\test-finished-1.png"
-                        },
-                        {
-                          "name": "trace",
-                          "contentType": "application/zip",
-                          "path": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\test-results\\tc4_navigation-TC4-—-Navig-afdf0-sistency-on-fireskyRetreats-chromium\\trace.zip"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "728dc8ddd5ff0d1d6886-4ab73209cd0ba35278c8",
-              "file": "tc4_navigation.spec.js",
-              "line": 10,
-              "column": 5
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "tc5_form_validation.spec.js",
-      "file": "tc5_form_validation.spec.js",
-      "column": 0,
-      "line": 0,
-      "specs": [],
-      "suites": [
-        {
-          "title": "TC5 — Form Validation Workflow [aliceLodging]",
-          "file": "tc5_form_validation.spec.js",
-          "line": 8,
-          "column": 8,
-          "specs": [
-            {
-              "title": "Verify inquiry form submission of invalid input, field-level error association, and document website differences on aliceLodging",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 90000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 11304,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "[2026-08-07T17:18:51.121Z] [STEP] [TC5] Starting Form Validation on Alice Lodging\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:18:51.121Z] [STEP] [TC5] Locating property owner inquiry form at: https://www.alicelodging.com/list-with-us\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:18:51.121Z] [INFO] Navigating to: https://www.alicelodging.com/list-with-us\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:18:52.459Z] [INFO] Dismissed promotional modal popup via X button click\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:18:52.780Z] [INFO] Dismissed cookie consent banner\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:18:53.356Z] [STEP] [TC5] Submitting invalid input to verify field-level validation association on Alice Lodging\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:18:56.652Z] [INFO] Filling Invalid Email Input Field with value: \"invalid-email-1786123133356\"\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:19:00.266Z] [INFO] [TC5 Output] Site: Alice Lodging | Total Form Fields Evaluated: 9\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:19:00.266Z] [INFO] [TC5 Output] Field-Level Invalid Assertions Count: 1\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:19:00.266Z] [INFO]   -> Field Associated: [email] (email) -> Validation Error: \"Please include an '@' in the email address. 'invalid-email-1786123133356' is missing an '@'.\"\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:19:00.269Z] [INFO] [TC5 Documented Difference] Alice Lodging Form Path: /list-with-us | Uses HTML5 email validation and client-side button state checks.\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:19:00.269Z] [INFO] [TC5 Success] Form validation behavior and field error association genuinely captured for Alice Lodging\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-08-07T17:18:50.905Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\test-results\\tc5_form_validation-TC5-—--10197-differences-on-aliceLodging-chromium\\test-finished-1.png"
-                        },
-                        {
-                          "name": "trace",
-                          "contentType": "application/zip",
-                          "path": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\test-results\\tc5_form_validation-TC5-—--10197-differences-on-aliceLodging-chromium\\trace.zip"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "421f2255d87be23d7f2b-f575e1fd1294354300e8",
-              "file": "tc5_form_validation.spec.js",
-              "line": 11,
-              "column": 5
-            }
-          ]
-        },
-        {
-          "title": "TC5 — Form Validation Workflow [fireskyRetreats]",
-          "file": "tc5_form_validation.spec.js",
-          "line": 8,
-          "column": 8,
-          "specs": [
-            {
-              "title": "Verify inquiry form submission of invalid input, field-level error association, and document website differences on fireskyRetreats",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 90000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 8818,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "[2026-08-07T17:19:03.427Z] [STEP] [TC5] Starting Form Validation on Firesky Retreats\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:19:03.427Z] [STEP] [TC5] Locating property owner inquiry form at: https://www.fireskyretreats.com/contact-us\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:19:03.427Z] [INFO] Navigating to: https://www.fireskyretreats.com/contact-us\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:19:04.839Z] [INFO] Dismissed promotional modal popup via X button click\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:19:05.120Z] [STEP] [TC5] Submitting invalid input to verify field-level validation association on Firesky Retreats\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:19:05.745Z] [INFO] Dismissed cookie consent banner\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:19:05.979Z] [INFO] Filling Invalid Email Input Field with value: \"invalid-email-1786123145120\"\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:19:08.453Z] [INFO] [TC5 Output] Site: Firesky Retreats | Total Form Fields Evaluated: 10\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:19:08.453Z] [INFO] [TC5 Output] Field-Level Invalid Assertions Count: 1\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:19:08.453Z] [INFO]   -> Field Associated: [email] (email) -> Validation Error: \"Please include an '@' in the email address. 'invalid-email-1786123145120' is missing an '@'.\"\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:19:08.458Z] [INFO] [TC5 Documented Difference] Firesky Retreats Form Path: /contact-us | Uses HTML5 required validation and modal/inline field notification popups.\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:19:08.458Z] [INFO] [TC5 Success] Form validation behavior and field error association genuinely captured for Firesky Retreats\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-08-07T17:19:02.885Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\test-results\\tc5_form_validation-TC5-—--65ec7-ferences-on-fireskyRetreats-chromium\\test-finished-1.png"
-                        },
-                        {
-                          "name": "trace",
-                          "contentType": "application/zip",
-                          "path": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\test-results\\tc5_form_validation-TC5-—--65ec7-ferences-on-fireskyRetreats-chromium\\trace.zip"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "421f2255d87be23d7f2b-47855be62b7f6d7bf776",
-              "file": "tc5_form_validation.spec.js",
-              "line": 11,
-              "column": 5
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "tc6_bonus_favorites.spec.js",
-      "file": "tc6_bonus_favorites.spec.js",
-      "column": 0,
-      "line": 0,
-      "specs": [],
-      "suites": [
-        {
-          "title": "TC6 (Bonus) — Favorites & Saved Stays Workflow [aliceLodging]",
-          "file": "tc6_bonus_favorites.spec.js",
-          "line": 7,
-          "column": 8,
-          "specs": [
-            {
-              "title": "Verify favoriting / wishlist feature interaction and saved stays section on aliceLodging",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 90000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 7448,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "[2026-08-07T17:19:12.573Z] [STEP] [TC6 Bonus] Starting Favorites & Saved Stays Workflow on Alice Lodging\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:19:12.573Z] [STEP] Navigating to property listings page for Alice Lodging\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:19:12.573Z] [INFO] Navigating to: https://www.alicelodging.com/listings\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:19:16.268Z] [INFO] Dismissed promotional modal popup via X button click\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:19:16.799Z] [INFO] Dismissed cookie consent banner\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:19:17.258Z] [INFO] [TC6 Limitation] Discovered 0 interactive favorite buttons on listing cards for Alice Lodging — Feature not exposed on live listing cards.\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:19:17.387Z] [INFO] [TC6 Limitation] Favorites header link not present on Alice Lodging\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:19:17.387Z] [INFO] [TC6 Evaluated] Bonus workflow completed and evaluated for Alice Lodging\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-08-07T17:19:12.341Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\test-results\\tc6_bonus_favorites-TC6-Bo-44507-ays-section-on-aliceLodging-chromium\\test-finished-1.png"
-                        },
-                        {
-                          "name": "trace",
-                          "contentType": "application/zip",
-                          "path": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\test-results\\tc6_bonus_favorites-TC6-Bo-44507-ays-section-on-aliceLodging-chromium\\trace.zip"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "f9a5f36cfff46c818272-9eea62a50c57ac925978",
-              "file": "tc6_bonus_favorites.spec.js",
-              "line": 10,
-              "column": 5
-            }
-          ]
-        },
-        {
-          "title": "TC6 (Bonus) — Favorites & Saved Stays Workflow [fireskyRetreats]",
-          "file": "tc6_bonus_favorites.spec.js",
-          "line": 7,
-          "column": 8,
-          "specs": [
-            {
-              "title": "Verify favoriting / wishlist feature interaction and saved stays section on fireskyRetreats",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 90000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 12078,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "[2026-08-07T17:19:20.632Z] [STEP] [TC6 Bonus] Starting Favorites & Saved Stays Workflow on Firesky Retreats\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:19:20.632Z] [STEP] Navigating to property listings page for Firesky Retreats\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:19:20.632Z] [INFO] Navigating to: https://www.fireskyretreats.com/listings\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:19:26.857Z] [INFO] Dismissed cookie consent banner\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:19:27.930Z] [INFO] [TC6 Limitation] Discovered 0 interactive favorite buttons on listing cards for Firesky Retreats — Feature not exposed on live listing cards.\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:19:28.038Z] [INFO] [TC6 Limitation] Favorites header link not present on Firesky Retreats\n"
-                        },
-                        {
-                          "text": "[2026-08-07T17:19:28.038Z] [INFO] [TC6 Evaluated] Bonus workflow completed and evaluated for Firesky Retreats\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-08-07T17:19:20.399Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\test-results\\tc6_bonus_favorites-TC6-Bo-0be85--section-on-fireskyRetreats-chromium\\test-finished-1.png"
-                        },
-                        {
-                          "name": "trace",
-                          "contentType": "application/zip",
-                          "path": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\test-results\\tc6_bonus_favorites-TC6-Bo-0be85--section-on-fireskyRetreats-chromium\\trace.zip"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "f9a5f36cfff46c818272-fa2d4928d0135861256a",
-              "file": "tc6_bonus_favorites.spec.js",
-              "line": 10,
               "column": 5
             }
           ]
@@ -1373,11 +205,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-08-07T17:15:04.314Z",
-    "duration": 270717.823,
-    "expected": 12,
+    "startTime": "2026-08-08T11:09:00.955Z",
+    "duration": 19289.473,
+    "expected": 0,
     "skipped": 0,
-    "unexpected": 0,
+    "unexpected": 1,
     "flaky": 0
   }
 }

@@ -57,19 +57,27 @@ class SearchResultsPage extends BasePage {
 
   /**
    * Dismiss ONLY promotional popups, not functional popovers.
+   * Aggressively removes any fixed/modal portal children that contain promo text.
    */
   async _dismissPromoPopupsOnly() {
     await this.page.evaluate(() => {
-      const portals = document.querySelectorAll('#headlessui-portal-root');
-      portals.forEach(p => {
-        const text = p.innerText || '';
-        if (text.includes('SUMMER') || text.includes('OFF') || text.includes('20%') || text.includes('SPECIAL')) {
-          const btn = p.querySelector('button');
-          if (btn) btn.click();
-          else p.style.display = 'none';
+      // Remove any headlessui portal children that are fullscreen fixed promo modals
+      document.querySelectorAll('#headlessui-portal-root > div').forEach(child => {
+        const text = child.innerText || '';
+        const hasFixedClass = child.className && (child.className.includes('fixed') || child.className.includes('z-modal'));
+        // Any fixed full-screen element that intercepts pointer events and has promo text
+        if (hasFixedClass && (text.includes('SUMMER') || text.includes('OFF') || text.includes('20%') || text.includes('SPECIAL') || text.includes('SUBSCRIBE'))) {
+          child.remove();
         }
+        // Also remove any banner popup regardless of promo text (the banner div)
+        const bannerClose = child.querySelector('button[aria-label*="Close banner" i], button[aria-label*="close banner" i]');
+        if (bannerClose) bannerClose.click();
       });
+      // Also dismiss the top announcement banner
+      const bannerCloseBtn = document.querySelector('button[aria-label="Close banner"]');
+      if (bannerCloseBtn) bannerCloseBtn.click();
     }).catch(() => {});
+    await this.page.waitForTimeout(300);
   }
 
   /**
@@ -77,22 +85,9 @@ class SearchResultsPage extends BasePage {
    */
   async _closeAllPopovers() {
     await this.page.evaluate(() => {
-      // Close any open headlessui panels/popovers
       document.querySelectorAll('[data-headlessui-state="open"]').forEach(el => {
         const closeBtn = el.querySelector('button[aria-label*="close" i]');
         if (closeBtn) closeBtn.click();
-      });
-      // Remove blocking portal overlays
-      document.querySelectorAll('#headlessui-portal-root > div').forEach(child => {
-        // Check if it's a functional popover (guest picker, calendar) or promo
-        const isModal = child.querySelector('.fixed');
-        if (isModal) {
-          // Check if it contains promotional content
-          const text = child.innerText || '';
-          if (text.includes('SUMMER') || text.includes('OFF') || text.includes('20%')) {
-            child.remove();
-          }
-        }
       });
     }).catch(() => {});
     await this.page.keyboard.press('Escape').catch(() => {});
@@ -100,70 +95,115 @@ class SearchResultsPage extends BasePage {
   }
 
   /**
-   * Configure guest count using real UI clicks on the guest picker popover.
-   * 
-   * Flow:
-   * 1. Read current guest counts from aria-label (BEFORE)
-   * 2. Click Guest Picker trigger button
-   * 3. Click Adult '+' button specified number of times
-   * 4. Click Children '+' button specified number of times
-   * 5. Read updated guest counts from aria-label (AFTER)
-   * 
-   * @param {number} adultsToAdd - Adults to add
-   * @param {number} childrenToAdd - Children to add
-   * @returns {Promise<{adultsBefore: number, adultsAfter: number, childrenBefore: number, childrenAfter: number}>}
+   * Configure guest count strictly using real UI clicks on the guest picker popover.
+   * NO URL MANIPULATION FALLBACKS ALLOWED.
+   *
+   * Strategy:
+   *  1. Remove any promo portal overlay that intercepts pointer events
+   *  2. Click the guest trigger button
+   *  3. Wait for popover to open by detecting new buttons appearing in the portal
+   *  4. Use page.evaluate to find the actual +/- stepper buttons by their position
+   *     relative to labelled rows (Adults, Children)
+   *  5. Click those buttons N times
+   *  6. Read aria-label to verify
+   *
+   * @param {number} adultsToAdd
+   * @param {number} childrenToAdd
    */
   async setGuestCount(adultsToAdd = 2, childrenToAdd = 1) {
     Logger.step(`[TC2] Configuring guest count (+${adultsToAdd} Adults, +${childrenToAdd} Children) on ${this.siteConfig.name}`);
-    await this._dismissPromoPopupsOnly();
 
-    // Step 1: Read BEFORE state from the actual UI
+    // Step 1: Read BEFORE state
     const before = await this._readGuestCountsFromUI();
     Logger.info(`[TC2] BEFORE: Adults=${before.adults}, Children=${before.children}`);
 
-    // Step 2: Open Guest Picker popover
+    // Step 2: Remove fixed promo overlay that intercepts pointer events
+    await this.page.evaluate(() => {
+      document.querySelectorAll('#headlessui-portal-root > div').forEach(child => {
+        const style = window.getComputedStyle(child);
+        const isFixed = style.position === 'fixed' || child.className.includes('fixed');
+        if (isFixed) child.remove();
+      });
+      const bannerClose = document.querySelector('button[aria-label="Close banner"]');
+      if (bannerClose) bannerClose.click();
+    }).catch(() => {});
+    await this.page.waitForTimeout(300);
+
+    // Step 3: Open guest picker via direct DOM element click (avoids CSS pointer-event interception)
     const guestBtn = this.page.locator('button.popoverButtonContainer[aria-label*="Select Guests"]').first();
-    await guestBtn.click({ force: true });
-    await this.page.waitForTimeout(500);
+    await guestBtn.waitFor({ state: 'visible', timeout: 10000 });
 
-    // Step 3: Genuinely click Adult '+' button
-    // Locate the plus button in the popover panel for Adults
-    const adultPlusBtn = this.page.locator('button[aria-label*="Increase adults" i], button[aria-label*="add adult" i], button:has-text("+")').first();
+    // Use page.evaluate to dispatch a real click event on the button element directly
+    await this.page.evaluate(() => {
+      const btn = document.querySelector('button.popoverButtonContainer[aria-label*="Select Guests"]');
+      if (btn) {
+        btn.dispatchEvent(new MouseEvent('click', { bubbles: true, cancelable: true }));
+      }
+    });
+    await this.page.waitForTimeout(1500);
+
+    // Step 4: Find the Increment Adults and Increment Children buttons by aria-label
+    // The dispatchEvent click opens the guest picker; buttons appear with known aria-labels
+    const stepperData = await this.page.evaluate(() => {
+      const incrementAdults = document.querySelector('button[aria-label="Increment adults"]');
+      const incrementChildren = document.querySelector('button[aria-label="Increment children"]');
+      if (!incrementAdults || !incrementChildren) {
+        // Try partial match
+        const allBtns = Array.from(document.querySelectorAll('button'));
+        const adultBtn = allBtns.find(b => (b.getAttribute('aria-label') || '').toLowerCase().includes('increment adult') || (b.getAttribute('aria-label') || '').toLowerCase().includes('add adult'));
+        const childBtn = allBtns.find(b => (b.getAttribute('aria-label') || '').toLowerCase().includes('increment child') || (b.getAttribute('aria-label') || '').toLowerCase().includes('add child'));
+        if (!adultBtn || !childBtn) {
+          return { found: false, allAriaLabels: allBtns.map(b => b.getAttribute('aria-label') || '').filter(Boolean) };
+        }
+        const aR = adultBtn.getBoundingClientRect();
+        const cR = childBtn.getBoundingClientRect();
+        return {
+          found: true,
+          adultPlus: { x: aR.x + aR.width / 2, y: aR.y + aR.height / 2 },
+          childPlus: { x: cR.x + cR.width / 2, y: cR.y + cR.height / 2 }
+        };
+      }
+      const aR = incrementAdults.getBoundingClientRect();
+      const cR = incrementChildren.getBoundingClientRect();
+      return {
+        found: true,
+        adultPlus: { x: aR.x + aR.width / 2, y: aR.y + aR.height / 2 },
+        childPlus: { x: cR.x + cR.width / 2, y: cR.y + cR.height / 2 }
+      };
+    });
+
+    Logger.info(`[TC2] Guest stepper detection: ${JSON.stringify(stepperData)}`);
+
+    if (!stepperData.found) {
+      throw new Error(`[TC2 FAILURE] Increment adults/children buttons not found after guest picker opened on ${this.siteConfig.name}. AriaLabels present: [${(stepperData.allAriaLabels || []).join(', ')}]`);
+    }
+
+    // Step 5: Click Adult '+' stepper
     for (let i = 0; i < adultsToAdd; i++) {
-      if (await adultPlusBtn.isVisible({ timeout: 2000 }).catch(() => false)) {
-        await adultPlusBtn.click({ force: true });
-        await this.page.waitForTimeout(300);
-      }
+      await this.page.mouse.click(stepperData.adultPlus.x, stepperData.adultPlus.y);
+      await this.page.waitForTimeout(400);
     }
 
-    // Step 4: Genuinely click Children '+' button
-    const childPlusBtn = this.page.locator('button[aria-label*="Increase children" i], button[aria-label*="add child" i], button:has-text("+")').nth(1);
+    // Step 6: Click Children '+' stepper
     for (let i = 0; i < childrenToAdd; i++) {
-      if (await childPlusBtn.isVisible({ timeout: 2000 }).catch(() => false)) {
-        await childPlusBtn.click({ force: true });
-        await this.page.waitForTimeout(300);
-      }
+      await this.page.mouse.click(stepperData.childPlus.x, stepperData.childPlus.y);
+      await this.page.waitForTimeout(400);
     }
 
-    // Close guest picker by pressing Escape or clicking outside
+    // Step 7: Close popover
     await this.page.keyboard.press('Escape').catch(() => {});
-    await this.page.waitForTimeout(500);
+    await this.page.waitForTimeout(800);
 
-    // Fallback sync if UI click popover panel was obstructed by Headless UI state:
-    const targetAdults = before.adults + adultsToAdd;
-    const targetChildren = before.children + childrenToAdd;
-    const currentUrl = new URL(this.page.url());
-    currentUrl.searchParams.set('adults', String(targetAdults));
-    currentUrl.searchParams.set('children', String(targetChildren));
-    await this.navigateTo(currentUrl.toString());
-    await this.page.waitForTimeout(2000);
 
-    // Step 5: Read AFTER state from the actual UI
+    // Step 8: Read AFTER state and verify
     const after = await this._readGuestCountsFromUI();
     Logger.info(`[TC2] AFTER: Adults=${after.adults}, Children=${after.children}`);
 
-    if (after.adults === before.adults && adultsToAdd > 0) {
-      throw new Error(`[TC2 FAILURE] Guest count did not change. Before: ${before.adults} Adults, After: ${after.adults} Adults`);
+    if (after.adults !== before.adults + adultsToAdd) {
+      throw new Error(`[TC2 FAILURE] Guest Adult count did not increment via UI. Expected: ${before.adults + adultsToAdd}, Got: ${after.adults}`);
+    }
+    if (after.children !== before.children + childrenToAdd) {
+      throw new Error(`[TC2 FAILURE] Guest Child count did not increment via UI. Expected: ${before.children + childrenToAdd}, Got: ${after.children}`);
     }
 
     return {
@@ -175,7 +215,8 @@ class SearchResultsPage extends BasePage {
   }
 
   /**
-   * Select future travel dates using real calendar UI clicks and verify via aria-label.
+   * Select future travel dates strictly using real calendar UI clicks and verify via aria-label.
+   * NO URL MANIPULATION FALLBACKS ALLOWED.
    * 
    * @param {Date} checkInDate 
    * @param {Date} checkOutDate 
@@ -191,42 +232,40 @@ class SearchResultsPage extends BasePage {
     const before = await this._readDateStateFromUI();
     Logger.info(`[TC2] Dates BEFORE: arrival=${before.arrivalISO}, departure=${before.departureISO}`);
 
-    // Step 2: Open Calendar date picker trigger
+    // Step 2: Open Calendar date picker trigger via real UI click
     const dateBtn = this.page.locator('button.popoverButtonContainer[aria-label*="Arrival"]').first();
+    await dateBtn.waitFor({ state: 'visible', timeout: 10000 });
     await dateBtn.click({ force: true });
+    await this.page.waitForTimeout(1000);
+
+    // Step 3: Locate and click check-in day cell by ISO date attribute / label
+    const checkInCell = this.page.locator(`time[datetime="${checkInISO}"], button[aria-label*="${checkInISO}"], [data-date="${checkInISO}"]`).first();
+    if (!await checkInCell.isVisible({ timeout: 5000 }).catch(() => false)) {
+      throw new Error(`[TC2 FAILURE] Check-in calendar cell for date ${checkInISO} was not found in open Calendar on ${this.siteConfig.name}`);
+    }
+    await checkInCell.click({ force: true });
     await this.page.waitForTimeout(500);
 
-    // Step 3: Look for check-in & check-out day cells in the calendar
-    const checkInCell = this.page.locator(`time[datetime="${checkInISO}"], [aria-label*="${checkInISO}"]`).first();
-    if (await checkInCell.isVisible({ timeout: 2000 }).catch(() => false)) {
-      await checkInCell.click({ force: true });
-      await this.page.waitForTimeout(300);
+    // Step 4: Locate and click check-out day cell
+    const checkOutCell = this.page.locator(`time[datetime="${checkOutISO}"], button[aria-label*="${checkOutISO}"], [data-date="${checkOutISO}"]`).first();
+    if (!await checkOutCell.isVisible({ timeout: 5000 }).catch(() => false)) {
+      throw new Error(`[TC2 FAILURE] Check-out calendar cell for date ${checkOutISO} was not found in open Calendar on ${this.siteConfig.name}`);
     }
-    const checkOutCell = this.page.locator(`time[datetime="${checkOutISO}"], [aria-label*="${checkOutISO}"]`).first();
-    if (await checkOutCell.isVisible({ timeout: 2000 }).catch(() => false)) {
-      await checkOutCell.click({ force: true });
-      await this.page.waitForTimeout(300);
-    }
+    await checkOutCell.click({ force: true });
+    await this.page.waitForTimeout(500);
 
     await this.page.keyboard.press('Escape').catch(() => {});
-    await this.page.waitForTimeout(500);
+    await this.page.waitForTimeout(800);
 
-    // Sync via URL if needed to ensure state consistency
-    const currentUrl = new URL(this.page.url());
-    currentUrl.searchParams.set('checkIn', checkInISO);
-    currentUrl.searchParams.set('checkOut', checkOutISO);
-    await this.navigateTo(currentUrl.toString());
-    await this.page.waitForTimeout(2000);
-
-    // Step 4: Read AFTER date state from actual UI
+    // Step 5: Read AFTER date state strictly from actual UI (No URL fallbacks)
     const after = await this._readDateStateFromUI();
     Logger.info(`[TC2] Dates AFTER: arrival=${after.arrivalISO}, departure=${after.departureISO}`);
 
     if (after.arrivalISO !== checkInISO) {
-      throw new Error(`[TC2 FAILURE] Check-in date not reflected. Expected: ${checkInISO}, Got: ${after.arrivalISO}. Label: "${after.label}"`);
+      throw new Error(`[TC2 FAILURE] Check-in date not reflected in UI. Expected: ${checkInISO}, Got: ${after.arrivalISO}. Label: "${after.label}"`);
     }
     if (after.departureISO !== checkOutISO) {
-      throw new Error(`[TC2 FAILURE] Check-out date not reflected. Expected: ${checkOutISO}, Got: ${after.departureISO}. Label: "${after.label}"`);
+      throw new Error(`[TC2 FAILURE] Check-out date not reflected in UI. Expected: ${checkOutISO}, Got: ${after.departureISO}. Label: "${after.label}"`);
     }
 
     return {
@@ -355,44 +394,41 @@ class SearchResultsPage extends BasePage {
 
   /**
    * Apply sorting option using the headlessui sort popover.
-   * Both sites have a "Sort: Default" button that opens sort options.
+   * Both sites have a "Sort: Default" / "Sort: ..." button with class sortButton.
+   * NO URL FALLBACK ALLOWED. If UI sort fails, throw a clear error.
    * @param {string} sortOption - e.g. "Price: Low to High"
    */
   async selectSortOption(sortOption) {
     Logger.step(`[TC2] Selecting sort: "${sortOption}"`);
     await this._dismissPromoPopupsOnly();
-    await this._closeAllPopovers();
 
-    // The sort button has class "sortButton" inside a wrapper
-    const sortBtn = this.page.locator('button:has(.sortButton)').first();
-    if (await sortBtn.isVisible({ timeout: 5000 }).catch(() => false)) {
-      await sortBtn.click({ force: true });
-      await this.page.waitForTimeout(1000);
-
-      // In the sort popover, find the option
-      const option = this.page.locator(`button:has-text("${sortOption}"), [role="option"]:has-text("${sortOption}")`).first();
-      if (await option.isVisible({ timeout: 3000 }).catch(() => false)) {
-        await option.click({ force: true });
-        await this.page.waitForTimeout(2500);
-        Logger.info(`[TC2] Sort "${sortOption}" selected`);
-        return;
-      } else {
-        Logger.warn(`[TC2] Sort option "${sortOption}" not found in popover`);
-      }
+    // The sort button: class filterAndSortButton sortButton, text contains "Sort:"
+    const sortBtn = this.page.locator('.filterAndSortButton.sortButton, button.sortButton, button:has-text("Sort:")').first();
+    const sortBtnVisible = await sortBtn.isVisible({ timeout: 5000 }).catch(() => false);
+    if (!sortBtnVisible) {
+      throw new Error(`[TC2 FAILURE] Sort button not found on ${this.siteConfig.name}. Cannot perform sort UI interaction.`);
     }
 
-    // Fallback: try URL-based sorting
-    const currentUrl = new URL(this.page.url());
-    if (sortOption.toLowerCase().includes('low to high')) {
-      currentUrl.searchParams.set('sortBy', 'price_asc');
-    } else if (sortOption.toLowerCase().includes('high to low')) {
-      currentUrl.searchParams.set('sortBy', 'price_desc');
+    await sortBtn.click({ force: true });
+    await this.page.waitForTimeout(1000);
+
+    // Find the sort option in the opened popover
+    const option = this.page.locator(`button:has-text("${sortOption}"), [role="option"]:has-text("${sortOption}"), li:has-text("${sortOption}")`).first();
+    const optionVisible = await option.isVisible({ timeout: 3000 }).catch(() => false);
+    if (!optionVisible) {
+      // Dump visible options for debugging
+      const visibleOptions = await this.page.evaluate(() =>
+        Array.from(document.querySelectorAll('[role="option"], li, button'))
+          .map(el => (el.textContent || '').trim())
+          .filter(t => t.length > 0 && t.length < 50)
+          .slice(0, 20)
+      );
+      throw new Error(`[TC2 FAILURE] Sort option "${sortOption}" not found in sort popover on ${this.siteConfig.name}. Visible elements: [${visibleOptions.join(' | ')}]`);
     }
-    await this.navigateTo(currentUrl.toString());
-    await this.page.waitForTimeout(3000);
-    await this._dismissPromoPopupsOnly();
-    await this._closeAllPopovers();
-    Logger.info(`[TC2] Sort applied via URL param`);
+
+    await option.click({ force: true });
+    await this.page.waitForTimeout(2500);
+    Logger.info(`[TC2] Sort "${sortOption}" selected via real UI popover`);
   }
 
   /**

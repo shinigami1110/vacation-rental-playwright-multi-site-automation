@@ -27,20 +27,14 @@ class BasePage {
         Logger.info('Dismissed cookie consent banner');
       }
 
-      // Close Promotional Modal Popup if present
-      const popupCloseBtn = this.page.locator('#headlessui-portal-root button:has-text("X"), #headlessui-portal-root button:has-text("×"), [id*="headlessui"] button, button[aria-label*="close" i]').first();
-      if (await popupCloseBtn.isVisible({ timeout: 500 }).catch(() => false)) {
-        await popupCloseBtn.click({ force: true }).catch(() => {});
-        Logger.info('Dismissed promotional modal popup via X button click');
-      }
-
-      // Remove overlay backdrop if portal blocks interaction
+      // Close Promotional Modal Popup if present (only when text indicates promo popup)
       await this.page.evaluate(() => {
         const portalRoots = document.querySelectorAll('#headlessui-portal-root');
         portalRoots.forEach(portal => {
-          if (portal.innerText && (portal.innerText.includes('SUMMER') || portal.innerText.includes('OFF') || portal.innerText.includes('20%') || portal.innerText.includes('SPECIAL'))) {
-            const btn = portal.querySelector('button');
-            if (btn) btn.click();
+          const text = portal.innerText || '';
+          if (text.includes('SUMMER') || text.includes('OFF') || text.includes('20%') || text.includes('SPECIAL')) {
+            const closeBtn = portal.querySelector('button[aria-label*="close" i], button:has-text("X"), button:has-text("×")');
+            if (closeBtn) closeBtn.click();
             else portal.style.display = 'none';
           }
         });

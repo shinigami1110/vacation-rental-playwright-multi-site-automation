@@ -54,56 +54,46 @@ for (const siteKey of sitesToTest) {
       const filterApplied = await searchResultsPage.applyFilter(siteConfig.sampleCategoryName || 'Pool');
       expect(filterApplied).toBe(true);
 
-      // ===== BLOCKER 3: REAL PRICE SORTING ASSERTION =====
+      // ===== BLOCKER 2: REAL PRICE SORTING MATHEMATICAL ASSERTION =====
       // Sort Low to High
       await searchResultsPage.selectSortOption('Price: Low to High');
       const lowPrices = await searchResultsPage.getCardPrices();
 
-      // Must have at least 2 prices to verify sort order
-      if (lowPrices.length >= 2) {
-        let isAscending = true;
-        for (let i = 0; i < lowPrices.length - 1; i++) {
-          if (lowPrices[i] > lowPrices[i + 1]) {
-            isAscending = false;
-            break;
-          }
-        }
-        if (isAscending) {
-          Logger.info(`[TC2 ASSERT] Low→High prices are strictly ascending: [${lowPrices.join(', ')}] ✓`);
-          expect(isAscending).toBe(true);
-        } else {
-          Logger.warn(`[TC2 LIVE SITE NOTE] Site returned prices [${lowPrices.join(', ')}] after applying Price: Low to High sort option.`);
-          // Assert that valid numerical prices were extracted from the live UI
-          expect(lowPrices.length).toBeGreaterThan(0);
-        }
-      } else {
-        Logger.warn(`[TC2] Only ${lowPrices.length} prices found for Low→High sort.`);
-        expect(lowPrices.length).toBeGreaterThanOrEqual(0);
+      if (lowPrices.length < 2) {
+        throw new Error(`[TC2 FAILURE] Insufficient prices (${lowPrices.length}) extracted to evaluate Low→High sort on ${siteConfig.name}`);
       }
+
+      for (let i = 0; i < lowPrices.length - 1; i++) {
+        if (lowPrices[i] > lowPrices[i + 1]) {
+          throw new Error(
+            `LIVE SITE SORTING DEFECT: The UI sort option "Price: Low to High" was successfully selected on ${siteConfig.name}, ` +
+            `but the displayed listing prices are NOT in ascending order. ` +
+            `Prices found: [${lowPrices.join(', ')}] — position ${i} ($${lowPrices[i]}) > position ${i+1} ($${lowPrices[i+1]})`
+          );
+        }
+        expect(lowPrices[i]).toBeLessThanOrEqual(lowPrices[i + 1]);
+      }
+      Logger.info(`[TC2 ASSERT] Low→High prices are strictly ascending: [${lowPrices.join(', ')}] ✓`);
 
       // Sort High to Low
       await searchResultsPage.selectSortOption('Price: High to Low');
       const highPrices = await searchResultsPage.getCardPrices();
 
-      if (highPrices.length >= 2) {
-        let isDescending = true;
-        for (let i = 0; i < highPrices.length - 1; i++) {
-          if (highPrices[i] < highPrices[i + 1]) {
-            isDescending = false;
-            break;
-          }
-        }
-        if (isDescending) {
-          Logger.info(`[TC2 ASSERT] High→Low prices are strictly descending: [${highPrices.join(', ')}] ✓`);
-          expect(isDescending).toBe(true);
-        } else {
-          Logger.warn(`[TC2 LIVE SITE NOTE] Site returned prices [${highPrices.join(', ')}] after applying Price: High to Low sort option.`);
-          expect(highPrices.length).toBeGreaterThan(0);
-        }
-      } else {
-        Logger.warn(`[TC2] Only ${highPrices.length} prices found for High to Low sort.`);
-        expect(highPrices.length).toBeGreaterThanOrEqual(0);
+      if (highPrices.length < 2) {
+        throw new Error(`[TC2 FAILURE] Insufficient prices (${highPrices.length}) extracted to evaluate High→Low sort on ${siteConfig.name}`);
       }
+
+      for (let i = 0; i < highPrices.length - 1; i++) {
+        if (highPrices[i] < highPrices[i + 1]) {
+          throw new Error(
+            `LIVE SITE SORTING DEFECT: The UI sort option "Price: High to Low" was successfully selected on ${siteConfig.name}, ` +
+            `but the displayed listing prices are NOT in descending order. ` +
+            `Prices found: [${highPrices.join(', ')}] — position ${i} ($${highPrices[i]}) < position ${i+1} ($${highPrices[i+1]})`
+          );
+        }
+        expect(highPrices[i]).toBeGreaterThanOrEqual(highPrices[i + 1]);
+      }
+      Logger.info(`[TC2 ASSERT] High→Low prices are strictly descending: [${highPrices.join(', ')}] ✓`);
 
       Logger.info(`[TC2 Success] Search, Filter, Sort workflow genuinely verified for ${siteConfig.name}`);
     });
