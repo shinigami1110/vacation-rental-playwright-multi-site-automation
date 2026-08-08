@@ -8,7 +8,8 @@ const FormValidationPage = require('../pages/FormValidationPage');
 const FooterPage = require('../pages/FooterPage');
 
 /**
- * Custom Playwright Fixture supporting Multi-Site Execution with clean full-screen rendering and banner popup suppression
+ * Custom Playwright Fixture supporting Multi-Site Execution with
+ * selective promo popup suppression (does NOT suppress functional popovers).
  */
 const test = baseTest.extend({
   siteKey: ['aliceLodging', { option: true }],
@@ -19,41 +20,24 @@ const test = baseTest.extend({
   },
 
   page: async ({ page }, use) => {
-    // Inject global stylesheet to permanently suppress floating promo modals from appearing on screenshots or blocking UI
+    // Inject a mutation observer that only removes PROMOTIONAL popups
+    // (those containing words like SUMMER, OFF, 20%, SPECIAL, coupon, discount).
+    // Functional popovers (guest picker, calendar, sort) are NOT suppressed.
     await page.addInitScript(() => {
-      const injectStyle = () => {
-        if (!document.getElementById('suppress-promo-popups')) {
-          const style = document.createElement('style');
-          style.id = 'suppress-promo-popups';
-          style.innerHTML = `
-            #headlessui-portal-root,
-            [id*="headlessui-portal"],
-            div[role="dialog"] {
-              display: none !important;
-              visibility: hidden !important;
-              opacity: 0 !important;
-              pointer-events: none !important;
-            }
-          `;
-          if (document.head) {
-            document.head.appendChild(style);
-          }
-        }
-      };
-
-      if (document.readyState === 'loading') {
-        window.addEventListener('DOMContentLoaded', injectStyle);
-      } else {
-        injectStyle();
-      }
-
-      // Mutation observer fallback to clean modal nodes
       const observer = new MutationObserver(() => {
         const portals = document.querySelectorAll('#headlessui-portal-root');
         portals.forEach(p => {
-          if (p.innerText && (p.innerText.includes('SUMMER') || p.innerText.includes('OFF') || p.innerText.includes('20%') || p.innerText.includes('SPECIAL'))) {
-            p.style.display = 'none';
-            p.remove();
+          const text = p.innerText || '';
+          // Only suppress promotional/marketing modals
+          if (text.includes('SUMMER') || text.includes('OFF') || text.includes('20%') ||
+              text.includes('SPECIAL') || text.includes('coupon') || text.includes('discount') ||
+              text.includes('SUBSCRIBE') || text.includes('newsletter')) {
+            const closeBtn = p.querySelector('button[aria-label*="close" i], button[aria-label*="Close"]');
+            if (closeBtn) {
+              closeBtn.click();
+            } else {
+              p.style.display = 'none';
+            }
           }
         });
       });
