@@ -36,6 +36,7 @@ for (const siteKey of sitesToTest) {
       // 5. Verify displayed property information is consistent
       const detailPropTitle = await propertyDetailsPage.getPropertyName();
       expect(detailPropTitle).toBeTruthy();
+      expect(detailPropTitle.trim().toLowerCase()).toBe(listingPropName.trim().toLowerCase());
 
       const bookingDetails = await propertyDetailsPage.verifyBookingDetails();
       expect(bookingDetails.pageLoaded).toBe(true);

@@ -18,6 +18,7 @@ for (const siteKey of sitesToTest) {
 
       // 3. Assert social links structure
       expect(Array.isArray(socialLinks)).toBe(true);
+      expect(socialLinks.length).toBeGreaterThan(0);
 
       // 4. Verify destination URLs & assert actual domain matches expected social platform
       for (const link of socialLinks) {

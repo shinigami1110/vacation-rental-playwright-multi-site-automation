@@ -20,27 +20,8 @@ const test = baseTest.extend({
   },
 
   page: async ({ page }, use) => {
-    // Inject a mutation observer that only removes PROMOTIONAL popups
-    // (those containing words like SUMMER, OFF, 20%, SPECIAL, coupon, discount).
-    // Functional popovers (guest picker, calendar, sort) are NOT suppressed.
-    await page.addInitScript(() => {
-      const observer = new MutationObserver(() => {
-        const portals = document.querySelectorAll('#headlessui-portal-root');
-        portals.forEach(p => {
-          const text = p.innerText || '';
-          // Only suppress promotional/marketing modals
-          if (text.includes('SUMMER') || text.includes('OFF') || text.includes('20%') ||
-              text.includes('SPECIAL') || text.includes('coupon') || text.includes('discount') ||
-              text.includes('SUBSCRIBE') || text.includes('newsletter')) {
-            p.style.display = 'none';
-          }
-        });
-      });
-      if (document.documentElement) {
-        observer.observe(document.documentElement, { childList: true, subtree: true });
-      }
-    });
-
+    // Do not suppress Headless UI portals here. Guest and calendar popovers are
+    // rendered in the portal root and must remain available to the tests.
     await use(page);
   },
 

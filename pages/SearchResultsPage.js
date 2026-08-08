@@ -56,28 +56,27 @@ class SearchResultsPage extends BasePage {
   }
 
   /**
-   * Dismiss ONLY promotional popups, not functional popovers.
-   * Aggressively removes any fixed/modal portal children that contain promo text.
+   * Dismiss only the currently observed seasonal promotional modal. Functional
+   * guest, calendar, filter, and sort portals remain untouched.
    */
-  async _dismissPromoPopupsOnly() {
-    await this.page.evaluate(() => {
-      // Remove any headlessui portal children that are fullscreen fixed promo modals
-      document.querySelectorAll('#headlessui-portal-root > div').forEach(child => {
-        const text = child.innerText || '';
-        const hasFixedClass = child.className && (child.className.includes('fixed') || child.className.includes('z-modal'));
-        // Any fixed full-screen element that intercepts pointer events and has promo text
-        if (hasFixedClass && (text.includes('SUMMER') || text.includes('OFF') || text.includes('20%') || text.includes('SPECIAL') || text.includes('SUBSCRIBE'))) {
-          child.remove();
-        }
-        // Also remove any banner popup regardless of promo text (the banner div)
-        const bannerClose = child.querySelector('button[aria-label*="Close banner" i], button[aria-label*="close banner" i]');
-        if (bannerClose) bannerClose.click();
-      });
-      // Also dismiss the top announcement banner
-      const bannerCloseBtn = document.querySelector('button[aria-label="Close banner"]');
-      if (bannerCloseBtn) bannerCloseBtn.click();
-    }).catch(() => {});
-    await this.page.waitForTimeout(300);
+  async _dismissPromoPopupsOnly(waitForPromo = false) {
+    const promoModal = this.page
+      .locator('#headlessui-portal-root div.fixed.bottom-0.z-modal')
+      .first();
+    const deadline = Date.now() + (waitForPromo ? 8000 : 0);
+
+    while (true) {
+      if (await promoModal.count() > 0 && await promoModal.isVisible()) {
+        // The observed seasonal modal's first button is its visible X close control.
+        const closeButton = promoModal.locator('button').first();
+        await closeButton.click();
+        await promoModal.waitFor({ state: 'hidden', timeout: 5000 });
+        return;
+      }
+
+      if (Date.now() >= deadline) return;
+      await this.page.waitForTimeout(250);
+    }
   }
 
   /**
@@ -117,85 +116,29 @@ class SearchResultsPage extends BasePage {
     const before = await this._readGuestCountsFromUI();
     Logger.info(`[TC2] BEFORE: Adults=${before.adults}, Children=${before.children}`);
 
-    // Step 2: Remove fixed promo overlay that intercepts pointer events
-    await this.page.evaluate(() => {
-      document.querySelectorAll('#headlessui-portal-root > div').forEach(child => {
-        const style = window.getComputedStyle(child);
-        const isFixed = style.position === 'fixed' || child.className.includes('fixed');
-        if (isFixed) child.remove();
-      });
-      const bannerClose = document.querySelector('button[aria-label="Close banner"]');
-      if (bannerClose) bannerClose.click();
-    }).catch(() => {});
-    await this.page.waitForTimeout(300);
-
-    // Step 3: Open guest picker via direct DOM element click (avoids CSS pointer-event interception)
+    // Step 2: Open the guest picker through its real trigger.
+    await this._dismissPromoPopupsOnly(true);
     const guestBtn = this.page.locator('button.popoverButtonContainer[aria-label*="Select Guests"]').first();
     await guestBtn.waitFor({ state: 'visible', timeout: 10000 });
+    await guestBtn.click();
 
-    // Use page.evaluate to dispatch a real click event on the button element directly
-    await this.page.evaluate(() => {
-      const btn = document.querySelector('button.popoverButtonContainer[aria-label*="Select Guests"]');
-      if (btn) {
-        btn.dispatchEvent(new MouseEvent('click', { bubbles: true, cancelable: true }));
-      }
-    });
-    await this.page.waitForTimeout(1500);
+    // Step 3: Use the real accessible increment controls rendered by the open picker.
+    const incrementAdults = this.page.getByRole('button', { name: 'Increment adults', exact: true });
+    const incrementChildren = this.page.getByRole('button', { name: 'Increment children', exact: true });
+    await incrementAdults.waitFor({ state: 'visible', timeout: 10000 });
+    await incrementChildren.waitFor({ state: 'visible', timeout: 10000 });
 
-    // Step 4: Find the Increment Adults and Increment Children buttons by aria-label
-    // The dispatchEvent click opens the guest picker; buttons appear with known aria-labels
-    const stepperData = await this.page.evaluate(() => {
-      const incrementAdults = document.querySelector('button[aria-label="Increment adults"]');
-      const incrementChildren = document.querySelector('button[aria-label="Increment children"]');
-      if (!incrementAdults || !incrementChildren) {
-        // Try partial match
-        const allBtns = Array.from(document.querySelectorAll('button'));
-        const adultBtn = allBtns.find(b => (b.getAttribute('aria-label') || '').toLowerCase().includes('increment adult') || (b.getAttribute('aria-label') || '').toLowerCase().includes('add adult'));
-        const childBtn = allBtns.find(b => (b.getAttribute('aria-label') || '').toLowerCase().includes('increment child') || (b.getAttribute('aria-label') || '').toLowerCase().includes('add child'));
-        if (!adultBtn || !childBtn) {
-          return { found: false, allAriaLabels: allBtns.map(b => b.getAttribute('aria-label') || '').filter(Boolean) };
-        }
-        const aR = adultBtn.getBoundingClientRect();
-        const cR = childBtn.getBoundingClientRect();
-        return {
-          found: true,
-          adultPlus: { x: aR.x + aR.width / 2, y: aR.y + aR.height / 2 },
-          childPlus: { x: cR.x + cR.width / 2, y: cR.y + cR.height / 2 }
-        };
-      }
-      const aR = incrementAdults.getBoundingClientRect();
-      const cR = incrementChildren.getBoundingClientRect();
-      return {
-        found: true,
-        adultPlus: { x: aR.x + aR.width / 2, y: aR.y + aR.height / 2 },
-        childPlus: { x: cR.x + cR.width / 2, y: cR.y + cR.height / 2 }
-      };
-    });
-
-    Logger.info(`[TC2] Guest stepper detection: ${JSON.stringify(stepperData)}`);
-
-    if (!stepperData.found) {
-      throw new Error(`[TC2 FAILURE] Increment adults/children buttons not found after guest picker opened on ${this.siteConfig.name}. AriaLabels present: [${(stepperData.allAriaLabels || []).join(', ')}]`);
-    }
-
-    // Step 5: Click Adult '+' stepper
+    // Step 4: Click Adult '+' stepper.
     for (let i = 0; i < adultsToAdd; i++) {
-      await this.page.mouse.click(stepperData.adultPlus.x, stepperData.adultPlus.y);
-      await this.page.waitForTimeout(400);
+      await incrementAdults.click();
     }
 
-    // Step 6: Click Children '+' stepper
+    // Step 5: Click Children '+' stepper.
     for (let i = 0; i < childrenToAdd; i++) {
-      await this.page.mouse.click(stepperData.childPlus.x, stepperData.childPlus.y);
-      await this.page.waitForTimeout(400);
+      await incrementChildren.click();
     }
 
-    // Step 7: Close popover
-    await this.page.keyboard.press('Escape').catch(() => {});
-    await this.page.waitForTimeout(800);
-
-
-    // Step 8: Read AFTER state and verify
+    // Step 6: Read AFTER state directly from the updated trigger aria-label.
     const after = await this._readGuestCountsFromUI();
     Logger.info(`[TC2] AFTER: Adults=${after.adults}, Children=${after.children}`);
 
@@ -226,36 +169,51 @@ class SearchResultsPage extends BasePage {
     const checkInISO = checkInDate.toISOString().split('T')[0];
     const checkOutISO = checkOutDate.toISOString().split('T')[0];
     Logger.step(`[TC2] Selecting future dates: Check-in ${checkInISO}, Check-out ${checkOutISO}`);
-    await this._dismissPromoPopupsOnly();
+    await this._dismissPromoPopupsOnly(true);
 
     // Step 1: Read BEFORE date state
     const before = await this._readDateStateFromUI();
     Logger.info(`[TC2] Dates BEFORE: arrival=${before.arrivalISO}, departure=${before.departureISO}`);
 
-    // Step 2: Open Calendar date picker trigger via real UI click
+    // Step 2: Open the real calendar and verify its date controls are rendered.
     const dateBtn = this.page.locator('button.popoverButtonContainer[aria-label*="Arrival"]').first();
     await dateBtn.waitFor({ state: 'visible', timeout: 10000 });
-    await dateBtn.click({ force: true });
-    await this.page.waitForTimeout(1000);
+    await dateBtn.click();
 
-    // Step 3: Locate and click check-in day cell by ISO date attribute / label
-    const checkInCell = this.page.locator(`time[datetime="${checkInISO}"], button[aria-label*="${checkInISO}"], [data-date="${checkInISO}"]`).first();
-    if (!await checkInCell.isVisible({ timeout: 5000 }).catch(() => false)) {
-      throw new Error(`[TC2 FAILURE] Check-in calendar cell for date ${checkInISO} was not found in open Calendar on ${this.siteConfig.name}`);
-    }
-    await checkInCell.click({ force: true });
-    await this.page.waitForTimeout(500);
+    const calendarDays = this.page.locator('time[datetime]');
+    await calendarDays.first().waitFor({ state: 'visible', timeout: 10000 });
 
-    // Step 4: Locate and click check-out day cell
-    const checkOutCell = this.page.locator(`time[datetime="${checkOutISO}"], button[aria-label*="${checkOutISO}"], [data-date="${checkOutISO}"]`).first();
-    if (!await checkOutCell.isVisible({ timeout: 5000 }).catch(() => false)) {
-      throw new Error(`[TC2 FAILURE] Check-out calendar cell for date ${checkOutISO} was not found in open Calendar on ${this.siteConfig.name}`);
-    }
-    await checkOutCell.click({ force: true });
-    await this.page.waitForTimeout(500);
+    const selectRenderedDate = async (targetISO, label) => {
+      for (let monthAdvance = 0; monthAdvance < 12; monthAdvance++) {
+        const targetDay = this.page
+          .locator(`time[datetime="${targetISO}"]`)
+          .first();
 
-    await this.page.keyboard.press('Escape').catch(() => {});
-    await this.page.waitForTimeout(800);
+        if (await targetDay.count() > 0 && await targetDay.isVisible()) {
+          await targetDay.click();
+          return;
+        }
+
+        const nextMonthAriaLabel = await this.page.evaluate(() => {
+          const nextMonthButton = Array.from(document.querySelectorAll('button')).find(button =>
+            /next.*month|month.*next/i.test(button.getAttribute('aria-label') || '')
+          );
+          return nextMonthButton?.getAttribute('aria-label') || null;
+        });
+
+        if (!nextMonthAriaLabel) {
+          throw new Error(`[TC2 FAILURE] ${label} ${targetISO} is not rendered and the open calendar exposes no next-month control on ${this.siteConfig.name}`);
+        }
+
+        await this.page.getByRole('button', { name: nextMonthAriaLabel, exact: true }).click();
+      }
+
+      throw new Error(`[TC2 FAILURE] ${label} ${targetISO} was not rendered after navigating 12 calendar months on ${this.siteConfig.name}`);
+    };
+
+    // Steps 3-4: Select the actual rendered check-in and check-out day controls.
+    await selectRenderedDate(checkInISO, 'Check-in date');
+    await selectRenderedDate(checkOutISO, 'Check-out date');
 
     // Step 5: Read AFTER date state strictly from actual UI (No URL fallbacks)
     const after = await this._readDateStateFromUI();
@@ -284,22 +242,15 @@ class SearchResultsPage extends BasePage {
     await this._dismissPromoPopupsOnly();
     await this._closeAllPopovers();
 
-    // The current URL should already have guests + dates from previous steps.
-    // Now add the search/destination and navigate to listings.
-    const currentUrl = new URL(this.page.url());
-    const params = new URLSearchParams(currentUrl.search);
-
-    // Navigate to listings page with all search params preserved
-    const listingsUrl = new URL(`${this.siteConfig.baseUrl}/listings`);
-    for (const [key, value] of params.entries()) {
-      listingsUrl.searchParams.set(key, value);
-    }
-
-    await this.navigateTo(listingsUrl.toString());
-    await this.page.waitForTimeout(3000);
+    const destinationInput = this.page.locator(commonLocators.search.destinationInput).first();
+    await destinationInput.waitFor({ state: 'visible', timeout: 10000 });
+    await this.safeFill(destinationInput, destination, 'Destination search input');
+    await this.page.keyboard.press('Enter');
+    await this.waitForLoad();
+    await this.page.waitForTimeout(2000);
     await this._dismissPromoPopupsOnly();
     await this._closeAllPopovers();
-    Logger.info(`[TC2] Navigated to listings: ${listingsUrl.toString()}`);
+    Logger.info(`[TC2] Destination search submitted through the live UI.`);
   }
 
   /**
@@ -321,27 +272,13 @@ class SearchResultsPage extends BasePage {
    */
   async getCardPrices() {
     await this.page.waitForTimeout(1500);
-    const prices = [];
-
-    // Both sites show prices as <span> elements with text like "$289"
-    // We look for leaf spans (no children) with dollar amounts
-    const priceElements = await this.page.evaluate(() => {
-      const results = [];
-      document.querySelectorAll('span').forEach(span => {
-        const text = (span.textContent || '').trim();
-        if (text.match(/^\$\d[\d,]*$/) && span.children.length === 0) {
-          results.push(text);
-        }
-      });
-      return results;
-    });
-
-    for (const text of priceElements) {
+    const cardTexts = await this.page.locator('a[href*="/listing"]').evaluateAll(cards =>
+      cards.map(card => card.innerText || '')
+    );
+    const prices = cardTexts.map(text => {
       const match = text.match(/\$(\d[\d,]*)/);
-      if (match) {
-        prices.push(parseInt(match[1].replace(/,/g, ''), 10));
-      }
-    }
+      return match ? parseInt(match[1].replace(/,/g, ''), 10) : null;
+    }).filter(Number.isFinite);
 
     Logger.info(`[TC2] Extracted ${prices.length} prices: [${prices.join(', ')}]`);
     return prices;
@@ -403,7 +340,7 @@ class SearchResultsPage extends BasePage {
     await this._dismissPromoPopupsOnly();
 
     // The sort button: class filterAndSortButton sortButton, text contains "Sort:"
-    const sortBtn = this.page.locator('.filterAndSortButton.sortButton, button.sortButton, button:has-text("Sort:")').first();
+    const sortBtn = this.page.locator('.filterAndSortButton.sortButton, button.sortButton, button:has-text("Sort:"), button:has-text("Sort")').first();
     const sortBtnVisible = await sortBtn.isVisible({ timeout: 5000 }).catch(() => false);
     if (!sortBtnVisible) {
       throw new Error(`[TC2 FAILURE] Sort button not found on ${this.siteConfig.name}. Cannot perform sort UI interaction.`);
@@ -423,7 +360,7 @@ class SearchResultsPage extends BasePage {
           .filter(t => t.length > 0 && t.length < 50)
           .slice(0, 20)
       );
-      throw new Error(`[TC2 FAILURE] Sort option "${sortOption}" not found in sort popover on ${this.siteConfig.name}. Visible elements: [${visibleOptions.join(' | ')}]`);
+      throw new Error(`LIVE SITE LIMITATION: ${this.siteConfig.name} exposes no "${sortOption}" option in its real sort UI. Visible sort choices: [${visibleOptions.join(' | ')}]`);
     }
 
     await option.click({ force: true });
@@ -440,20 +377,25 @@ class SearchResultsPage extends BasePage {
     await this._dismissPromoPopupsOnly();
     await this._closeAllPopovers();
 
-    const cardLinks = this.page.locator('a[href*="/listing"]').filter({ hasText: /./ });
-    const count = await cardLinks.count();
+    const propertyCards = this.page.locator('[aria-label^="Property card "]');
+    const count = await propertyCards.count();
 
     if (count === 0) {
       throw new Error(`[TC3 FAILURE] No property listing cards found on ${this.siteConfig.name}`);
     }
 
-    const firstCard = cardLinks.first();
+    const firstCard = propertyCards.first();
     await firstCard.waitFor({ state: 'visible', timeout: 10000 });
-    const cardText = (await firstCard.innerText()).trim();
-    const name = cardText.split('\n')[0].trim();
+    const cardLabel = await firstCard.getAttribute('aria-label');
+    const name = cardLabel?.replace(/^Property card\s+/i, '').trim();
+    if (!name) {
+      throw new Error(`[TC3 FAILURE] The first property card on ${this.siteConfig.name} has no accessible name.`);
+    }
+    const propertyLink = firstCard.locator('a[href*="/listing"]').first();
+    await propertyLink.waitFor({ state: 'visible', timeout: 10000 });
     Logger.info(`[TC3/TC4] Opening property: "${name}"`);
 
-    await firstCard.click({ force: true });
+    await propertyLink.click();
     await this.waitForLoad();
     return name;
   }

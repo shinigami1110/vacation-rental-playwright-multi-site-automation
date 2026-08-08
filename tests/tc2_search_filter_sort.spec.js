@@ -48,11 +48,12 @@ for (const siteKey of sitesToTest) {
       const cardsBefore = await searchResultsPage.getPropertyCards();
       const countBefore = await cardsBefore.count();
       Logger.info(`[TC2] Property listings count after search: ${countBefore}`);
-      expect(countBefore).toBeGreaterThanOrEqual(0);
+      expect(countBefore).toBeGreaterThan(0);
 
       // 5. Apply filter
       const filterApplied = await searchResultsPage.applyFilter(siteConfig.sampleCategoryName || 'Pool');
       expect(filterApplied).toBe(true);
+      expect(await searchResultsPage.getPropertyCards().then(cards => cards.count())).toBeGreaterThan(0);
 
       // ===== BLOCKER 2: REAL PRICE SORTING MATHEMATICAL ASSERTION =====
       // Sort Low to High

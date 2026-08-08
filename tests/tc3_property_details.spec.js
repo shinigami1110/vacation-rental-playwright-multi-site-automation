@@ -38,6 +38,7 @@ for (const siteKey of sitesToTest) {
       // 6. Verify property name on detail page
       const pagePropertyName = await propertyDetailsPage.getPropertyName();
       expect(pagePropertyName).toBeTruthy();
+      expect(pagePropertyName.trim().toLowerCase()).toBe(selectedPropertyName.trim().toLowerCase());
       Logger.info(`[TC3] Property page title: "${pagePropertyName}"`);
 
       // 7. Verify booking criteria consistency — BLOCKER 4
@@ -50,6 +51,11 @@ for (const siteKey of sitesToTest) {
 
       // Assert page actually loaded
       expect(bookingInfo.pageLoaded).toBe(true);
+      expect(bookingInfo.actualGuests).toBeTruthy();
+      expect(bookingInfo.guestsConsistent).toBe(true);
+      expect(bookingInfo.actualDates).toBeTruthy();
+      expect(bookingInfo.datesConsistent).toBe(true);
+      expect(bookingInfo.hasBookingSection).toBe(true);
 
       // Assert guests are consistent between search and property page
       if (bookingInfo.actualGuests) {

@@ -14,11 +14,7 @@ for (const siteKey of sitesToTest) {
       // Navigate to listings page
       await searchResultsPage.openListings();
 
-      // Remove popup suppression so headlessui elements work
-      await page.evaluate(() => {
-        const suppressStyle = document.getElementById('suppress-promo-popups');
-        if (suppressStyle) suppressStyle.remove();
-      }).catch(() => {});
+      await searchResultsPage._dismissPromoPopupsOnly(true);
 
       // 1. Find favourite buttons on listing cards
       // Both sites use: button[aria-label="Click to add unit to Favourites"]
@@ -38,19 +34,8 @@ for (const siteKey of sitesToTest) {
       const svgBefore = await firstFavBtn.locator('svg').first().getAttribute('class');
       Logger.info(`[TC6] SVG class BEFORE click: "${svgBefore}"`);
 
-      // 3. Click the favourite button safely
-      // Ensure any open backdrop or modal overlay is dismissed before clicking
-      await page.evaluate(() => {
-        document.querySelectorAll('#headlessui-portal-root > div').forEach(el => {
-          if (el.querySelector('.fixed') || el.innerText.includes('SUMMER') || el.innerText.includes('OFF')) {
-            el.remove();
-          }
-        });
-      }).catch(() => {});
-      await page.keyboard.press('Escape').catch(() => {});
-      await page.waitForTimeout(300);
-
-      await firstFavBtn.click({ force: true });
+      // 3. Click the real favourite button.
+      await firstFavBtn.click();
       await page.waitForTimeout(1000);
       Logger.info(`[TC6] Clicked first favourite button`);
 
@@ -58,9 +43,8 @@ for (const siteKey of sitesToTest) {
       const svgAfter = await firstFavBtn.locator('svg').first().getAttribute('class');
       Logger.info(`[TC6] SVG class AFTER click: "${svgAfter}"`);
 
-      // The SVG should have changed (typically adds fill-red or similar)
-      // Even if classes don't differ, the click action is genuine
-      Logger.info(`[TC6] SVG state changed: ${svgBefore !== svgAfter}`);
+      expect(svgAfter).not.toBe(svgBefore);
+      Logger.info(`[TC6 ASSERT] SVG state changed: true`);
 
       // 5. Navigate to Favourites page via header
       // Both sites have: div[role="button"][aria-label="Favourites"]
@@ -91,7 +75,10 @@ for (const siteKey of sitesToTest) {
         }
       }
 
-      Logger.info(`[TC6 Success] Bonus favourites workflow genuinely completed on ${siteConfig.name}`);
+      Logger.info(
+        `[TC6 Success] Favourite button state transition was verified on ${siteConfig.name}; ` +
+        'saved-favourites persistence is not asserted for unauthenticated users.'
+      );
     });
   });
 }

@@ -3,11 +3,7 @@
     "argv": [
       "C:\\Program Files\\nodejs\\node.exe",
       "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\node_modules\\@playwright\\test\\cli.js",
-      "test",
-      "tests/tc2_search_filter_sort.spec.js",
-      "--headed",
-      "-g",
-      "aliceLodging"
+      "test"
     ],
     "configFile": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\playwright.config.js",
     "rootDir": "C:/Users/ASUS/.gemini/antigravity-ide/scratch/vacation-rental-playwright-multi-site-automation/tests",
@@ -76,6 +72,208 @@
   },
   "suites": [
     {
+      "title": "tc1_social_media.spec.js",
+      "file": "tc1_social_media.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "TC1 — Social Media Links Validation [aliceLodging]",
+          "file": "tc1_social_media.spec.js",
+          "line": 7,
+          "column": 8,
+          "specs": [
+            {
+              "title": "Verify dynamic discovery, destination URL recording, and social platform domain assertions on aliceLodging",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 6884,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "[2026-08-08T12:25:09.683Z] [STEP] [TC1] Starting Social Media Links Validation on Alice Lodging\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:25:09.684Z] [STEP] Opening home page for Alice Lodging\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:25:09.684Z] [INFO] Navigating to: https://www.alicelodging.com\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:25:11.997Z] [STEP] [TC1] Dynamically discovering footer social media links on Alice Lodging\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:25:13.270Z] [INFO] [TC1 Output] Discovered 3 dynamic social media links for Alice Lodging\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:25:13.270Z] [INFO] [Social Link 1] Platform: FACEBOOK -> Destination: https://www.facebook.com/profile.php?id=61579637295109 (Domain: www.facebook.com)\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:25:13.271Z] [INFO] [Social Link 2] Platform: INSTAGRAM -> Destination: https://www.instagram.com/alicelodging/ (Domain: www.instagram.com)\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:25:13.271Z] [INFO] [Social Link 3] Platform: LINKEDIN -> Destination: https://www.linkedin.com/company/alice-lodging (Domain: www.linkedin.com)\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:25:13.291Z] [INFO] [TC1 Verified Destination] Platform: FACEBOOK | URL: https://www.facebook.com/profile.php?id=61579637295109 | Domain: www.facebook.com\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:25:13.300Z] [INFO] [TC1 Verified Destination] Platform: INSTAGRAM | URL: https://www.instagram.com/alicelodging/ | Domain: www.instagram.com\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:25:13.309Z] [INFO] [TC1 Verified Destination] Platform: LINKEDIN | URL: https://www.linkedin.com/company/alice-lodging | Domain: www.linkedin.com\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:25:13.310Z] [INFO] [TC1 Success] Completed dynamic social media validation for Alice Lodging\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T12:25:07.567Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\test-results\\tc1_social_media-TC1-—-Soc-fd223--assertions-on-aliceLodging-chromium\\test-finished-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\test-results\\tc1_social_media-TC1-—-Soc-fd223--assertions-on-aliceLodging-chromium\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "3ff269b265c19b75fec6-fffecc28f929c1a7d2d0",
+              "file": "tc1_social_media.spec.js",
+              "line": 10,
+              "column": 5
+            }
+          ]
+        },
+        {
+          "title": "TC1 — Social Media Links Validation [fireskyRetreats]",
+          "file": "tc1_social_media.spec.js",
+          "line": 7,
+          "column": 8,
+          "specs": [
+            {
+              "title": "Verify dynamic discovery, destination URL recording, and social platform domain assertions on fireskyRetreats",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 7603,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n    at C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\tests\\tc1_social_media.spec.js:21:34",
+                        "location": {
+                          "file": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\tests\\tc1_social_media.spec.js",
+                          "column": 34,
+                          "line": 21
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 19 |\u001b[39m       \u001b[90m// 3. Assert social links structure\u001b[39m\n \u001b[90m 20 |\u001b[39m       expect(\u001b[33mArray\u001b[39m\u001b[33m.\u001b[39misArray(socialLinks))\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 21 |\u001b[39m       expect(socialLinks\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 22 |\u001b[39m\n \u001b[90m 23 |\u001b[39m       \u001b[90m// 4. Verify destination URLs & assert actual domain matches expected social platform\u001b[39m\n \u001b[90m 24 |\u001b[39m       \u001b[36mfor\u001b[39m (\u001b[36mconst\u001b[39m link \u001b[36mof\u001b[39m socialLinks) {\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\tests\\tc1_social_media.spec.js",
+                            "column": 34,
+                            "line": 21
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n\n\u001b[0m \u001b[90m 19 |\u001b[39m       \u001b[90m// 3. Assert social links structure\u001b[39m\n \u001b[90m 20 |\u001b[39m       expect(\u001b[33mArray\u001b[39m\u001b[33m.\u001b[39misArray(socialLinks))\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 21 |\u001b[39m       expect(socialLinks\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 22 |\u001b[39m\n \u001b[90m 23 |\u001b[39m       \u001b[90m// 4. Verify destination URLs & assert actual domain matches expected social platform\u001b[39m\n \u001b[90m 24 |\u001b[39m       \u001b[36mfor\u001b[39m (\u001b[36mconst\u001b[39m link \u001b[36mof\u001b[39m socialLinks) {\u001b[0m\n\u001b[2m    at C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\tests\\tc1_social_media.spec.js:21:34\u001b[22m"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "[2026-08-08T12:25:17.128Z] [STEP] [TC1] Starting Social Media Links Validation on Firesky Retreats\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:25:17.128Z] [STEP] Opening home page for Firesky Retreats\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:25:17.128Z] [INFO] Navigating to: https://www.fireskyretreats.com\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:25:20.666Z] [STEP] [TC1] Dynamically discovering footer social media links on Firesky Retreats\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:25:22.140Z] [INFO] [TC1 Output] Discovered 0 dynamic social media links for Firesky Retreats\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T12:25:16.887Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\test-results\\tc1_social_media-TC1-—-Soc-f557a-sertions-on-fireskyRetreats-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\test-results\\tc1_social_media-TC1-—-Soc-f557a-sertions-on-fireskyRetreats-chromium\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\test-results\\tc1_social_media-TC1-—-Soc-f557a-sertions-on-fireskyRetreats-chromium\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\test-results\\tc1_social_media-TC1-—-Soc-f557a-sertions-on-fireskyRetreats-chromium\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\tests\\tc1_social_media.spec.js",
+                        "column": 34,
+                        "line": 21
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "3ff269b265c19b75fec6-ee0b55bd84f2708bb5e6",
+              "file": "tc1_social_media.spec.js",
+              "line": 10,
+              "column": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "tc2_search_filter_sort.spec.js",
       "file": "tc2_search_filter_sort.spec.js",
       "column": 0,
@@ -101,65 +299,119 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 0,
+                      "workerIndex": 1,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 15314,
+                      "duration": 32345,
                       "error": {
-                        "message": "Error: [TC2 FAILURE] Guest Child count did not increment via UI. Expected: 1, Got: 0",
-                        "stack": "Error: [TC2 FAILURE] Guest Child count did not increment via UI. Expected: 1, Got: 0\n    at SearchResultsPage.setGuestCount (C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\pages\\SearchResultsPage.js:206:13)\n    at C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\tests\\tc2_search_filter_sort.spec.js:23:27",
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n    at C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\tests\\tc2_search_filter_sort.spec.js:56:87",
                         "location": {
-                          "file": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\pages\\SearchResultsPage.js",
-                          "column": 13,
-                          "line": 206
+                          "file": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\tests\\tc2_search_filter_sort.spec.js",
+                          "column": 87,
+                          "line": 56
                         },
-                        "snippet": "\u001b[90m   at \u001b[39m..\\pages\\SearchResultsPage.js:206\n\n\u001b[0m \u001b[90m 204 |\u001b[39m     }\n \u001b[90m 205 |\u001b[39m     \u001b[36mif\u001b[39m (after\u001b[33m.\u001b[39mchildren \u001b[33m!==\u001b[39m before\u001b[33m.\u001b[39mchildren \u001b[33m+\u001b[39m childrenToAdd) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 206 |\u001b[39m       \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m`[TC2 FAILURE] Guest Child count did not increment via UI. Expected: ${before.children + childrenToAdd}, Got: ${after.children}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 207 |\u001b[39m     }\n \u001b[90m 208 |\u001b[39m\n \u001b[90m 209 |\u001b[39m     \u001b[36mreturn\u001b[39m {\u001b[0m"
+                        "snippet": "\u001b[0m \u001b[90m 54 |\u001b[39m       \u001b[36mconst\u001b[39m filterApplied \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m searchResultsPage\u001b[33m.\u001b[39mapplyFilter(siteConfig\u001b[33m.\u001b[39msampleCategoryName \u001b[33m||\u001b[39m \u001b[32m'Pool'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 55 |\u001b[39m       expect(filterApplied)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 56 |\u001b[39m       expect(\u001b[36mawait\u001b[39m searchResultsPage\u001b[33m.\u001b[39mgetPropertyCards()\u001b[33m.\u001b[39mthen(cards \u001b[33m=>\u001b[39m cards\u001b[33m.\u001b[39mcount()))\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 57 |\u001b[39m\n \u001b[90m 58 |\u001b[39m       \u001b[90m// ===== BLOCKER 2: REAL PRICE SORTING MATHEMATICAL ASSERTION =====\u001b[39m\n \u001b[90m 59 |\u001b[39m       \u001b[90m// Sort Low to High\u001b[39m\u001b[0m"
                       },
                       "errors": [
                         {
                           "location": {
-                            "file": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\pages\\SearchResultsPage.js",
-                            "column": 13,
-                            "line": 206
+                            "file": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\tests\\tc2_search_filter_sort.spec.js",
+                            "column": 87,
+                            "line": 56
                           },
-                          "message": "Error: [TC2 FAILURE] Guest Child count did not increment via UI. Expected: 1, Got: 0\n\n   at ..\\pages\\SearchResultsPage.js:206\n\n  204 |     }\n  205 |     if (after.children !== before.children + childrenToAdd) {\n> 206 |       throw new Error(`[TC2 FAILURE] Guest Child count did not increment via UI. Expected: ${before.children + childrenToAdd}, Got: ${after.children}`);\n      |             ^\n  207 |     }\n  208 |\n  209 |     return {\n    at SearchResultsPage.setGuestCount (C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\pages\\SearchResultsPage.js:206:13)\n    at C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\tests\\tc2_search_filter_sort.spec.js:23:27"
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n\n\u001b[0m \u001b[90m 54 |\u001b[39m       \u001b[36mconst\u001b[39m filterApplied \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m searchResultsPage\u001b[33m.\u001b[39mapplyFilter(siteConfig\u001b[33m.\u001b[39msampleCategoryName \u001b[33m||\u001b[39m \u001b[32m'Pool'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 55 |\u001b[39m       expect(filterApplied)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 56 |\u001b[39m       expect(\u001b[36mawait\u001b[39m searchResultsPage\u001b[33m.\u001b[39mgetPropertyCards()\u001b[33m.\u001b[39mthen(cards \u001b[33m=>\u001b[39m cards\u001b[33m.\u001b[39mcount()))\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 57 |\u001b[39m\n \u001b[90m 58 |\u001b[39m       \u001b[90m// ===== BLOCKER 2: REAL PRICE SORTING MATHEMATICAL ASSERTION =====\u001b[39m\n \u001b[90m 59 |\u001b[39m       \u001b[90m// Sort Low to High\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\tests\\tc2_search_filter_sort.spec.js:56:87\u001b[22m"
                         }
                       ],
                       "stdout": [
                         {
-                          "text": "[2026-08-08T11:09:03.034Z] [STEP] [TC2] Starting Search, Filter, Sort Workflow on Alice Lodging\n"
+                          "text": "[2026-08-08T12:25:27.885Z] [STEP] [TC2] Starting Search, Filter, Sort Workflow on Alice Lodging\n"
                         },
                         {
-                          "text": "[2026-08-08T11:09:03.091Z] [INFO] [TC2] Dynamic dates: Check-in 2026-08-22 | Check-out 2026-08-26\n"
+                          "text": "[2026-08-08T12:25:27.975Z] [INFO] [TC2] Dynamic dates: Check-in 2026-08-22 | Check-out 2026-08-26\n"
                         },
                         {
-                          "text": "[2026-08-08T11:09:03.092Z] [STEP] Opening home page for Alice Lodging\n"
+                          "text": "[2026-08-08T12:25:27.975Z] [STEP] Opening home page for Alice Lodging\n"
                         },
                         {
-                          "text": "[2026-08-08T11:09:03.092Z] [INFO] Navigating to: https://www.alicelodging.com\n"
+                          "text": "[2026-08-08T12:25:27.976Z] [INFO] Navigating to: https://www.alicelodging.com\n"
                         },
                         {
-                          "text": "[2026-08-08T11:09:04.589Z] [STEP] [TC2] Configuring guest count (+2 Adults, +1 Children) on Alice Lodging\n"
+                          "text": "[2026-08-08T12:25:29.387Z] [STEP] [TC2] Configuring guest count (+2 Adults, +1 Children) on Alice Lodging\n"
                         },
                         {
-                          "text": "[2026-08-08T11:09:05.677Z] [INFO] [Guest Picker] Current aria-label: \"Select Guests: 0 Adults 0 Children \"\n"
+                          "text": "[2026-08-08T12:25:30.167Z] [INFO] [Guest Picker] Current aria-label: \"Select Guests: 0 Adults 0 Children \"\n"
                         },
                         {
-                          "text": "[2026-08-08T11:09:05.677Z] [INFO] [TC2] BEFORE: Adults=0, Children=0\n"
+                          "text": "[2026-08-08T12:25:30.168Z] [INFO] [TC2] BEFORE: Adults=0, Children=0\n"
                         },
                         {
-                          "text": "[2026-08-08T11:09:08.547Z] [INFO] [TC2] Guest stepper detection: {\"found\":true,\"adultPlus\":{\"x\":1498.5,\"y\":641.5},\"childPlus\":{\"x\":1498.5,\"y\":715.5}}\n"
+                          "text": "[2026-08-08T12:25:39.720Z] [INFO] [Guest Picker] Current aria-label: \"Select Guests: 2 Adults 1 Children \"\n"
                         },
                         {
-                          "text": "[2026-08-08T11:09:14.093Z] [INFO] [Guest Picker] Current aria-label: \"Select Guests: 2 Adults 0 Children \"\n"
+                          "text": "[2026-08-08T12:25:39.720Z] [INFO] [TC2] AFTER: Adults=2, Children=1\n"
                         },
                         {
-                          "text": "[2026-08-08T11:09:14.094Z] [INFO] [TC2] AFTER: Adults=2, Children=0\n"
+                          "text": "[2026-08-08T12:25:39.745Z] [INFO] [TC2 ASSERT] Adults: 0 → 2 ✓\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:25:39.760Z] [INFO] [TC2 ASSERT] Children: 0 → 1 ✓\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:25:39.762Z] [STEP] [TC2] Selecting future dates: Check-in 2026-08-22, Check-out 2026-08-26\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:25:42.037Z] [INFO] [Date Picker] Current aria-label: \"Select Arrival Date Select Departure Date\"\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:25:42.038Z] [INFO] [TC2] Dates BEFORE: arrival=null, departure=null\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:25:43.260Z] [INFO] [Date Picker] Current aria-label: \"Arrival on 2026-08-22 Departure on 2026-08-26\"\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:25:43.262Z] [INFO] [TC2] Dates AFTER: arrival=2026-08-22, departure=2026-08-26\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:25:43.266Z] [INFO] [TC2 ASSERT] Check-in 2026-08-22 reflected in UI: \"Arrival on 2026-08-22 Departure on 2026-08-26\" ✓\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:25:43.269Z] [INFO] [TC2 ASSERT] Check-out 2026-08-26 reflected in UI ✓\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:25:43.270Z] [STEP] [TC2] Performing destination search for: \"Palm Springs\"\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:25:44.001Z] [INFO] Dismissed cookie consent banner\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:25:44.036Z] [INFO] Filling Destination search input with value: \"Palm Springs\"\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:25:47.120Z] [INFO] [TC2] Destination search submitted through the live UI.\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:25:49.177Z] [INFO] [TC2] Property card links displayed: 6\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:25:49.201Z] [INFO] [TC2] Property listings count after search: 6\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:25:49.204Z] [STEP] [TC2] Applying filter: \"Specials\"\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:25:49.639Z] [INFO] Navigating to: https://www.alicelodging.com/specials\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:25:54.640Z] [INFO] [TC2] Filter applied via category navigation: /specials\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:25:56.670Z] [INFO] [TC2] Property card links displayed: 0\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-08T11:09:02.023Z",
+                      "startTime": "2026-08-08T12:25:26.843Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -184,9 +436,9 @@
                         }
                       ],
                       "errorLocation": {
-                        "file": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\pages\\SearchResultsPage.js",
-                        "column": 13,
-                        "line": 206
+                        "file": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\tests\\tc2_search_filter_sort.spec.js",
+                        "column": 87,
+                        "line": 56
                       }
                     }
                   ],
@@ -199,17 +451,1268 @@
               "column": 5
             }
           ]
+        },
+        {
+          "title": "TC2 — Search, Filtering, and Sorting Workflow [fireskyRetreats]",
+          "file": "tc2_search_filter_sort.spec.js",
+          "line": 8,
+          "column": 8,
+          "specs": [
+            {
+              "title": "Verify search, guest count, date selection, filters, and price sorting on fireskyRetreats",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 34152,
+                      "error": {
+                        "message": "TimeoutError: locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[placeholder*=\"destination\" i], input[placeholder*=\"search\" i], input[name*=\"location\" i]').first() to be visible\u001b[22m\n",
+                        "stack": "TimeoutError: locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[placeholder*=\"destination\" i], input[placeholder*=\"search\" i], input[name*=\"location\" i]').first() to be visible\u001b[22m\n\n    at SearchResultsPage.executeSearch (C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\pages\\SearchResultsPage.js:246:28)\n    at C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\tests\\tc2_search_filter_sort.spec.js:45:7",
+                        "location": {
+                          "file": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\pages\\SearchResultsPage.js",
+                          "column": 28,
+                          "line": 246
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m..\\pages\\SearchResultsPage.js:246\n\n\u001b[0m \u001b[90m 244 |\u001b[39m\n \u001b[90m 245 |\u001b[39m     \u001b[36mconst\u001b[39m destinationInput \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(commonLocators\u001b[33m.\u001b[39msearch\u001b[33m.\u001b[39mdestinationInput)\u001b[33m.\u001b[39mfirst()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 246 |\u001b[39m     \u001b[36mawait\u001b[39m destinationInput\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 247 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39msafeFill(destinationInput\u001b[33m,\u001b[39m destination\u001b[33m,\u001b[39m \u001b[32m'Destination search input'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 248 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mkeyboard\u001b[33m.\u001b[39mpress(\u001b[32m'Enter'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 249 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mwaitForLoad()\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\pages\\SearchResultsPage.js",
+                            "column": 28,
+                            "line": 246
+                          },
+                          "message": "TimeoutError: locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[placeholder*=\"destination\" i], input[placeholder*=\"search\" i], input[name*=\"location\" i]').first() to be visible\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\pages\\SearchResultsPage.js:246\n\n\u001b[0m \u001b[90m 244 |\u001b[39m\n \u001b[90m 245 |\u001b[39m     \u001b[36mconst\u001b[39m destinationInput \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(commonLocators\u001b[33m.\u001b[39msearch\u001b[33m.\u001b[39mdestinationInput)\u001b[33m.\u001b[39mfirst()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 246 |\u001b[39m     \u001b[36mawait\u001b[39m destinationInput\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 247 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39msafeFill(destinationInput\u001b[33m,\u001b[39m destination\u001b[33m,\u001b[39m \u001b[32m'Destination search input'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 248 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mkeyboard\u001b[33m.\u001b[39mpress(\u001b[32m'Enter'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 249 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mwaitForLoad()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at SearchResultsPage.executeSearch (C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\pages\\SearchResultsPage.js:246:28)\u001b[22m\n\u001b[2m    at C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\tests\\tc2_search_filter_sort.spec.js:45:7\u001b[22m"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "[2026-08-08T12:26:04.444Z] [STEP] [TC2] Starting Search, Filter, Sort Workflow on Firesky Retreats\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:26:04.502Z] [INFO] [TC2] Dynamic dates: Check-in 2026-08-22 | Check-out 2026-08-26\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:26:04.504Z] [STEP] Opening home page for Firesky Retreats\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:26:04.505Z] [INFO] Navigating to: https://www.fireskyretreats.com\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:26:08.935Z] [INFO] Dismissed cookie consent banner\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:26:09.008Z] [STEP] [TC2] Configuring guest count (+2 Adults, +1 Children) on Firesky Retreats\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:26:09.166Z] [INFO] [Guest Picker] Current aria-label: \"Select Guests: 0 Adults 0 Children \"\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:26:09.167Z] [INFO] [TC2] BEFORE: Adults=0, Children=0\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:26:15.035Z] [INFO] [Guest Picker] Current aria-label: \"Select Guests: 2 Adults 1 Children \"\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:26:15.036Z] [INFO] [TC2] AFTER: Adults=2, Children=1\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:26:15.049Z] [INFO] [TC2 ASSERT] Adults: 0 → 2 ✓\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:26:15.052Z] [INFO] [TC2 ASSERT] Children: 0 → 1 ✓\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:26:15.053Z] [STEP] [TC2] Selecting future dates: Check-in 2026-08-22, Check-out 2026-08-26\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:26:23.141Z] [INFO] [Date Picker] Current aria-label: \"Select Arrival Date Select Departure Date\"\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:26:23.141Z] [INFO] [TC2] Dates BEFORE: arrival=null, departure=null\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:26:24.598Z] [INFO] [Date Picker] Current aria-label: \"Arrival on 2026-08-22 Departure on 2026-08-26\"\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:26:24.598Z] [INFO] [TC2] Dates AFTER: arrival=2026-08-22, departure=2026-08-26\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:26:24.604Z] [INFO] [TC2 ASSERT] Check-in 2026-08-22 reflected in UI: \"Arrival on 2026-08-22 Departure on 2026-08-26\" ✓\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:26:24.609Z] [INFO] [TC2 ASSERT] Check-out 2026-08-26 reflected in UI ✓\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:26:24.609Z] [STEP] [TC2] Performing destination search for: \"Scottsdale\"\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T12:26:03.363Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\test-results\\tc2_search_filter_sort-TC2-37b66--sorting-on-fireskyRetreats-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\test-results\\tc2_search_filter_sort-TC2-37b66--sorting-on-fireskyRetreats-chromium\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\test-results\\tc2_search_filter_sort-TC2-37b66--sorting-on-fireskyRetreats-chromium\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\test-results\\tc2_search_filter_sort-TC2-37b66--sorting-on-fireskyRetreats-chromium\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\pages\\SearchResultsPage.js",
+                        "column": 28,
+                        "line": 246
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "390146c09a1a0f257f4d-914232d0bc8752178276",
+              "file": "tc2_search_filter_sort.spec.js",
+              "line": 11,
+              "column": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "tc3_property_details.spec.js",
+      "file": "tc3_property_details.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "TC3 — Property Details Validation [aliceLodging]",
+          "file": "tc3_property_details.spec.js",
+          "line": 8,
+          "column": 8,
+          "specs": [
+            {
+              "title": "Verify property details and booking criteria consistency from search on aliceLodging",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 33510,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n    at C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\tests\\tc3_property_details.spec.js:55:44",
+                        "location": {
+                          "file": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\tests\\tc3_property_details.spec.js",
+                          "column": 44,
+                          "line": 55
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 53 |\u001b[39m       expect(bookingInfo\u001b[33m.\u001b[39mpageLoaded)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 54 |\u001b[39m       expect(bookingInfo\u001b[33m.\u001b[39mactualGuests)\u001b[33m.\u001b[39mtoBeTruthy()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 55 |\u001b[39m       expect(bookingInfo\u001b[33m.\u001b[39mguestsConsistent)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 56 |\u001b[39m       expect(bookingInfo\u001b[33m.\u001b[39mactualDates)\u001b[33m.\u001b[39mtoBeTruthy()\u001b[33m;\u001b[39m\n \u001b[90m 57 |\u001b[39m       expect(bookingInfo\u001b[33m.\u001b[39mdatesConsistent)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 58 |\u001b[39m       expect(bookingInfo\u001b[33m.\u001b[39mhasBookingSection)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\tests\\tc3_property_details.spec.js",
+                            "column": 44,
+                            "line": 55
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\n\u001b[0m \u001b[90m 53 |\u001b[39m       expect(bookingInfo\u001b[33m.\u001b[39mpageLoaded)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 54 |\u001b[39m       expect(bookingInfo\u001b[33m.\u001b[39mactualGuests)\u001b[33m.\u001b[39mtoBeTruthy()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 55 |\u001b[39m       expect(bookingInfo\u001b[33m.\u001b[39mguestsConsistent)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 56 |\u001b[39m       expect(bookingInfo\u001b[33m.\u001b[39mactualDates)\u001b[33m.\u001b[39mtoBeTruthy()\u001b[33m;\u001b[39m\n \u001b[90m 57 |\u001b[39m       expect(bookingInfo\u001b[33m.\u001b[39mdatesConsistent)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 58 |\u001b[39m       expect(bookingInfo\u001b[33m.\u001b[39mhasBookingSection)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\tests\\tc3_property_details.spec.js:55:44\u001b[22m"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "[2026-08-08T12:26:41.285Z] [STEP] [TC3] Starting Property Details Validation on Alice Lodging\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:26:41.338Z] [STEP] Opening home page for Alice Lodging\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:26:41.339Z] [INFO] Navigating to: https://www.alicelodging.com\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:26:42.995Z] [STEP] [TC2] Configuring guest count (+2 Adults, +1 Children) on Alice Lodging\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:26:43.785Z] [INFO] [Guest Picker] Current aria-label: \"Select Guests: 0 Adults 0 Children \"\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:26:43.785Z] [INFO] [TC2] BEFORE: Adults=0, Children=0\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:26:53.611Z] [INFO] [Guest Picker] Current aria-label: \"Select Guests: 2 Adults 1 Children \"\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:26:53.612Z] [INFO] [TC2] AFTER: Adults=2, Children=1\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:26:53.612Z] [INFO] [TC3] Guests configured: 2 Adults, 1 Children\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:26:53.613Z] [STEP] [TC2] Selecting future dates: Check-in 2026-08-22, Check-out 2026-08-26\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:26:55.836Z] [INFO] [Date Picker] Current aria-label: \"Select Arrival Date Select Departure Date\"\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:26:55.836Z] [INFO] [TC2] Dates BEFORE: arrival=null, departure=null\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:26:57.203Z] [INFO] [Date Picker] Current aria-label: \"Arrival on 2026-08-22 Departure on 2026-08-26\"\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:26:57.204Z] [INFO] [TC2] Dates AFTER: arrival=2026-08-22, departure=2026-08-26\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:26:57.204Z] [INFO] [TC3] Dates configured: 2026-08-22 to 2026-08-26\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:26:57.205Z] [STEP] [TC2] Performing destination search for: \"Palm Springs\"\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:26:57.924Z] [INFO] Dismissed cookie consent banner\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:26:57.971Z] [INFO] Filling Destination search input with value: \"Palm Springs\"\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:27:01.118Z] [INFO] [TC2] Destination search submitted through the live UI.\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:27:01.118Z] [STEP] [TC3/TC4] Opening first property card from listings\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:27:01.638Z] [INFO] [TC3/TC4] Opening property: \"Desert Dream\"\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:27:03.254Z] [INFO] [TC3] Selected property card name: \"Desert Dream\"\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:27:03.255Z] [STEP] [TC3] Reading property name from detail page on Alice Lodging\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:27:03.501Z] [INFO] [TC3] Property page title: \"Desert Dream\"\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:27:03.506Z] [INFO] [TC3] Property page title: \"Desert Dream\"\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:27:03.506Z] [STEP] [TC3] Verifying booking criteria consistency on property page\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:27:05.397Z] [INFO] [TC3] Property page guest picker aria-label: \"Select Guests: 1 Adults 0 Children \"\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:27:06.554Z] [INFO] [TC3] Property page date picker aria-label: \"Arrival on 2026-08-09 Departure on 2026-08-12\"\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:27:06.554Z] [INFO] [TC3] Guest consistency: expected=2A/1C, actual=1A/0C, match=false\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:27:06.555Z] [INFO] [TC3] Date consistency: expected CI=2026-08-22 CO=2026-08-26, label=\"Arrival on 2026-08-09 Departure on 2026-08-12\", match=false\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:27:07.341Z] [INFO] [TC3] Booking widget/form visible: true\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T12:26:40.458Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\test-results\\tc3_property_details-TC3-—-ef5d5-from-search-on-aliceLodging-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\test-results\\tc3_property_details-TC3-—-ef5d5-from-search-on-aliceLodging-chromium\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\test-results\\tc3_property_details-TC3-—-ef5d5-from-search-on-aliceLodging-chromium\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\test-results\\tc3_property_details-TC3-—-ef5d5-from-search-on-aliceLodging-chromium\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\tests\\tc3_property_details.spec.js",
+                        "column": 44,
+                        "line": 55
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "44d21a503d51ea94d010-82d5b3aedeebb58deb09",
+              "file": "tc3_property_details.spec.js",
+              "line": 11,
+              "column": 5
+            }
+          ]
+        },
+        {
+          "title": "TC3 — Property Details Validation [fireskyRetreats]",
+          "file": "tc3_property_details.spec.js",
+          "line": 8,
+          "column": 8,
+          "specs": [
+            {
+              "title": "Verify property details and booking criteria consistency from search on fireskyRetreats",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 33068,
+                      "error": {
+                        "message": "TimeoutError: locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[placeholder*=\"destination\" i], input[placeholder*=\"search\" i], input[name*=\"location\" i]').first() to be visible\u001b[22m\n",
+                        "stack": "TimeoutError: locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[placeholder*=\"destination\" i], input[placeholder*=\"search\" i], input[name*=\"location\" i]').first() to be visible\u001b[22m\n\n    at SearchResultsPage.executeSearch (C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\pages\\SearchResultsPage.js:246:28)\n    at C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\tests\\tc3_property_details.spec.js:31:7",
+                        "location": {
+                          "file": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\pages\\SearchResultsPage.js",
+                          "column": 28,
+                          "line": 246
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m..\\pages\\SearchResultsPage.js:246\n\n\u001b[0m \u001b[90m 244 |\u001b[39m\n \u001b[90m 245 |\u001b[39m     \u001b[36mconst\u001b[39m destinationInput \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(commonLocators\u001b[33m.\u001b[39msearch\u001b[33m.\u001b[39mdestinationInput)\u001b[33m.\u001b[39mfirst()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 246 |\u001b[39m     \u001b[36mawait\u001b[39m destinationInput\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 247 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39msafeFill(destinationInput\u001b[33m,\u001b[39m destination\u001b[33m,\u001b[39m \u001b[32m'Destination search input'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 248 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mkeyboard\u001b[33m.\u001b[39mpress(\u001b[32m'Enter'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 249 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mwaitForLoad()\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\pages\\SearchResultsPage.js",
+                            "column": 28,
+                            "line": 246
+                          },
+                          "message": "TimeoutError: locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[placeholder*=\"destination\" i], input[placeholder*=\"search\" i], input[name*=\"location\" i]').first() to be visible\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\pages\\SearchResultsPage.js:246\n\n\u001b[0m \u001b[90m 244 |\u001b[39m\n \u001b[90m 245 |\u001b[39m     \u001b[36mconst\u001b[39m destinationInput \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mlocator(commonLocators\u001b[33m.\u001b[39msearch\u001b[33m.\u001b[39mdestinationInput)\u001b[33m.\u001b[39mfirst()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 246 |\u001b[39m     \u001b[36mawait\u001b[39m destinationInput\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 247 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39msafeFill(destinationInput\u001b[33m,\u001b[39m destination\u001b[33m,\u001b[39m \u001b[32m'Destination search input'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 248 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mkeyboard\u001b[33m.\u001b[39mpress(\u001b[32m'Enter'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 249 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mwaitForLoad()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at SearchResultsPage.executeSearch (C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\pages\\SearchResultsPage.js:246:28)\u001b[22m\n\u001b[2m    at C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\tests\\tc3_property_details.spec.js:31:7\u001b[22m"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "[2026-08-08T12:27:20.154Z] [STEP] [TC3] Starting Property Details Validation on Firesky Retreats\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:27:20.225Z] [STEP] Opening home page for Firesky Retreats\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:27:20.226Z] [INFO] Navigating to: https://www.fireskyretreats.com\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:27:22.899Z] [INFO] Dismissed cookie consent banner\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:27:22.944Z] [STEP] [TC2] Configuring guest count (+2 Adults, +1 Children) on Firesky Retreats\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:27:23.073Z] [INFO] [Guest Picker] Current aria-label: \"Select Guests: 0 Adults 0 Children \"\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:27:23.073Z] [INFO] [TC2] BEFORE: Adults=0, Children=0\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:27:28.901Z] [INFO] [Guest Picker] Current aria-label: \"Select Guests: 2 Adults 1 Children \"\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:27:28.901Z] [INFO] [TC2] AFTER: Adults=2, Children=1\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:27:28.902Z] [INFO] [TC3] Guests configured: 2 Adults, 1 Children\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:27:28.902Z] [STEP] [TC2] Selecting future dates: Check-in 2026-08-22, Check-out 2026-08-26\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:27:37.177Z] [INFO] [Date Picker] Current aria-label: \"Select Arrival Date Select Departure Date\"\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:27:37.177Z] [INFO] [TC2] Dates BEFORE: arrival=null, departure=null\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:27:38.428Z] [INFO] [Date Picker] Current aria-label: \"Arrival on 2026-08-22 Departure on 2026-08-26\"\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:27:38.428Z] [INFO] [TC2] Dates AFTER: arrival=2026-08-22, departure=2026-08-26\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:27:38.429Z] [INFO] [TC3] Dates configured: 2026-08-22 to 2026-08-26\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:27:38.429Z] [STEP] [TC2] Performing destination search for: \"Scottsdale\"\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T12:27:19.049Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\test-results\\tc3_property_details-TC3-—-fb812-m-search-on-fireskyRetreats-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\test-results\\tc3_property_details-TC3-—-fb812-m-search-on-fireskyRetreats-chromium\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\test-results\\tc3_property_details-TC3-—-fb812-m-search-on-fireskyRetreats-chromium\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\test-results\\tc3_property_details-TC3-—-fb812-m-search-on-fireskyRetreats-chromium\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\pages\\SearchResultsPage.js",
+                        "column": 28,
+                        "line": 246
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "44d21a503d51ea94d010-b8ca244313afa0cfe5d5",
+              "file": "tc3_property_details.spec.js",
+              "line": 11,
+              "column": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "tc4_navigation.spec.js",
+      "file": "tc4_navigation.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "TC4 — Navigation Validation [aliceLodging]",
+          "file": "tc4_navigation.spec.js",
+          "line": 7,
+          "column": 8,
+          "specs": [
+            {
+              "title": "Verify navigation menu, options population, category page navigation, and property info consistency on aliceLodging",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 30880,
+                      "error": {
+                        "message": "TimeoutError: locator.click: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[aria-label^=\"Property card \"]').first().locator('a[href*=\"/listing\"]').first()\u001b[22m\n\u001b[2m    - locator resolved to <a class=\"disable-highlight\" href=\"/listings/6924de8c47db180013b451f6\">…</a>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"fixed bottom-0 h-[80%] sm:h-full sm:top-0 z-modal w-screen overflow-y-auto sm:flex sm:items-center sm:justify-center p-4\">…</div> from <div id=\"headlessui-portal-root\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"fixed bottom-0 h-[80%] sm:h-full sm:top-0 z-modal w-screen overflow-y-auto sm:flex sm:items-center sm:justify-center p-4\">…</div> from <div id=\"headlessui-portal-root\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    24 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <div class=\"fixed bottom-0 h-[80%] sm:h-full sm:top-0 z-modal w-screen overflow-y-auto sm:flex sm:items-center sm:justify-center p-4\">…</div> from <div id=\"headlessui-portal-root\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n",
+                        "stack": "TimeoutError: locator.click: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[aria-label^=\"Property card \"]').first().locator('a[href*=\"/listing\"]').first()\u001b[22m\n\u001b[2m    - locator resolved to <a class=\"disable-highlight\" href=\"/listings/6924de8c47db180013b451f6\">…</a>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"fixed bottom-0 h-[80%] sm:h-full sm:top-0 z-modal w-screen overflow-y-auto sm:flex sm:items-center sm:justify-center p-4\">…</div> from <div id=\"headlessui-portal-root\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"fixed bottom-0 h-[80%] sm:h-full sm:top-0 z-modal w-screen overflow-y-auto sm:flex sm:items-center sm:justify-center p-4\">…</div> from <div id=\"headlessui-portal-root\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    24 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <div class=\"fixed bottom-0 h-[80%] sm:h-full sm:top-0 z-modal w-screen overflow-y-auto sm:flex sm:items-center sm:justify-center p-4\">…</div> from <div id=\"headlessui-portal-root\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\n    at SearchResultsPage.openFirstProperty (C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\pages\\SearchResultsPage.js:398:24)\n    at C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\tests\\tc4_navigation.spec.js:31:27",
+                        "location": {
+                          "file": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\pages\\SearchResultsPage.js",
+                          "column": 24,
+                          "line": 398
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m..\\pages\\SearchResultsPage.js:398\n\n\u001b[0m \u001b[90m 396 |\u001b[39m     \u001b[33mLogger\u001b[39m\u001b[33m.\u001b[39minfo(\u001b[32m`[TC3/TC4] Opening property: \"${name}\"`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 397 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 398 |\u001b[39m     \u001b[36mawait\u001b[39m propertyLink\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 399 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mwaitForLoad()\u001b[33m;\u001b[39m\n \u001b[90m 400 |\u001b[39m     \u001b[36mreturn\u001b[39m name\u001b[33m;\u001b[39m\n \u001b[90m 401 |\u001b[39m   }\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\pages\\SearchResultsPage.js",
+                            "column": 24,
+                            "line": 398
+                          },
+                          "message": "TimeoutError: locator.click: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[aria-label^=\"Property card \"]').first().locator('a[href*=\"/listing\"]').first()\u001b[22m\n\u001b[2m    - locator resolved to <a class=\"disable-highlight\" href=\"/listings/6924de8c47db180013b451f6\">…</a>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"fixed bottom-0 h-[80%] sm:h-full sm:top-0 z-modal w-screen overflow-y-auto sm:flex sm:items-center sm:justify-center p-4\">…</div> from <div id=\"headlessui-portal-root\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"fixed bottom-0 h-[80%] sm:h-full sm:top-0 z-modal w-screen overflow-y-auto sm:flex sm:items-center sm:justify-center p-4\">…</div> from <div id=\"headlessui-portal-root\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    24 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <div class=\"fixed bottom-0 h-[80%] sm:h-full sm:top-0 z-modal w-screen overflow-y-auto sm:flex sm:items-center sm:justify-center p-4\">…</div> from <div id=\"headlessui-portal-root\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\pages\\SearchResultsPage.js:398\n\n\u001b[0m \u001b[90m 396 |\u001b[39m     \u001b[33mLogger\u001b[39m\u001b[33m.\u001b[39minfo(\u001b[32m`[TC3/TC4] Opening property: \"${name}\"`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 397 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 398 |\u001b[39m     \u001b[36mawait\u001b[39m propertyLink\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 399 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mwaitForLoad()\u001b[33m;\u001b[39m\n \u001b[90m 400 |\u001b[39m     \u001b[36mreturn\u001b[39m name\u001b[33m;\u001b[39m\n \u001b[90m 401 |\u001b[39m   }\u001b[0m\n\u001b[2m    at SearchResultsPage.openFirstProperty (C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\pages\\SearchResultsPage.js:398:24)\u001b[22m\n\u001b[2m    at C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\tests\\tc4_navigation.spec.js:31:27\u001b[22m"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "[2026-08-08T12:27:55.446Z] [STEP] [TC4] Starting Navigation Validation on Alice Lodging\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:27:55.447Z] [STEP] Opening home page for Alice Lodging\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:27:55.447Z] [INFO] Navigating to: https://www.alicelodging.com\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:27:57.476Z] [STEP] [TC4] Interacting with navigation component and verifying options population on Alice Lodging\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:27:57.653Z] [INFO] [TC4] Discovered 6 populated navigation options for Alice Lodging\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:27:57.653Z] [INFO] [Nav Item 1] Specials -> https://www.alicelodging.com/specials\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:27:57.653Z] [INFO] [Nav Item 2] Blog -> https://www.alicelodging.com/blog\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:27:57.653Z] [INFO] [Nav Item 3] List With Us -> https://www.alicelodging.com/list-with-us\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:27:57.653Z] [INFO] [Nav Item 4] Contact Us -> https://www.alicelodging.com/contact-us\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:27:57.653Z] [INFO] [Nav Item 5] ⚡ Flash Summer Deals Alert • 20% Off with SUMMERESCAPE • For Check ins On or Before Sep 30 -> https://www.alicelodging.com/specials/palm-springs-palm-desert-summer-deals-save-20-on-vacation-rental\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:27:57.653Z] [INFO] [Nav Item 6] ⚡ Flash Summer Deals • Up to 20% Off -> https://www.alicelodging.com/specials/palm-springs-palm-desert-summer-deals-save-20-on-vacation-rental\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:27:57.664Z] [INFO] [TC4 Output] Verified navigation menu populated with 6 category items.\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:27:57.664Z] [STEP] [TC4] Navigating to destination/category page: \"Specials\"\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:28:00.585Z] [STEP] [TC3/TC4] Opening first property card from listings\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:28:02.182Z] [STEP] Navigating to property listings page for Alice Lodging\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:28:02.182Z] [INFO] Navigating to: https://www.alicelodging.com/listings\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:28:04.950Z] [INFO] Dismissed cookie consent banner\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:28:05.004Z] [STEP] [TC3/TC4] Opening first property card from listings\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:28:08.568Z] [INFO] [TC3/TC4] Opening property: \"Teal and Tangerine Retreat\"\n"
+                        }
+                      ],
+                      "stderr": [
+                        {
+                          "text": "[2026-08-08T12:28:02.181Z] [WARN] [TC4] Category page had no listing cards directly visible, navigating to /listings\n"
+                        }
+                      ],
+                      "retry": 0,
+                      "startTime": "2026-08-08T12:27:54.812Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\test-results\\tc4_navigation-TC4-—-Navig-03590-consistency-on-aliceLodging-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\test-results\\tc4_navigation-TC4-—-Navig-03590-consistency-on-aliceLodging-chromium\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\test-results\\tc4_navigation-TC4-—-Navig-03590-consistency-on-aliceLodging-chromium\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\test-results\\tc4_navigation-TC4-—-Navig-03590-consistency-on-aliceLodging-chromium\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\pages\\SearchResultsPage.js",
+                        "column": 24,
+                        "line": 398
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "728dc8ddd5ff0d1d6886-925534cfac3a764b87cb",
+              "file": "tc4_navigation.spec.js",
+              "line": 10,
+              "column": 5
+            }
+          ]
+        },
+        {
+          "title": "TC4 — Navigation Validation [fireskyRetreats]",
+          "file": "tc4_navigation.spec.js",
+          "line": 7,
+          "column": 8,
+          "specs": [
+            {
+              "title": "Verify navigation menu, options population, category page navigation, and property info consistency on fireskyRetreats",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 46167,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "[2026-08-08T12:28:29.755Z] [STEP] [TC4] Starting Navigation Validation on Firesky Retreats\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:28:29.756Z] [STEP] Opening home page for Firesky Retreats\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:28:29.757Z] [INFO] Navigating to: https://www.fireskyretreats.com\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:28:32.193Z] [STEP] [TC4] Interacting with navigation component and verifying options population on Firesky Retreats\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:28:32.515Z] [INFO] [TC4] Discovered 5 populated navigation options for Firesky Retreats\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:28:32.516Z] [INFO] [Nav Item 1] ⚡ Flash Summer Deals Alert • 20% Off with SUNNY20 • For Check-ins On or Before Sep 30 -> https://www.fireskyretreats.com/specials/arizona-summer-deals-save-20-on-vacation-rental\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:28:32.516Z] [INFO] [Nav Item 2] ⚡ Flash Summer Deals • Up to 20% Off -> https://www.fireskyretreats.com/specials/arizona-summer-deals-save-20-on-vacation-rental\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:28:32.516Z] [INFO] [Nav Item 3] Explore -> https://www.fireskyretreats.com/\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:28:32.516Z] [INFO] [Nav Item 4] Favorites -> https://www.fireskyretreats.com/favourites\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:28:32.516Z] [INFO] [Nav Item 5] Contact -> https://www.fireskyretreats.com/contact-us\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:28:32.526Z] [INFO] [TC4 Output] Verified navigation menu populated with 5 category items.\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:28:32.526Z] [STEP] [TC4] Navigating to destination/category page: \"Pool\"\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:28:34.795Z] [INFO] Dismissed cookie consent banner\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:28:35.215Z] [STEP] [TC3/TC4] Opening first property card from listings\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:28:40.282Z] [INFO] [TC3/TC4] Opening property: \"loading\"\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:28:55.477Z] [STEP] Navigating to property listings page for Firesky Retreats\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:28:55.477Z] [INFO] Navigating to: https://www.fireskyretreats.com/listings\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:28:58.964Z] [STEP] [TC3/TC4] Opening first property card from listings\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:29:02.941Z] [INFO] [TC3/TC4] Opening property: \"High Pines Abode\"\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:29:05.741Z] [INFO] [TC4 Output] Property Selected from Category Page: \"High Pines Abode\"\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:29:05.742Z] [STEP] [TC3] Reading property name from detail page on Firesky Retreats\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:29:06.136Z] [INFO] [TC3] Property page title: \"High Pines Abode\"\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:29:06.147Z] [STEP] [TC3] Verifying booking criteria consistency on property page\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:29:06.826Z] [INFO] [TC3] Property page guest picker aria-label: \"Select Guests: 1 Adults 0 Children 0 Pets\"\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:29:08.088Z] [INFO] [TC3] Property page date picker aria-label: \"Arrival on 2026-08-09 Departure on 2026-08-11\"\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:29:09.242Z] [INFO] [TC3] Booking widget/form visible: true\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:29:09.257Z] [INFO] [TC4 Success] Primary navigation flow and property consistency genuinely verified on Firesky Retreats\n"
+                        }
+                      ],
+                      "stderr": [
+                        {
+                          "text": "[2026-08-08T12:28:55.477Z] [WARN] [TC4] Category page had no listing cards directly visible, navigating to /listings\n"
+                        }
+                      ],
+                      "retry": 0,
+                      "startTime": "2026-08-08T12:28:28.795Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\test-results\\tc4_navigation-TC4-—-Navig-afdf0-sistency-on-fireskyRetreats-chromium\\test-finished-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\test-results\\tc4_navigation-TC4-—-Navig-afdf0-sistency-on-fireskyRetreats-chromium\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "728dc8ddd5ff0d1d6886-4ab73209cd0ba35278c8",
+              "file": "tc4_navigation.spec.js",
+              "line": 10,
+              "column": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "tc5_form_validation.spec.js",
+      "file": "tc5_form_validation.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "TC5 — Form Validation Workflow [aliceLodging]",
+          "file": "tc5_form_validation.spec.js",
+          "line": 8,
+          "column": 8,
+          "specs": [
+            {
+              "title": "Verify inquiry form submission of invalid input, field-level error association, and document website differences on aliceLodging",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 7923,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "[2026-08-08T12:29:18.074Z] [STEP] [TC5] Starting Form Validation on Alice Lodging\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:29:18.074Z] [STEP] [TC5] Locating property owner inquiry form at: https://www.alicelodging.com/list-with-us\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:29:18.074Z] [INFO] Navigating to: https://www.alicelodging.com/list-with-us\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:29:19.390Z] [STEP] [TC5] Submitting invalid input to verify field-level validation association on Alice Lodging\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:29:19.722Z] [INFO] Dismissed cookie consent banner\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:29:19.758Z] [INFO] Filling Invalid Email Input Field with value: \"invalid-email-1786192159389\"\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:29:24.335Z] [INFO] [TC5 Output] Site: Alice Lodging | Total Form Fields Evaluated: 9\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:29:24.335Z] [INFO] [TC5 Output] Field-Level Invalid Assertions Count: 1\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:29:24.335Z] [INFO]   -> Field Associated: [email] (email) -> Validation Error: \"Please include an '@' in the email address. 'invalid-email-1786192159389' is missing an '@'.\"\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:29:24.339Z] [INFO] [TC5 Documented Difference] Alice Lodging Form Path: /list-with-us | Uses HTML5 email validation and client-side button state checks.\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:29:24.339Z] [INFO] [TC5 Success] Form validation behavior and field error association genuinely captured for Alice Lodging\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T12:29:17.796Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\test-results\\tc5_form_validation-TC5-—--10197-differences-on-aliceLodging-chromium\\test-finished-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\test-results\\tc5_form_validation-TC5-—--10197-differences-on-aliceLodging-chromium\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "421f2255d87be23d7f2b-f575e1fd1294354300e8",
+              "file": "tc5_form_validation.spec.js",
+              "line": 11,
+              "column": 5
+            }
+          ]
+        },
+        {
+          "title": "TC5 — Form Validation Workflow [fireskyRetreats]",
+          "file": "tc5_form_validation.spec.js",
+          "line": 8,
+          "column": 8,
+          "specs": [
+            {
+              "title": "Verify inquiry form submission of invalid input, field-level error association, and document website differences on fireskyRetreats",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 7301,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "[2026-08-08T12:29:26.634Z] [STEP] [TC5] Starting Form Validation on Firesky Retreats\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:29:26.634Z] [STEP] [TC5] Locating property owner inquiry form at: https://www.fireskyretreats.com/contact-us\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:29:26.634Z] [INFO] Navigating to: https://www.fireskyretreats.com/contact-us\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:29:27.685Z] [STEP] [TC5] Submitting invalid input to verify field-level validation association on Firesky Retreats\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:29:28.053Z] [INFO] Filling Invalid Email Input Field with value: \"invalid-email-1786192167685\"\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:29:31.177Z] [INFO] [TC5 Output] Site: Firesky Retreats | Total Form Fields Evaluated: 10\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:29:31.177Z] [INFO] [TC5 Output] Field-Level Invalid Assertions Count: 1\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:29:31.177Z] [INFO]   -> Field Associated: [email] (email) -> Validation Error: \"Please include an '@' in the email address. 'invalid-email-1786192167685' is missing an '@'.\"\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:29:31.183Z] [INFO] [TC5 Documented Difference] Firesky Retreats Form Path: /contact-us | Uses HTML5 required validation and modal/inline field notification popups.\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:29:31.183Z] [INFO] [TC5 Success] Form validation behavior and field error association genuinely captured for Firesky Retreats\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T12:29:26.403Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\test-results\\tc5_form_validation-TC5-—--65ec7-ferences-on-fireskyRetreats-chromium\\test-finished-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\test-results\\tc5_form_validation-TC5-—--65ec7-ferences-on-fireskyRetreats-chromium\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "421f2255d87be23d7f2b-47855be62b7f6d7bf776",
+              "file": "tc5_form_validation.spec.js",
+              "line": 11,
+              "column": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "tc6_bonus_favorites.spec.js",
+      "file": "tc6_bonus_favorites.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "TC6 (Bonus) — Favorites & Saved Stays Workflow [aliceLodging]",
+          "file": "tc6_bonus_favorites.spec.js",
+          "line": 7,
+          "column": 8,
+          "specs": [
+            {
+              "title": "Verify favoriting workflow: add to favourites, verify, navigate to saved stays on aliceLodging",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 14674,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "[2026-08-08T12:29:34.550Z] [STEP] [TC6 Bonus] Starting Favorites Workflow on Alice Lodging\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:29:34.551Z] [STEP] Navigating to property listings page for Alice Lodging\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:29:34.551Z] [INFO] Navigating to: https://www.alicelodging.com/listings\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:29:45.953Z] [INFO] [TC6] Found 12 favourite buttons on listing cards\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:29:45.956Z] [INFO] [TC6 ASSERT] Favourite buttons exist: 12 found ✓\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:29:46.029Z] [INFO] [TC6] SVG class BEFORE click: \"text-neutral-0 hover:fill-red-500/80 hover:stroke-red-500/80  hover:scale-110\"\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:29:47.176Z] [INFO] [TC6] Clicked first favourite button\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:29:47.214Z] [INFO] [TC6] SVG class AFTER click: \"text-neutral-0 hover:fill-red-500/80 hover:stroke-red-500/80 !text-favourite !fill-favourite  hover:scale-110\"\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:29:47.216Z] [INFO] [TC6 ASSERT] SVG state changed: true\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:29:47.279Z] [INFO] [TC6 Success] Favourite button state transition was verified on Alice Lodging; saved-favourites persistence is not asserted for unauthenticated users.\n"
+                        }
+                      ],
+                      "stderr": [
+                        {
+                          "text": "[2026-08-08T12:29:47.278Z] [WARN] [TC6] Favourites header/link not found after clicking favourite button\n"
+                        }
+                      ],
+                      "retry": 0,
+                      "startTime": "2026-08-08T12:29:34.246Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\test-results\\tc6_bonus_favorites-TC6-Bo-a108d-saved-stays-on-aliceLodging-chromium\\test-finished-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\test-results\\tc6_bonus_favorites-TC6-Bo-a108d-saved-stays-on-aliceLodging-chromium\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "f9a5f36cfff46c818272-8ce199c1a6f001206031",
+              "file": "tc6_bonus_favorites.spec.js",
+              "line": 10,
+              "column": 5
+            }
+          ]
+        },
+        {
+          "title": "TC6 (Bonus) — Favorites & Saved Stays Workflow [fireskyRetreats]",
+          "file": "tc6_bonus_favorites.spec.js",
+          "line": 7,
+          "column": 8,
+          "specs": [
+            {
+              "title": "Verify favoriting workflow: add to favourites, verify, navigate to saved stays on fireskyRetreats",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 12776,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "[2026-08-08T12:29:49.969Z] [STEP] [TC6 Bonus] Starting Favorites Workflow on Firesky Retreats\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:29:49.969Z] [STEP] Navigating to property listings page for Firesky Retreats\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:29:49.969Z] [INFO] Navigating to: https://www.fireskyretreats.com/listings\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:29:53.038Z] [INFO] Dismissed cookie consent banner\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:29:59.190Z] [INFO] [TC6] Found 30 favourite buttons on listing cards\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:29:59.192Z] [INFO] [TC6 ASSERT] Favourite buttons exist: 30 found ✓\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:29:59.362Z] [INFO] [TC6] SVG class BEFORE click: \"text-neutral-0 fill-neutral-500/60 hover:fill-neutral-500/80  hover:scale-110\"\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:30:00.744Z] [INFO] [TC6] Clicked first favourite button\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:30:00.806Z] [INFO] [TC6] SVG class AFTER click: \"text-neutral-0 fill-neutral-500/60 hover:fill-neutral-500/80 !text-favourite !fill-favourite  hover:scale-110\"\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:30:00.809Z] [INFO] [TC6 ASSERT] SVG state changed: true\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:30:00.932Z] [INFO] [TC6 Success] Favourite button state transition was verified on Firesky Retreats; saved-favourites persistence is not asserted for unauthenticated users.\n"
+                        }
+                      ],
+                      "stderr": [
+                        {
+                          "text": "[2026-08-08T12:30:00.932Z] [WARN] [TC6] Favourites header/link not found after clicking favourite button\n"
+                        }
+                      ],
+                      "retry": 0,
+                      "startTime": "2026-08-08T12:29:49.728Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\test-results\\tc6_bonus_favorites-TC6-Bo-81844-ed-stays-on-fireskyRetreats-chromium\\test-finished-1.png"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\test-results\\tc6_bonus_favorites-TC6-Bo-81844-ed-stays-on-fireskyRetreats-chromium\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "f9a5f36cfff46c818272-0013868950044be70476",
+              "file": "tc6_bonus_favorites.spec.js",
+              "line": 10,
+              "column": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "tc7_intentional_failure.spec.js",
+      "file": "tc7_intentional_failure.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "TC7 — Intentional Failure Diagnostic Reporting Demo",
+          "file": "tc7_intentional_failure.spec.js",
+          "line": 5,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Demonstrate failure diagnostics (screenshot, element highlight, trace, & step logs)",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 9480,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#non-existent-property-verification-title-element')\nExpected: visible\nTimeout: 3000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for locator('#non-existent-property-verification-title-element')\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#non-existent-property-verification-title-element')\nExpected: visible\nTimeout: 3000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for locator('#non-existent-property-verification-title-element')\u001b[22m\n\n    at C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\tests\\tc7_intentional_failure.spec.js:21:38",
+                        "location": {
+                          "file": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\tests\\tc7_intentional_failure.spec.js",
+                          "column": 38,
+                          "line": 21
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 19 |\u001b[39m\n \u001b[90m 20 |\u001b[39m     \u001b[90m// Intentional strict assertion failure\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 21 |\u001b[39m     \u001b[36mawait\u001b[39m expect(nonExistentElement)\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m3000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 22 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 23 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 24 |\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\tests\\tc7_intentional_failure.spec.js",
+                            "column": 38,
+                            "line": 21
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#non-existent-property-verification-title-element')\nExpected: visible\nTimeout: 3000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 3000ms\u001b[22m\n\u001b[2m  - waiting for locator('#non-existent-property-verification-title-element')\u001b[22m\n\n\n\u001b[0m \u001b[90m 19 |\u001b[39m\n \u001b[90m 20 |\u001b[39m     \u001b[90m// Intentional strict assertion failure\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 21 |\u001b[39m     \u001b[36mawait\u001b[39m expect(nonExistentElement)\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m3000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 22 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 23 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 24 |\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\tests\\tc7_intentional_failure.spec.js:21:38\u001b[22m"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "[2026-08-08T12:30:03.656Z] [STEP] [TC7 Failure Demo] Opening site Alice Lodging to demonstrate diagnostic reporting\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:30:03.656Z] [STEP] Opening home page for Alice Lodging\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:30:03.656Z] [INFO] Navigating to: https://www.alicelodging.com\n"
+                        },
+                        {
+                          "text": "[2026-08-08T12:30:06.019Z] [STEP] Attempting assertion on intentional non-existent element\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T12:30:03.424Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\test-results\\tc7_intentional_failure-TC-bf75f--highlight-trace-step-logs--chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\test-results\\tc7_intentional_failure-TC-bf75f--highlight-trace-step-logs--chromium\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\test-results\\tc7_intentional_failure-TC-bf75f--highlight-trace-step-logs--chromium\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\test-results\\tc7_intentional_failure-TC-bf75f--highlight-trace-step-logs--chromium\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\ASUS\\.gemini\\antigravity-ide\\scratch\\vacation-rental-playwright-multi-site-automation\\tests\\tc7_intentional_failure.spec.js",
+                        "column": 38,
+                        "line": 21
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "2cb092b1cd83f0c02e53-99abc35b3791e86bffc5",
+              "file": "tc7_intentional_failure.spec.js",
+              "line": 8,
+              "column": 3
+            }
+          ]
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-08-08T11:09:00.955Z",
-    "duration": 19289.473,
-    "expected": 0,
+    "startTime": "2026-08-08T12:25:04.548Z",
+    "duration": 311157.61500000005,
+    "expected": 6,
     "skipped": 0,
-    "unexpected": 1,
+    "unexpected": 7,
     "flaky": 0
   }
 }
